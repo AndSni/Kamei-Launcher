@@ -1,0 +1,1 @@
+First release: a private home screen in Japanese (or Chinese, Korean, Greek) with three-second translations and readings, learning lines that fade, a word of the day, unexpected app glyphs and phonetic app names; Yr and Open-Meteo weather with a rain-aware line; battery and signal warnings; Original, Material and Tokyo themes; clock, font, order and gesture settings.
