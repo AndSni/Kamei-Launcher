@@ -30,6 +30,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -38,6 +39,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -46,6 +48,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -76,6 +79,7 @@ import com.asnidev.kamei.data.NotifStyle
 import com.asnidev.kamei.data.Place
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.ReadingHint
+import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.data.WeatherGlyphs
 import com.asnidev.kamei.data.WeatherSource
 import com.asnidev.kamei.data.dayFadeAt
@@ -97,8 +101,13 @@ import kotlin.math.roundToInt
 fun SettingsScreen(prefs: Prefs) {
     val vm = LocalVm.current
     val page = vm.settings.lastOrNull() ?: return
-    val back = { vm.settings.removeAt(vm.settings.lastIndex) }
+    val back: () -> Unit = { vm.settings.removeAt(vm.settings.lastIndex) }
     val title = TITLES[page] ?: "Settings"
+    CompositionLocalProvider(LocalSettingsStyle provides prefs.settingsStyle.resolve()) { Page(page, title, prefs, back) }
+}
+
+@Composable
+private fun Page(page: String, title: String, prefs: Prefs, back: () -> Unit) {
     Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.surface).safeDrawingPadding()) {
         Row(Modifier.padding(horizontal = 8.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
             Box(Modifier.size(48.dp).clip(CircleShape).clickable { back() }, contentAlignment = Alignment.Center) {
@@ -148,8 +157,14 @@ private val TITLES = mapOf(
 @Composable
 private fun Group(label: String? = null, content: GroupScope.() -> Unit) {
     val rows = GroupScope().apply(content).rows
+    val plain = LocalSettingsStyle.current == SettingsStyle.PLAIN
     if (label != null) {
-        Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(start = 40.dp, bottom = 8.dp, top = 4.dp))
+        Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(start = if (plain) 24.dp else 40.dp, bottom = 8.dp, top = 4.dp))
+    }
+    if (plain) {
+        Column(Modifier.padding(horizontal = 4.dp)) { rows.forEach { it() } }
+        HorizontalDivider(Modifier.padding(top = 8.dp, bottom = 16.dp), color = MaterialTheme.colorScheme.outlineVariant)
+        return
     }
     Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
         rows.forEachIndexed { i, row ->
@@ -166,6 +181,9 @@ private class GroupScope {
     val rows = mutableListOf<@Composable () -> Unit>()
     fun row(content: @Composable () -> Unit) { rows += content }
 }
+
+/** Pixel look (cards, coloured circles) or plain look (flat list, accent icons); see [SettingsStyle]. */
+private val LocalSettingsStyle = staticCompositionLocalOf { SettingsStyle.PIXEL }
 
 private val CIRCLES = listOf(Color(0xFF7FCFFF), Color(0xFFB4E89C), Color(0xFFFFB68A), Color(0xFFD7BAFF), Color(0xFFFFD86B), Color(0xFF8EE3D3), Color(0xFFFF9FB3), Color(0xFFA9C2FF))
 
@@ -185,7 +203,11 @@ private fun Item(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         if (glyph != null) {
-            if (circle != null) {
+            if (circle != null && LocalSettingsStyle.current == SettingsStyle.PLAIN) {
+                Box(Modifier.size(40.dp), contentAlignment = Alignment.Center) {
+                    GlyphIcon(glyph, 24.dp, tint = MaterialTheme.colorScheme.primary, stroke = 1.75f)
+                }
+            } else if (circle != null) {
                 Box(Modifier.size(40.dp).clip(CircleShape).background(circle), contentAlignment = Alignment.Center) {
                     GlyphIcon(glyph, 22.dp, tint = Color(0xFF1B1B1F), stroke = 1.9f)
                 }
@@ -219,12 +241,13 @@ private fun <T> ChoiceItem(
     selected: T,
     label: (T) -> String,
     glyph: String? = null,
+    circle: Color? = null,
     describe: ((T) -> String?)? = null,
     preview: (@Composable (T) -> Unit)? = null,
     onSelect: (T) -> Unit,
 ) {
     var open by remember { mutableStateOf(false) }
-    Item(title, label(selected), glyph, onClick = { open = true })
+    Item(title, label(selected), glyph, circle, onClick = { open = true })
     if (open) {
         AlertDialog(
             onDismissRequest = { open = false },
@@ -281,19 +304,26 @@ private fun MainPage(prefs: Prefs) {
     val target = Phrases.targets.firstOrNull { it.first == Phrases.resolveTarget(prefs.translateTo) }?.second ?: "English"
     Group {
         row {
-            ChoiceItem("Theme", HomeTheme.entries, prefs.theme, { it.label }, "palette", describe = { it.summary }) { t -> vm.update { it.copy(theme = t) } }
+            ChoiceItem("Theme", HomeTheme.entries, prefs.theme, { it.label }, "palette", CIRCLES[7], describe = { it.summary }) { t -> vm.update { it.copy(theme = t) } }
         }
         row {
             Item(
                 "Colours",
                 if (android.os.Build.VERSION.SDK_INT >= 31) "From your wallpaper (Material You). Change them in Wallpaper & style" else "Android 12 and later take them from the wallpaper",
                 "color-swatch",
+                CIRCLES[2],
             ) { SystemActions.openWallpaperAndStyle(context) }
+        }
+        row {
+            ChoiceItem("Settings look", SettingsStyle.entries, prefs.settingsStyle,
+                { if (it == SettingsStyle.AUTO) "Automatic · ${it.resolve().label} on this phone" else it.label },
+                "layout-list", CIRCLES[1], describe = { it.summary }) { st -> vm.update { it.copy(settingsStyle = st) } }
         }
         row { Item("Language", "${prefs.displayLang.label} · translated into $target", "language", CIRCLES[0]) { vm.settings += "language" } }
         row { Item("Wallpaper", if (prefs.showWallpaper) "Shown, ${prefs.wallpaperDim}% darker" else "Black", "photo", CIRCLES[6]) { vm.settings += "wallpaper" } }
         row { Item("Clock", "${if (prefs.clockShuffle) "A new font daily" else prefs.clockFont.label} · ${prefs.clockLayout.label.lowercase()}", "clock", CIRCLES[1]) { vm.settings += "clock" } }
         row { Item("Fonts & layout", "${prefs.textFont.label} · ${prefs.infoAlign.label.lowercase()}", "typography", CIRCLES[5]) { vm.settings += "fonts" } }
+        row { Item("Order of lines", prefs.blockOrder.joinToString(" · ") { it.label.substringBefore(' ') }, "arrows-sort", CIRCLES[4]) { vm.settings += "order" } }
         row { Item("Icons", prefs.iconStyle.label, "icons", CIRCLES[2]) { vm.settings += "icons" } }
         row { Item("Favourites & drawer", "${prefs.favorites.size} favourites · ${prefs.drawerLayout.label.lowercase()}", "layout-grid", CIRCLES[3]) { vm.settings += "drawer" } }
     }

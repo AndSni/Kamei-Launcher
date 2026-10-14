@@ -1,0 +1,1 @@
+Settings look: Automatic matches your phone (coloured circles on Pixel, Samsung and Xiaomi; plain icons in a flat list on Sony, Motorola and others), or pick Pixel or Plain. "Order of lines" is now on the main settings page.

@@ -55,6 +55,7 @@ object PrefsJson {
         put("weatherApp", p.weatherApp)
         put("notifView", p.notifStyle.name)
         put("theme", p.theme.name)
+        put("settingsStyle", p.settingsStyle.name)
         put("hideStatusBar", p.hideStatusBar)
         put("cutoutMode", p.cutoutMode.name)
         put("swipeLeft", p.swipeLeft.encode())
@@ -138,6 +139,7 @@ object PrefsJson {
             weatherApp = o.optString("weatherApp", d.weatherApp),
             notifStyle = enumOr(o.optString("notifView"), d.notifStyle),
             theme = enumOr(o.optString("theme"), d.theme),
+            settingsStyle = enumOr(o.optString("settingsStyle"), d.settingsStyle),
             hideStatusBar = o.optBoolean("hideStatusBar", d.hideStatusBar),
             cutoutMode = enumOr(o.optString("cutoutMode"), d.cutoutMode),
             swipeLeft = if (o.has("swipeLeft")) Gesture.decode(o.optString("swipeLeft")) else d.swipeLeft,

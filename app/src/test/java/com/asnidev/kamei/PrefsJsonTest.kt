@@ -10,6 +10,7 @@ import com.asnidev.kamei.data.IconStyle
 import com.asnidev.kamei.data.Place
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.PrefsJson
+import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.lang.DisplayLang
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -33,8 +34,19 @@ class PrefsJsonTest {
             weatherOn = true,
             place = Place("Rīga, Latvia", 56.95, 24.11),
             seeded = true,
+            settingsStyle = SettingsStyle.PLAIN,
         )
         assertEquals(p, PrefsJson.read(PrefsJson.write(p)))
+    }
+
+    @Test
+    fun settingsStyleFollowsTheMaker() {
+        assertEquals(SettingsStyle.PIXEL, SettingsStyle.AUTO.resolve("Google"))
+        assertEquals(SettingsStyle.PIXEL, SettingsStyle.AUTO.resolve("samsung"))
+        assertEquals(SettingsStyle.PLAIN, SettingsStyle.AUTO.resolve("Sony"))
+        assertEquals(SettingsStyle.PLAIN, SettingsStyle.AUTO.resolve("motorola"))
+        assertEquals(SettingsStyle.PIXEL, SettingsStyle.PIXEL.resolve("Sony"))
+        assertEquals(SettingsStyle.PLAIN, SettingsStyle.PLAIN.resolve("Google"))
     }
 
     @Test

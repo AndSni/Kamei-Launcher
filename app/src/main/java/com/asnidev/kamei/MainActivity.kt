@@ -33,6 +33,7 @@ import com.asnidev.kamei.data.GlyphSet
 import com.asnidev.kamei.data.HomeTheme
 import com.asnidev.kamei.data.IconStyle
 import com.asnidev.kamei.data.InfoAlign
+import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.data.LocationMode
 import com.asnidev.kamei.data.Place
 import com.asnidev.kamei.lang.DisplayLang
@@ -119,6 +120,9 @@ class MainActivity : ComponentActivity() {
         }
         intent.getStringExtra("theme")?.let { name ->
             HomeTheme.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { t -> vm.update { it.copy(theme = t) } }
+        }
+        intent.getStringExtra("settingsstyle")?.let { name ->
+            SettingsStyle.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { st -> vm.update { it.copy(settingsStyle = st) } }
         }
         if (intent.getBooleanExtra("drawer", false)) vm.drawerOpen = true
         intent.getStringExtra("settings")?.let { vm.openSettings(it) }

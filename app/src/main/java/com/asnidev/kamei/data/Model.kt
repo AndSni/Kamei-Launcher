@@ -140,6 +140,26 @@ enum class CutoutMode(val label: String, val summary: String) {
     FULL("Use the whole screen", "Ignores the hole"),
 }
 
+/**
+ * How Kamei's own settings look. Pixels (and the phones that copy them) put each
+ * icon in a coloured circle on rounded cards; Sony, Motorola and most others keep
+ * plain icons in a flat list. Automatic picks by the phone's maker.
+ */
+enum class SettingsStyle(val label: String, val summary: String) {
+    AUTO("Automatic", "Matches your phone's own Settings"),
+    PIXEL("Pixel", "Coloured circles on rounded cards"),
+    PLAIN("Plain", "Plain icons in a flat list, like Sony and Motorola"),
+    ;
+
+    fun resolve(manufacturer: String = android.os.Build.MANUFACTURER ?: ""): SettingsStyle =
+        if (this != AUTO) this else if (manufacturer.lowercase().trim() in CIRCLE_MAKERS) PIXEL else PLAIN
+
+    companion object {
+        /** Makers whose stock Settings draw icons on coloured shapes. */
+        val CIRCLE_MAKERS = setOf("google", "samsung", "xiaomi", "redmi", "poco")
+    }
+}
+
 /** The lines of the home screen's column, in the user's order. */
 enum class HomeBlock(val label: String, val glyph: String) {
     CLOCK("Clock", "clock"),
@@ -295,6 +315,7 @@ data class Prefs(
     val weatherApp: String = "",
     val notifStyle: NotifStyle = NotifStyle.SUMMARY,
     val theme: HomeTheme = HomeTheme.ORIGINAL,
+    val settingsStyle: SettingsStyle = SettingsStyle.AUTO,
     val hideStatusBar: Boolean = true,
     val cutoutMode: CutoutMode = CutoutMode.AUTO,
     /** Swipe left / right on the home screen (up is the drawer, down the notifications). */
