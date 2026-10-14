@@ -4,12 +4,17 @@ import android.content.Intent
 import android.provider.Settings
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -25,20 +30,18 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -784,74 +787,100 @@ private fun FavoritesRail(prefs: Prefs, modifier: Modifier) {
     ) {
         val count = favorites.size.coerceAtLeast(1)
         val slot = (maxHeight / count).coerceIn(iconSize + 16.dp, iconSize * 2.4f)
-        val slotPx = with(LocalDensity.current) { slot.toPx() }
-        var order by remember(favorites) { mutableStateOf(favorites) }
+        val slotPx by rememberUpdatedState(with(LocalDensity.current) { slot.toPx() })
+        // The pointer handlers outlive recompositions, so they read the stored
+        // favourites through this, never a copy taken when they were set up.
+        val stored by rememberUpdatedState(favorites)
+        // The order while a drag is going on (and until the store catches up after it).
+        var dragOrder by remember { mutableStateOf<List<AppKey>?>(null) }
         var dragging by remember { mutableStateOf<AppKey?>(null) }
         var offset by remember { mutableFloatStateOf(0f) }
         var moved by remember { mutableStateOf(false) }
         var held by remember { mutableStateOf(false) }
+        LaunchedEffect(favorites) { if (dragging == null) dragOrder = null }
+        val order = dragOrder ?: favorites
         val fits = slot * favorites.size <= maxHeight
-        Column(
-            Modifier.fillMaxWidth().then(if (fits) Modifier.fillMaxHeight() else Modifier.verticalScroll(rememberScrollState(), enabled = dragging == null)),
+        val listState = rememberLazyListState()
+        val scope = rememberCoroutineScope()
+        // A lazy list keeps its first visible item in place; when that item is the one
+        // being swapped, hold the scroll where it was instead of following it.
+        fun swap(list: List<AppKey>, i: Int, j: Int): List<AppKey> {
+            val first = listState.firstVisibleItemIndex
+            if (i == first || j == first) {
+                val off = listState.firstVisibleItemScrollOffset
+                scope.launch { listState.scrollToItem(first, off) }
+            }
+            return list.toMutableList().apply { add(j, removeAt(i)) }
+        }
+        LazyColumn(
+            Modifier.fillMaxWidth().fillMaxHeight(),
+            state = listState,
             verticalArrangement = if (fits) Arrangement.Center else Arrangement.Top,
+            userScrollEnabled = !fits && dragging == null,
         ) {
-            order.forEach { k ->
-                key(k) {
-                    val isDragged = dragging == k
-                    Box(
-                        Modifier
-                            .fillMaxWidth()
-                            .height(slot)
-                            .zIndex(if (isDragged) 1f else 0f)
-                            .graphicsLayer {
-                                translationY = if (isDragged) offset else 0f
-                                val s = if (isDragged) 1.18f else 1f
-                                scaleX = s; scaleY = s
-                            }
-                            .pointerInput(k) {
-                                detectTapGestures(
-                                    onPress = { held = false },
-                                    onTap = { if (!held) vm.launch(k) },
-                                )
-                            }
-                            .pointerInput(k) {
-                                detectDragGesturesAfterLongPress(
-                                    onDragStart = {
-                                        held = true
-                                        dragging = k
-                                        offset = 0f
-                                        moved = false
-                                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                                    },
-                                    onDrag = { change, amount ->
-                                        change.consume()
-                                        offset += amount.y
-                                        if (kotlin.math.abs(offset) > 8f) moved = true
-                                        val i = order.indexOf(k)
-                                        if (offset > slotPx / 2 && i < order.lastIndex) {
-                                            order = order.toMutableList().apply { add(i + 1, removeAt(i)) }
-                                            offset -= slotPx
-                                        } else if (offset < -slotPx / 2 && i > 0) {
-                                            order = order.toMutableList().apply { add(i - 1, removeAt(i)) }
-                                            offset += slotPx
-                                        }
-                                    },
-                                    onDragEnd = {
-                                        dragging = null
-                                        offset = 0f
-                                        if (moved) vm.setFavorites(order) else vm.sheetFor = k
-                                    },
-                                    onDragCancel = {
-                                        dragging = null
-                                        offset = 0f
-                                        order = favorites
-                                    },
-                                )
-                            },
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        RailIcon(k, iconSize)
-                    }
+            items(order, key = { it.encode() }) { k ->
+                val isDragged = dragging == k
+                Box(
+                    Modifier
+                        .then(if (isDragged) Modifier else Modifier.animateItem(fadeInSpec = null, fadeOutSpec = null, placementSpec = spring(stiffness = Spring.StiffnessMediumLow)))
+                        .fillMaxWidth()
+                        .height(slot)
+                        .zIndex(if (isDragged) 1f else 0f)
+                        .graphicsLayer {
+                            translationY = if (isDragged) offset else 0f
+                            val s = if (isDragged) 1.18f else 1f
+                            scaleX = s; scaleY = s
+                        }
+                        .pointerInput(k) {
+                            detectTapGestures(
+                                onPress = { held = false },
+                                onTap = { if (!held) vm.launch(k) },
+                            )
+                        }
+                        .pointerInput(k) {
+                            detectDragGesturesAfterLongPress(
+                                onDragStart = {
+                                    held = true
+                                    dragging = k
+                                    dragOrder = stored
+                                    offset = 0f
+                                    moved = false
+                                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                                },
+                                onDrag = { change, amount ->
+                                    change.consume()
+                                    val list = dragOrder ?: return@detectDragGesturesAfterLongPress
+                                    offset += amount.y
+                                    if (kotlin.math.abs(offset) > 8f) moved = true
+                                    val i = list.indexOf(k)
+                                    if (offset > slotPx / 2 && i in 0 until list.lastIndex) {
+                                        dragOrder = swap(list, i, i + 1)
+                                        offset -= slotPx
+                                    } else if (offset < -slotPx / 2 && i > 0) {
+                                        dragOrder = swap(list, i, i - 1)
+                                        offset += slotPx
+                                    }
+                                },
+                                onDragEnd = {
+                                    val list = dragOrder
+                                    dragging = null
+                                    offset = 0f
+                                    if (moved && list != null && list != stored) vm.setFavorites(list)
+                                    else {
+                                        dragOrder = null
+                                        if (!moved) vm.sheetFor = k
+                                    }
+                                },
+                                onDragCancel = {
+                                    dragging = null
+                                    offset = 0f
+                                    dragOrder = null
+                                },
+                            )
+                        },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    RailIcon(k, iconSize)
                 }
             }
         }
