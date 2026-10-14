@@ -160,6 +160,17 @@ enum class SettingsStyle(val label: String, val summary: String) {
     }
 }
 
+/** How apps from the work profile stand apart from their personal twins. */
+enum class WorkMark(val label: String, val summary: String) {
+    DOT("Dot on the icon", "A small dot at the icon's corner"),
+    ASTERISK("Asterisk after the name", "Chrome*, in the drawer and the app's menu"),
+    BOTH("Both", "Dot on the icon and asterisk after the name"),
+    ;
+
+    val dot get() = this != ASTERISK
+    val star get() = this != DOT
+}
+
 /** The lines of the home screen's column, in the user's order. */
 enum class HomeBlock(val label: String, val glyph: String) {
     CLOCK("Clock", "clock"),
@@ -316,6 +327,7 @@ data class Prefs(
     val notifStyle: NotifStyle = NotifStyle.SUMMARY,
     val theme: HomeTheme = HomeTheme.ORIGINAL,
     val settingsStyle: SettingsStyle = SettingsStyle.AUTO,
+    val workMark: WorkMark = WorkMark.DOT,
     val hideStatusBar: Boolean = true,
     val cutoutMode: CutoutMode = CutoutMode.AUTO,
     /** Swipe left / right on the home screen (up is the drawer, down the notifications). */

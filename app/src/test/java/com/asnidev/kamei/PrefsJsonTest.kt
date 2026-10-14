@@ -11,6 +11,7 @@ import com.asnidev.kamei.data.Place
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.PrefsJson
 import com.asnidev.kamei.data.SettingsStyle
+import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.lang.DisplayLang
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -35,6 +36,7 @@ class PrefsJsonTest {
             place = Place("Rīga, Latvia", 56.95, 24.11),
             seeded = true,
             settingsStyle = SettingsStyle.PLAIN,
+            workMark = WorkMark.BOTH,
         )
         assertEquals(p, PrefsJson.read(PrefsJson.write(p)))
     }

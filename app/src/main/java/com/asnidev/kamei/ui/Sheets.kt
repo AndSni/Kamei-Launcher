@@ -54,11 +54,12 @@ fun AppSheet(key: AppKey) {
     ModalBottomSheet(onDismissRequest = { vm.sheetFor = null }, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)) {
         Column(Modifier.navigationBarsPadding().padding(bottom = 12.dp)) {
             Row(Modifier.padding(horizontal = 24.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                val work = vm.repo.isWork(key)
                 AppIcon(key, 44.dp, tint = MaterialTheme.colorScheme.onSurface)
                 Spacer(Modifier.width(18.dp))
                 Column {
-                    Text(vm.label(key), style = MaterialTheme.typography.titleLarge)
-                    Text(key.pkg, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(vm.label(key) + if (work && prefs.workMark.star) "*" else "", style = MaterialTheme.typography.titleLarge)
+                    Text(if (work) "Work profile · ${key.pkg}" else key.pkg, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
             Spacer(Modifier.height(8.dp))

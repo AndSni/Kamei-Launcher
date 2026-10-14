@@ -457,7 +457,20 @@ private const val MAX_ROWS = 5
 @Composable
 fun RailIcon(key: AppKey, size: Dp) {
     val look = LocalLook.current
-    if (look.cards) AppIcon(key, size + 10.dp, tonal = Tonal(look.iconCircle, look.onIconCircle)) else AppIcon(key, size)
+    val vm = LocalVm.current
+    val prefs by vm.prefs.collectAsState()
+    Box {
+        if (look.cards) AppIcon(key, size + 10.dp, tonal = Tonal(look.iconCircle, look.onIconCircle)) else AppIcon(key, size)
+        if (prefs.workMark.dot && vm.repo.isWork(key)) WorkDot(size, Modifier.align(Alignment.TopEnd))
+    }
+}
+
+/** The work-profile mark: an accent dot, ringed in the background colour so it reads on any icon. */
+@Composable
+fun WorkDot(iconSize: Dp, modifier: Modifier = Modifier) {
+    val look = LocalLook.current
+    val d = (iconSize * 0.26f).coerceAtLeast(8.dp)
+    Box(modifier.size(d).background(look.background, CircleShape).padding(d * 0.16f).background(look.accent, CircleShape))
 }
 
 /** "//" in the phone's accent colour, then [text] as it is: Original follows the colour scheme through its marks. */

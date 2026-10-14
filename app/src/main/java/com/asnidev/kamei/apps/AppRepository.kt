@@ -34,6 +34,10 @@ class AppRepository(private val context: Context, scope: CoroutineScope) {
 
     private val launcherApps = context.getSystemService(LauncherApps::class.java)
     private val userManager = context.getSystemService(UserManager::class.java)
+    private val mySerial = userManager.getSerialNumberForUser(Process.myUserHandle())
+
+    /** Whether [key] belongs to another profile than ours (the work profile, usually). */
+    fun isWork(key: AppKey): Boolean = key.user != mySerial
 
     private val _apps = MutableStateFlow<List<AppEntry>>(emptyList())
     val apps: StateFlow<List<AppEntry>> = _apps

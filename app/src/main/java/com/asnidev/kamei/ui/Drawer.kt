@@ -82,8 +82,11 @@ fun Drawer(prefs: Prefs) {
     var query by rememberSaveable { mutableStateOf("") }
     // Names as the drawer writes them: as they are, or sounded out in the home screen's script.
     val phonetic = prefs.phoneticLabels && Transcribe.supports(prefs.displayLang)
-    val names = remember(apps, phonetic, prefs.displayLang) {
-        apps.associate { it.key to if (phonetic) Transcribe.label(it.label, prefs.displayLang) else it.label }
+    val names = remember(apps, phonetic, prefs.displayLang, prefs.workMark) {
+        apps.associate {
+            val name = if (phonetic) Transcribe.label(it.label, prefs.displayLang) else it.label
+            it.key to if (it.isWork && prefs.workMark.star) "$name*" else name
+        }
     }
     val shown = remember(apps, query, names) {
         val q = query.trim()

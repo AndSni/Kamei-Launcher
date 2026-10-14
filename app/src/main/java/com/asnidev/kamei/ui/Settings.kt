@@ -82,6 +82,7 @@ import com.asnidev.kamei.data.ReadingHint
 import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.data.WeatherGlyphs
 import com.asnidev.kamei.data.WeatherSource
+import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.data.dayFadeAt
 import com.asnidev.kamei.data.longFade
 import com.asnidev.kamei.lang.DisplayLang
@@ -693,6 +694,11 @@ private fun DrawerPage(prefs: Prefs) {
             }
         }
         row { Item("Hidden apps", "${prefs.hidden.size} hidden", "eye-off") { vm.settings += "hidden" } }
+        row {
+            ChoiceItem("Work profile apps", WorkMark.entries, prefs.workMark, { it.label }, "briefcase", describe = { it.summary }) { m ->
+                vm.update { it.copy(workMark = m) }
+            }
+        }
     }
     Group("Favourites") {
         row {
