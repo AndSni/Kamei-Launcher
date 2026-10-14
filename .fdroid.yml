@@ -22,7 +22,7 @@ Binaries:
 Builds:
   - versionName: 0.1.0
     versionCode: 1
-    commit: PINNED_AFTER_TAG
+    commit: 9216c14661f63b68fbf9666bceb3b63c5418b5f7
     # The Gradle root is the repo root; F-Droid looks for the output APK under
     # <subdir>/build/outputs/apk, so this must be the app module itself.
     subdir: app
