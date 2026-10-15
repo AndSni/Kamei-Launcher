@@ -3,65 +3,28 @@ package com.asnidev.kamei.lang
 import java.util.concurrent.ConcurrentHashMap
 
 /**
- * Writes Latin app names the way they sound, in the home screen's own script:
- * "YouTube" → ユーチューブ (Japanese), 유튜브 (Korean), Γιουτιουμπ (Greek).
+ * Writes Latin app names in katakana, the way they sound: "YouTube" → ユーチューブ.
  * Known words come from a dictionary of their usual spelling; the rest go
- * through English sound rules into one sound sequence, which each script then
- * writes by its own conventions. Anything not in Latin letters stays as it is.
+ * through English sound rules into one sound sequence, which kana then writes.
+ * Anything not in Latin letters stays as it is.
  */
 object Transcribe {
 
-    /** Whether [lang] has a phonetic script to write names in (Chinese doesn't, in everyday use). */
-    fun supports(lang: DisplayLang) = lang != DisplayLang.ZH
-
     private val cache = ConcurrentHashMap<String, String>()
 
-    fun label(text: String, lang: DisplayLang): String {
-        if (!supports(lang)) return text
-        return cache.getOrPut("${lang.tag}|$text") {
-            val out = WORD.replace(text) { m -> word(m.value, lang) }
-            when (lang) {
-                // Words one after another read as one name in Japanese: the middle dot keeps them apart.
-                DisplayLang.JA -> out.replace(Regex("(?<=[ァ-ヿ]) (?=[ァ-ヿ])"), "・")
-                // Greek: a capital at the start of each name, ς only where a word really ends.
-                DisplayLang.EL -> out.split(' ').joinToString(" ") { it.replaceFirstChar(Char::uppercaseChar) }
-                    .replace(Regex("σ(?!\\p{L})"), "ς")
-                else -> out
-            }
-        }
+    fun label(text: String): String = cache.getOrPut(text) {
+        // Words one after another read as one name in Japanese: the middle dot keeps them apart.
+        WORD.replace(text) { m -> word(m.value) }.replace(Regex("(?<=[ァ-ヿ]) (?=[ァ-ヿ])"), "・")
     }
 
     /** Latin words, split where CamelCase starts a new one ("YouTube" → You, Tube). */
     private val WORD = Regex("[A-Z]{2,}(?![a-z])|[A-Z]?[a-z]+|[A-Z]")
 
-    private fun word(w: String, lang: DisplayLang): String {
+    private fun word(w: String): String {
         // Short all-capital words are read letter by letter: "TV", "VLC".
-        if (w.length in 1..4 && w.all { it.isUpperCase() }) return letters(w, lang)
+        if (w.length in 1..4 && w.all { it.isUpperCase() }) return w.map { JA_LETTERS[it - 'A'] }.joinToString("")
         val lower = w.lowercase()
-        when (lang) {
-            DisplayLang.JA -> JA_WORDS[lower]
-            DisplayLang.KO -> KO_WORDS[lower]
-            DisplayLang.EL -> EL_WORDS[lower]?.replace('ς', 'σ')
-            DisplayLang.ZH -> null
-        }?.let { return it }
-        val sounds = Sounds.of(english(lower))
-        return when (lang) {
-            DisplayLang.JA -> Kana.write(sounds)
-            DisplayLang.KO -> Hangul.write(sounds)
-            DisplayLang.EL -> Greek.write(sounds)
-            DisplayLang.ZH -> w
-        }
-    }
-
-    private fun letters(w: String, lang: DisplayLang): String {
-        val names = when (lang) {
-            DisplayLang.JA -> JA_LETTERS
-            DisplayLang.KO -> KO_LETTERS
-            DisplayLang.EL -> EL_LETTERS
-            DisplayLang.ZH -> return w
-        }
-        val out = w.map { names[it - 'A'] }.joinToString("")
-        return if (lang == DisplayLang.EL) out.lowercase() else out
+        return JA_WORDS[lower] ?: Kana.write(Sounds.of(english(lower)))
     }
 
     /** Common words English spells nothing like it says. */
@@ -92,7 +55,7 @@ object Transcribe {
             val long = when (m.groupValues[1]) { "a" -> "EI"; "e" -> "II"; "i" -> "AI"; "o" -> "OO"; else -> "YUU" }
             long + m.groupValues[2]
         }
-        // "-le" is a lone l: ル in Japanese, ㄹ under the syllable in Korean (킨들), λ in Greek.
+        // "-le" is a lone l: ル (キンドル).
         s = s.replace(Regex("([^$v])le$"), "$1l")
         // y between consonants, before a syllable: hyper, type.
         s = s.replace(Regex("(?<=[^$v])y(?=[^$v][$v])"), "AI")
@@ -120,8 +83,8 @@ object Transcribe {
 
     // ---- the sound sequence ----
 
-    /** One spoken syllable: [c] is "" for none, [v] a/i/u/e/o/ə, [added] for a vowel only there to carry a lone consonant. */
-    data class Syl(val c: String, val v: Char, val long: Boolean = false, val added: Boolean = false, val held: Boolean = false)
+    /** One spoken syllable: [c] is "" for none, [v] a/i/u/e/o/ə; [held] doubles the consonant (ッ). */
+    data class Syl(val c: String, val v: Char, val long: Boolean = false, val held: Boolean = false)
 
     /** A syllable, or a lone n (ン). */
     sealed interface Sound {
@@ -172,7 +135,7 @@ object Transcribe {
                         (unit == "ch" || unit == "j") && atEnd -> 'i'
                         else -> 'u'
                     }
-                    out += Sound.S(Syl(unit, v, added = true, held = held))
+                    out += Sound.S(Syl(unit, v, held = held))
                     held = false
                     i = next
                 }
@@ -235,136 +198,11 @@ object Transcribe {
             .replace(Regex("([オコゴソゾトドノホボポモロォ])ウ"), "$1ー")
     }
 
-    // ---- Korean hangul ----
-
-    private object Hangul {
-        // Initial consonant indexes in the Unicode hangul block.
-        private val INITIAL = mapOf(
-            "" to 11, "k" to 15, "g" to 0, "s" to 9, "z" to 12, "t" to 16, "d" to 3, "n" to 2, "h" to 18, "b" to 7,
-            "p" to 17, "m" to 6, "r" to 5, "l" to 5, "f" to 17, "v" to 7, "j" to 12, "ch" to 14, "sh" to 9, "ts" to 14, "y" to 11, "w" to 11,
-        )
-        // Final consonants Korean writes at the bottom of a syllable: 앱, 크롬, 북, 챗.
-        private val FINAL = mapOf("k" to 1, "g" to 1, "n" to 4, "l" to 8, "r" to 8, "m" to 16, "p" to 17, "b" to 17, "t" to 19, "d" to 19)
-        private const val NG = 21
-
-        private fun vowel(c: String, v: Char, added: Boolean): Int {
-            val glide = c.length == 2 && c.endsWith("y") || c == "y" || c == "sh"
-            if (added) return 18 // ㅡ, the vowel Korean adds to a lone consonant
-            if (c == "w") return when (v) { 'a', 'ə' -> 9; 'i' -> 16; 'e' -> 15; 'o' -> 14; else -> 13 }
-            return when (v) {
-                'a' -> if (glide) 2 else 0
-                'ə' -> if (glide) 6 else 4 // the "er" of keeper, monitor: 퍼, 터
-                'e' -> if (glide) 7 else 5
-                'o' -> if (glide) 12 else 8
-                'u' -> if (glide) 17 else 13
-                else -> 20
-            }
-        }
-
-        private fun block(initial: Int, vowel: Int) = (0xAC00 + (initial * 21 + vowel) * 28).toChar()
-
-        fun write(sounds: List<Sound>): String {
-            val out = StringBuilder()
-            var open = false // whether the last block can still take a final consonant
-            var lastLong = false
-            var i = 0
-            while (i < sounds.size) {
-                val s = sounds[i]
-                val next = sounds.getOrNull(i + 1)
-                when (s) {
-                    Sound.N -> {
-                        // "ng" (settings, king) is ㅇ under the block; plain n is ㄴ.
-                        val ng = next is Sound.S && next.syl.added && next.syl.c == "g"
-                        if (open) withFinal(out, if (ng) NG else 4) else out.append(if (ng) "응" else "ㄴ")
-                        open = false
-                        if (ng) i++
-                    }
-                    is Sound.S -> {
-                        val syl = s.syl
-                        val base = if (syl.c.length == 2 && syl.c.endsWith("y")) syl.c.dropLast(1) else syl.c
-                        if (syl.added && open && !lastLong && base in FINAL) {
-                            withFinal(out, FINAL.getValue(base))
-                            open = false
-                        } else {
-                            out.append(block(INITIAL[base] ?: 11, vowel(syl.c, syl.v, syl.added)))
-                            open = true
-                            lastLong = syl.long
-                        }
-                    }
-                }
-                i++
-            }
-            return out.toString()
-        }
-
-        private fun withFinal(out: StringBuilder, final: Int) {
-            val ch = out.last()
-            if (ch.code !in 0xAC00..0xD7A3 || (ch.code - 0xAC00) % 28 != 0) return
-            out.setCharAt(out.lastIndex, (ch.code + final).toChar())
-        }
-    }
-
-    // ---- Greek letters ----
-
-    private object Greek {
-        private val CONS = mapOf(
-            "" to "", "k" to "κ", "g" to "γκ", "s" to "σ", "z" to "ζ", "t" to "τ", "d" to "ντ", "n" to "ν", "h" to "χ",
-            "b" to "μπ", "p" to "π", "m" to "μ", "y" to "γι", "r" to "ρ", "l" to "λ", "w" to "ου", "f" to "φ", "v" to "β",
-            "j" to "τζ", "ch" to "τσ", "sh" to "σ", "ts" to "τσ",
-        )
-        private val VOW = mapOf('a' to "α", 'i' to "ι", 'u' to "ου", 'e' to "ε", 'o' to "ο", 'ə' to "α")
-
-        fun write(sounds: List<Sound>): String {
-            val raw = buildString {
-                for (s in sounds) when (s) {
-                    Sound.N -> append('ν')
-                    is Sound.S -> {
-                        val c = s.syl.c
-                        if (c.length == 2 && c.endsWith("y")) append(CONS[c.dropLast(1)] ?: "").append("ι") else append(CONS[c] ?: c)
-                        // Greek writes consonant clusters as they are: no helper vowels. An i right after
-                        // a, e or o is ϊ, or "αι" would read as e (Ραϊτ, not Ραιτ).
-                        if (!s.syl.added) append(if (s.syl.v == 'i' && c.isEmpty() && length > 0 && last() in "αεο") "ϊ" else VOW[s.syl.v])
-                    }
-                }
-            }
-            return raw.replace("νντ", "ντ").replace("μμπ", "μπ")
-        }
-    }
-
     // ---- dictionaries ----
 
     private val JA_LETTERS = listOf(
         "エー", "ビー", "シー", "ディー", "イー", "エフ", "ジー", "エイチ", "アイ", "ジェー", "ケー", "エル", "エム",
         "エヌ", "オー", "ピー", "キュー", "アール", "エス", "ティー", "ユー", "ブイ", "ダブリュー", "エックス", "ワイ", "ゼット",
-    )
-    private val KO_LETTERS = listOf(
-        "에이", "비", "씨", "디", "이", "에프", "지", "에이치", "아이", "제이", "케이", "엘", "엠",
-        "엔", "오", "피", "큐", "아르", "에스", "티", "유", "브이", "더블유", "엑스", "와이", "제트",
-    )
-    private val EL_LETTERS = listOf(
-        "Έι", "Μπι", "Σι", "Ντι", "Ι", "Εφ", "Τζι", "Έιτς", "Άι", "Τζέι", "Κέι", "Ελ", "Εμ",
-        "Εν", "Όου", "Πι", "Κιου", "Αρ", "Ες", "Τι", "Γιου", "Βι", "Ντάμπλιου", "Εξ", "Γουάι", "Ζεντ",
-    )
-
-    /** The usual hangul for the best-known app words (the rules cover the rest). */
-    private val KO_WORDS: Map<String, String> = mapOf(
-        "you" to "유", "tube" to "튜브", "google" to "구글", "chrome" to "크롬", "gmail" to "지메일", "spotify" to "스포티파이",
-        "whats" to "왓츠", "app" to "앱", "telegram" to "텔레그램", "instagram" to "인스타그램", "facebook" to "페이스북",
-        "netflix" to "넷플릭스", "maps" to "맵", "map" to "맵", "camera" to "카메라", "calendar" to "캘린더", "settings" to "세팅",
-        "phone" to "폰", "messages" to "메시지", "message" to "메시지", "clock" to "클록", "contacts" to "콘택트", "files" to "파일",
-        "file" to "파일", "drive" to "드라이브", "photos" to "포토", "photo" to "포토", "music" to "뮤직", "play" to "플레이",
-        "store" to "스토어", "one" to "원", "bit" to "비트", "gemini" to "제미나이", "safety" to "세이프티", "glasses" to "글라스",
-        "keep" to "킵", "chat" to "챗", "mail" to "메일", "news" to "뉴스", "weather" to "웨더", "notes" to "노트", "gallery" to "갤러리",
-        "browser" to "브라우저", "bank" to "뱅크", "pay" to "페이", "home" to "홈", "launcher" to "런처", "zoom" to "줌",
-        "discord" to "디스코드", "firefox" to "파이어폭스", "termux" to "터먹스", "wikipedia" to "위키피디아", "himitsu" to "히미츠", "kamei" to "카메이",
-    )
-
-    /** The usual Greek spelling of the best-known app words. */
-    private val EL_WORDS: Map<String, String> = mapOf(
-        "you" to "γιου", "tube" to "τιουμπ", "google" to "γκουγκλ", "chrome" to "κρομ", "gmail" to "τζιμέιλ", "spotify" to "σποτιφάι",
-        "whats" to "γουότς", "app" to "απ", "facebook" to "φέισμπουκ", "instagram" to "ινσταγκραμ", "phone" to "φόουν",
-        "maps" to "μαπς", "camera" to "κάμερα", "settings" to "σέτινγκς", "music" to "μιούζικ", "play" to "πλέι", "store" to "στορ",
-        "one" to "γουάν", "bit" to "μπιτ", "himitsu" to "χιμίτσου", "kamei" to "καμέι",
     )
 
     /** The usual katakana for words app names are made of. */

@@ -13,7 +13,6 @@ import com.asnidev.kamei.data.PrefsJson
 import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.data.TokyoAccent
 import com.asnidev.kamei.data.WorkMark
-import com.asnidev.kamei.lang.DisplayLang
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -30,7 +29,6 @@ class PrefsJsonTest {
             renames = mapOf(b to "Bee"),
             customIcons = mapOf(a to IconRef.Glyph("cat").encode()),
             iconStyle = IconStyle.LINE,
-            displayLang = DisplayLang.KO,
             translateTo = "lv",
             textFont = FontChoice.KLEE,
             weatherOn = true,

@@ -24,7 +24,6 @@ object PrefsJson {
         put("drawerColumns", p.drawerColumns)
         put("drawerKeyboard", p.drawerKeyboard)
         put("phoneticLabels", p.phoneticLabels)
-        put("displayLang", p.displayLang.name)
         put("translateTo", p.translateTo)
         put("holdMillis", p.holdMillis)
         put("textFont", p.textFont.name)
@@ -102,7 +101,6 @@ object PrefsJson {
             drawerColumns = o.optInt("drawerColumns", d.drawerColumns).coerceIn(Prefs.DRAWER_COLUMNS),
             drawerKeyboard = o.optBoolean("drawerKeyboard", d.drawerKeyboard),
             phoneticLabels = o.optBoolean("phoneticLabels", d.phoneticLabels),
-            displayLang = enumOr(o.optString("displayLang"), d.displayLang),
             translateTo = o.optString("translateTo", d.translateTo).ifBlank { d.translateTo },
             holdMillis = o.optInt("holdMillis", d.holdMillis).takeIf { it in Prefs.HOLD_MILLIS } ?: d.holdMillis,
             textFont = enumOr(o.optString("textFont"), d.textFont),

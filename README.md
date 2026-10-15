@@ -2,7 +2,7 @@
 
 **A home screen only you can read: written in Japanese, with apps behind symbols only you know.**
 
-Kamei (仮名, "pseudonym", also read "kana") writes everything on your home screen in Japanese (or Chinese, Korean or Greek), gives each app an unrelated symbol that only hints at it, and can spell app names out in katakana. Hold any line for three seconds to see it in your own language, with its reading. Over time the translations fade, and you're reading Japanese.
+Kamei (仮名, "pseudonym", also read "kana") writes everything on your home screen in Japanese, gives each app an unrelated symbol that only hints at it, and can spell app names out in katakana. Hold any line for three seconds to see it in your own language, with its reading. Over time the translations fade, and you're reading Japanese.
 
 <p>
 <img src="metadata/en-US/images/phoneScreenshots/01_original.png" width="200" alt="Kamei screenshot 1">
@@ -13,8 +13,8 @@ Kamei (仮名, "pseudonym", also read "kana") writes everything on your home scr
 
 ## Features
 
-- **Private by design.** Apps get unexpected glyphs that hint at them sideways (music → a feather, bank → an anchor), from Tabler's 4,900 line icons; app names can be written as they sound in katakana, hangul or Greek; notifications show as a short summary until you hold them.
-- **Learn as you go.** Small translations under the date and weather, readings in kana or rōmaji, a word of the day, and translations that fade over weeks or every morning; all from a dictionary inside the app, in 16 languages.
+- **Private by design.** Apps get unexpected glyphs that hint at them sideways (music → a feather, bank → an anchor), from Tabler's 4,900 line icons; app names can be written as they sound in katakana; notifications show as a short summary until you hold them.
+- **Learn as you go.** Small translations under the date and weather, readings in kana or rōmaji, a word of the day, and translations that fade over weeks or every morning; all from a dictionary inside the app, in 15 languages.
 - **Weather that matters.** Yr (MET Norway) with radar nowcast, or Open-Meteo: the line turns bluer as rain comes closer and says when it starts or stops. Tap it to open Yr or Drops.
 - **Calm warnings.** Battery under 25% turns the line orange, then red, blinking at 5%; weak signal and no service (圏外) the same way.
 - **Three themes.** Original (white outlines on black), Material (rounded cards in your wallpaper colours) and Tokyo (paper, ink and tag chips), all following the phone's colours.

@@ -159,7 +159,7 @@ fun ForecastSheet(prefs: Prefs) {
     val hhmm = remember { DateTimeFormatter.ofPattern("HH:mm") }
     ModalBottomSheet(onDismissRequest = { vm.forecastOpen = false }) {
         Column(Modifier.navigationBarsPadding().padding(horizontal = 24.dp).padding(bottom = 16.dp)) {
-            Text(Phrases.say(Phrases.effectiveTarget(prefs.displayLang, prefs.translateTo), com.asnidev.kamei.lang.Phrase.WEATHER), style = MaterialTheme.typography.titleLarge)
+            Text(Phrases.say(Phrases.effectiveTarget(prefs.translateTo), com.asnidev.kamei.lang.Phrase.WEATHER), style = MaterialTheme.typography.titleLarge)
             Spacer(Modifier.height(12.dp))
             if (f == null) {
                 Text("No forecast yet.", color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -173,7 +173,7 @@ fun ForecastSheet(prefs: Prefs) {
                         val temp = if (prefs.fahrenheit) "${(h.tempC * 9 / 5 + 32).roundToInt()}°" else "${h.tempC.roundToInt()}°"
                         Text(temp, modifier = Modifier.width(56.dp))
                         Text(
-                            Phrases.say(Phrases.effectiveTarget(prefs.displayLang, prefs.translateTo), conditionPhrase(h.condition)),
+                            Phrases.say(Phrases.effectiveTarget(prefs.translateTo), conditionPhrase(h.condition)),
                             modifier = Modifier.weight(1f),
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )

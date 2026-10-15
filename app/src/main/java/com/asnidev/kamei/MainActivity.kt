@@ -34,9 +34,9 @@ import com.asnidev.kamei.data.HomeTheme
 import com.asnidev.kamei.data.IconStyle
 import com.asnidev.kamei.data.InfoAlign
 import com.asnidev.kamei.data.SettingsStyle
+import com.asnidev.kamei.data.TokyoAccent
 import com.asnidev.kamei.data.LocationMode
 import com.asnidev.kamei.data.Place
-import com.asnidev.kamei.lang.DisplayLang
 import com.asnidev.kamei.system.NotifListener
 import com.asnidev.kamei.ui.AppSheet
 import com.asnidev.kamei.ui.Drawer
@@ -92,18 +92,15 @@ class MainActivity : ComponentActivity() {
 
     /**
      * Debug builds only, for checking looks over adb: `--es icons line|obscure|…`,
-     * `--es lang ja|zh|ko|el`, `--ez drawer true`, `--es settings <page>`,
+     * `--ez drawer true`, `--es settings <page>`,
      * `--es place "56.95,24.11,Rīga"` (weather at a fixed place), `--es glyphs hints|mixed|…`,
      * `--ez wallpaper true|false`, `--ez searchnow true|false`, `--es align top|middle|bottom`,
-     * `--ez phonetic true|false`, `--es theme original|material|tokyo`. These are saved. Not saved: `--es fakecutout "l,t,r,b"` (or "none").
+     * `--ez phonetic true|false`, `--es theme original|material|tokyo`, `--es accent auto|custom|battery|off`, `--es settingsstyle auto|pixel|plain`. These are saved. Not saved: `--es fakecutout "l,t,r,b"` (or "none").
      */
     private fun debugExtras(intent: Intent?) {
         if (!BuildConfig.DEBUG || intent == null) return
         intent.getStringExtra("icons")?.let { name ->
             IconStyle.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { s -> vm.update { it.copy(iconStyle = s) } }
-        }
-        intent.getStringExtra("lang")?.let { tag ->
-            DisplayLang.entries.firstOrNull { it.tag == tag }?.let { l -> vm.update { it.copy(displayLang = l) } }
         }
         intent.getStringExtra("glyphs")?.let { name ->
             GlyphSet.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { g -> vm.update { it.copy(glyphSet = g) } }
@@ -120,6 +117,9 @@ class MainActivity : ComponentActivity() {
         }
         intent.getStringExtra("theme")?.let { name ->
             HomeTheme.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { t -> vm.update { it.copy(theme = t) } }
+        }
+        intent.getStringExtra("accent")?.let { name ->
+            TokyoAccent.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { a -> vm.update { it.copy(tokyoAccent = a) } }
         }
         intent.getStringExtra("settingsstyle")?.let { name ->
             SettingsStyle.entries.firstOrNull { it.name.equals(name, ignoreCase = true) }?.let { st -> vm.update { it.copy(settingsStyle = st) } }

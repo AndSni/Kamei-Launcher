@@ -1,6 +1,5 @@
 package com.asnidev.kamei.data
 
-import com.asnidev.kamei.lang.DisplayLang
 
 /** One launchable activity in one user profile ([user] is the profile's serial number). */
 data class AppKey(val pkg: String, val cls: String, val user: Long) {
@@ -325,7 +324,6 @@ data class Prefs(
     val phoneticLabels: Boolean = false,
     /** Opening the drawer puts the cursor in search with the keyboard up. */
     val drawerKeyboard: Boolean = false,
-    val displayLang: DisplayLang = DisplayLang.JA,
     /** Language code for the long-hold popup, or "system". */
     val translateTo: String = "system",
     val holdMillis: Int = 3000,

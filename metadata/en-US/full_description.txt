@@ -1,8 +1,8 @@
-Kamei (仮名, "pseudonym", also read "kana") writes everything on your home screen in Japanese (or Chinese, Korean or Greek), gives each app an unrelated symbol that only hints at it, and can spell app names out in katakana. Hold any line for three seconds to see it in your own language, with its reading. Over time the translations fade, and you're reading Japanese.
+Kamei (仮名, "pseudonym", also read "kana") writes everything on your home screen in Japanese, gives each app an unrelated symbol that only hints at it, and can spell app names out in katakana. Hold any line for three seconds to see it in your own language, with its reading. Over time the translations fade, and you're reading Japanese.
 
-<b>Private by design</b>: Apps get unexpected glyphs that hint at them sideways (music → a feather, bank → an anchor), from Tabler's 4,900 line icons; app names can be written as they sound in katakana, hangul or Greek; notifications show as a short summary until you hold them.
+<b>Private by design</b>: Apps get unexpected glyphs that hint at them sideways (music → a feather, bank → an anchor), from Tabler's 4,900 line icons; app names can be written as they sound in katakana; notifications show as a short summary until you hold them.
 
-<b>Learn as you go</b>: Small translations under the date and weather, readings in kana or rōmaji, a word of the day, and translations that fade over weeks or every morning; all from a dictionary inside the app, in 16 languages.
+<b>Learn as you go</b>: Small translations under the date and weather, readings in kana or rōmaji, a word of the day, and translations that fade over weeks or every morning; all from a dictionary inside the app, in 15 languages.
 
 <b>Weather that matters</b>: Yr (MET Norway) with radar nowcast, or Open-Meteo: the line turns bluer as rain comes closer and says when it starts or stops. Tap it to open Yr or Drops.
 

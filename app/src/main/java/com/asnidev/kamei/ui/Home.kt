@@ -85,7 +85,6 @@ import com.asnidev.kamei.data.NotifStyle
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.fade
 import com.asnidev.kamei.data.WeatherGlyphs
-import com.asnidev.kamei.lang.DisplayLang
 import com.asnidev.kamei.lang.JaReading
 import com.asnidev.kamei.lang.Vocabulary
 import com.asnidev.kamei.lang.Phrase
@@ -199,8 +198,7 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
     val font = remember(prefs.textFont) { prefs.textFont.family() }
     val face = if (prefs.clockShuffle) FontChoice.daily(now.toLocalDate()) else prefs.clockFont
     val clockFont = remember(face, CustomFonts.clock) { face.family() }
-    val lang = prefs.displayLang
-    val target = Phrases.effectiveTarget(prefs.displayLang, prefs.translateTo)
+    val target = Phrases.effectiveTarget(prefs.translateTo)
     val weather by vm.weather.state.collectAsState()
     val pending by NotifListener.pending.collectAsState()
     val apps by vm.repo.apps.collectAsState()
@@ -254,7 +252,7 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                 vm.translation = Words(
                     clockText(now, prefs.clock24).replace('\n', ':'),
                     "${Phrases.time(target, now)}\n${Phrases.fullDate(target, now)}",
-                    if (lang == DisplayLang.JA) JaReading.time(h, now.minute) else null,
+                    JaReading.time(h, now.minute),
                 )
             }) {
                 CutoutClear(prefs) { ClockFace(now, prefs, clockFont) }
@@ -263,12 +261,12 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
 
             // Weekday and date
             parts[HomeBlock.DATE] = {
-            val dateReading = if (lang == DisplayLang.JA) "${JaReading.weekday(now.dayOfWeek)}\n${JaReading.date(now.monthValue, now.dayOfMonth)}" else null
+            val dateReading = "${JaReading.weekday(now.dayOfWeek)}\n${JaReading.date(now.monthValue, now.dayOfMonth)}"
             HoldBlock(prefs.holdMillis, onTap = shade, onHold = {
-                vm.translation = Words("${Phrases.weekday(lang, now)}\n${Phrases.date(lang, now)}", Phrases.fullDate(target, now), dateReading)
+                vm.translation = Words("${Phrases.weekday(now)}\n${Phrases.date(now)}", Phrases.fullDate(target, now), dateReading)
             }) {
-                Heading(Phrases.weekday(lang, now), pre, big)
-                BasicText(spaced(Phrases.date(lang, now), lang), style = big)
+                Heading(Phrases.weekday(now), pre, big)
+                BasicText(spaced(Phrases.date(now)), style = big)
                 if (learnSome) Learning(dateReading, shortDate(target, now), prefs, learnStyle, look.text, fade)
             }
             }
@@ -306,7 +304,7 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
 
             // Battery and signal warnings
             alerts.forEach { (which, alert, settings) -> parts[which] = {
-                val w = Phrases.words(lang, target, alert.phrase, alert.n)
+                val w = Phrases.words(target, alert.phrase, alert.n)
                 val tint = look.alertTint(alert.heat)
                 val shown by produceState(true, alert.blink) {
                     // Critical: the whole line blinks, on and off each half second.
@@ -328,10 +326,10 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
             if (prefs.wordOfDay) parts[HomeBlock.WORD] = {
                 var extra by remember(now.toLocalDate()) { mutableIntStateOf(0) }
                 val v = Vocabulary.ofDay(now.toLocalDate(), extra)
-                val word = v.word(lang.tag)
-                val rawReading = v.reading(lang.tag)?.takeIf { it != word }
+                val word = v.word("ja")
+                val rawReading = v.reading("ja")?.takeIf { it != word }
                 val reading = rawReading?.let { r ->
-                    if (lang != DisplayLang.JA) r else when (prefs.readingHint) {
+                    when (prefs.readingHint) {
                         ReadingHint.KANA -> r
                         ReadingHint.ROMAJI -> JaReading.romaji(r)
                         ReadingHint.OFF -> null
@@ -339,11 +337,11 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                 }
                 val meaning = v.word(target)
                 HoldBlock(prefs.holdMillis, onTap = { extra++ }, onHold = {
-                    val head = Phrases.words(lang, target, Phrase.WORD_OF_DAY)
+                    val head = Phrases.words(target, Phrase.WORD_OF_DAY)
                     vm.translation = Words(
                         "${head.display}\n$word",
                         "${head.translated}\n$meaning",
-                        if (lang == DisplayLang.JA) "${head.reading}\n${rawReading ?: word}" else rawReading,
+                        "${head.reading}\n${rawReading ?: word}",
                     )
                 }) {
                     Row {
@@ -363,15 +361,15 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
             HoldBlock(prefs.holdMillis, onTap = {
                 if (!vm.notifAccess) SystemActions.open(context, Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)) else shade()
             }, onHold = {
-                val head = Phrases.words(lang, target, Phrase.NOTIFICATIONS)
-                val body = Phrases.words(lang, target, status, total)
+                val head = Phrases.words(target, Phrase.NOTIFICATIONS)
+                val body = Phrases.words(target, status, total)
                 vm.translation = Words("${head.display}\n${body.display}", "${head.translated}\n${body.translated}", head.reading?.let { "$it\n${body.reading}" })
             }) {
-                Heading(Phrases.say(lang.tag, Phrase.NOTIFICATIONS), pre, big)
+                Heading(Phrases.ja(Phrase.NOTIFICATIONS), pre, big)
                 Spacer(Modifier.height(4.dp))
-                BasicText(Phrases.say(lang.tag, status, total), style = small.copy(color = if (total > 0) look.text else look.text.copy(alpha = 0.85f)))
+                BasicText(Phrases.ja(status, total), style = small.copy(color = if (total > 0) look.text else look.text.copy(alpha = 0.85f)))
                 if (learnAll) {
-                    val w = Phrases.words(lang, target, status, total)
+                    val w = Phrases.words(target, status, total)
                     Learning(w.reading, w.translated, prefs, learnStyle, look.text, fade)
                 }
                 if (total > 0 && prefs.notifStyle == NotifStyle.GLYPHS) {
@@ -391,14 +389,14 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                 pending.take(MAX_ROWS).forEach { p ->
                     val key = keyFor(p)
                     val kind = kindPhrase(p.kind)
-                    val summary = Phrases.say(lang.tag, kind) + " · " + Phrases.ago(lang.tag, p.postTime, nowMs)
+                    val summary = Phrases.ja(kind) + " · " + Phrases.ago("ja", p.postTime, nowMs)
                     HoldBlock(prefs.holdMillis, modifier = Modifier.padding(top = 6.dp), onTap = {
                         if (!NotifListener.open(p.key)) shade()
                     }, onHold = {
                         val t = Phrases.resolveTarget(target)
                         val app = key?.let { vm.label(it) } ?: appName(context, p.pkg)
                         val meta = "$app · ${Phrases.say(t, kind)} · ${Phrases.ago(t, p.postTime, nowMs)}"
-                        val reading = if (lang == DisplayLang.JA) "${JaReading.say(kind)} · ${agoReading(p.postTime, nowMs)}" else null
+                        val reading = "${JaReading.say(kind)} · ${agoReading(p.postTime, nowMs)}"
                         vm.translation = Words(summary, listOf(meta, p.title, p.text).filter { it.isNotBlank() }.joinToString("\n\n"), reading)
                     }) {
                         Row(verticalAlignment = Alignment.Top) {
@@ -414,7 +412,7 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                                     BasicText(summary, style = small, maxLines = 1, overflow = TextOverflow.Ellipsis)
                                     if (learnAll) {
                                         val t = Phrases.resolveTarget(target)
-                                        val reading = if (lang == DisplayLang.JA) "${JaReading.say(kind)} · ${agoReading(p.postTime, nowMs)}" else null
+                                        val reading = "${JaReading.say(kind)} · ${agoReading(p.postTime, nowMs)}"
                                         Learning(reading, "${Phrases.say(t, kind)} · ${Phrases.ago(t, p.postTime, nowMs)}", prefs, learnStyle, look.text, fade)
                                     }
                                 }
@@ -422,7 +420,7 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                         }
                     }
                 }
-                if (total > MAX_ROWS) BasicText(Phrases.say(lang.tag, Phrase.N_MORE, total - MAX_ROWS), style = small.copy(color = look.dim), modifier = Modifier.padding(start = 32.dp, top = 2.dp))
+                if (total > MAX_ROWS) BasicText(Phrases.ja(Phrase.N_MORE, total - MAX_ROWS), style = small.copy(color = look.dim), modifier = Modifier.padding(start = 32.dp, top = 2.dp))
             }
             }
 
@@ -640,9 +638,9 @@ private fun kindPhrase(k: NotifKind): Phrase = when (k) {
     NotifKind.OTHER -> Phrase.KIND_OTHER
 }
 
-/** CJK dates in the sketch sit on a wide grid ("10 月 14 日"); other scripts stay as written. */
-private fun spaced(date: String, lang: DisplayLang): String =
-    if (lang == DisplayLang.JA || lang == DisplayLang.ZH) date.replace(Regex("(\\d)(\\D)"), "$1\u2009$2").replace(Regex("(\\D)(\\d)"), "$1\u2009$2") else date
+/** Dates in the sketch sit on a wide grid: "10 月 14 日". */
+private fun spaced(date: String): String =
+    date.replace(Regex("(\\d)(\\D)"), "$1\u2009$2").replace(Regex("(\\D)(\\d)"), "$1\u2009$2")
 
 private fun clockText(now: LocalDateTime, h24: Boolean): String = "${clockHour(now, h24)}\n%02d".format(now.minute)
 
@@ -673,9 +671,8 @@ class WeatherLine(
 }
 
 fun weatherLine(state: WeatherState, prefs: Prefs, now: LocalDateTime): WeatherLine {
-    val lang = prefs.displayLang
-    val target = Phrases.effectiveTarget(prefs.displayLang, prefs.translateTo)
-    fun plain(p: Phrase, setup: Boolean = false) = WeatherLine(Phrases.words(lang, target, p), null, false, 0f, setup)
+    val target = Phrases.effectiveTarget(prefs.translateTo)
+    fun plain(p: Phrase, setup: Boolean = false) = WeatherLine(Phrases.words(target, p), null, false, 0f, setup)
     if (!prefs.weatherOn || state.status == WeatherStatus.OFF) return plain(Phrase.SET_UP_WEATHER, setup = true)
     val f = state.forecast ?: return when (state.status) {
         WeatherStatus.NO_LOCATION -> plain(Phrase.NO_LOCATION, setup = true)
@@ -697,15 +694,15 @@ fun weatherLine(state: WeatherState, prefs: Prefs, now: LocalDateTime): WeatherL
     }
     val coming = when (outlook) {
         is Outlook.Now -> outlook.stopsInMin?.takeIf { it <= 120 }?.let {
-            Phrases.words(lang, target, if (outlook.snow) Phrase.SNOW_STOPS_IN else Phrase.RAIN_STOPS_IN, it)
+            Phrases.words(target, if (outlook.snow) Phrase.SNOW_STOPS_IN else Phrase.RAIN_STOPS_IN, it)
         }
         // Past two hours "in 190 min" reads worse than a time of day.
-        is Outlook.Soon -> if (outlook.inMin <= 120) Phrases.words(lang, target, if (outlook.snow) Phrase.SNOW_IN else Phrase.RAIN_IN, outlook.inMin)
-            else Phrases.words(lang, target, Phrase.RAIN_AT, t = at(ms + outlook.inMin * 60_000L))
-        is Outlook.Later -> Phrases.words(lang, target, Phrase.RAIN_AT, t = at(outlook.at))
+        is Outlook.Soon -> if (outlook.inMin <= 120) Phrases.words(target, if (outlook.snow) Phrase.SNOW_IN else Phrase.RAIN_IN, outlook.inMin)
+            else Phrases.words(target, Phrase.RAIN_AT, t = at(ms + outlook.inMin * 60_000L))
+        is Outlook.Later -> Phrases.words(target, Phrase.RAIN_AT, t = at(outlook.at))
         Outlook.Dry -> null
     }
-    val w = Phrases.words(lang, target, nowPhrase)
+    val w = Phrases.words(target, nowPhrase)
     val icon = if (raining) {
         if (outlook.snow) Condition.SNOW else if (f.condition in WET_CONDITIONS) f.condition else Condition.RAIN
     } else f.condition

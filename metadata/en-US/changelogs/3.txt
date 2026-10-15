@@ -1,0 +1,1 @@
+Japanese only: the home screen is now always written in Japanese, the language Kamei is built around. Chinese, Korean and Greek remain as translation languages, alongside English and 11 more. App names in the drawer can still be written in katakana. Smaller fonts, as they now carry only the characters Japanese needs. The Language settings page is now called Translation.

@@ -87,7 +87,6 @@ import com.asnidev.kamei.data.WeatherSource
 import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.data.dayFadeAt
 import com.asnidev.kamei.data.longFade
-import com.asnidev.kamei.lang.DisplayLang
 import com.asnidev.kamei.lang.Phrase
 import com.asnidev.kamei.lang.Phrases
 import com.asnidev.kamei.lang.Transcribe
@@ -149,7 +148,7 @@ private fun Page(page: String, title: String, prefs: Prefs, back: () -> Unit) {
 }
 
 private val TITLES = mapOf(
-    "main" to "Settings", "language" to "Language", "fonts" to "Fonts & layout", "clock" to "Clock", "icons" to "Icons",
+    "main" to "Settings", "language" to "Translation", "fonts" to "Fonts & layout", "clock" to "Clock", "icons" to "Icons",
     "drawer" to "Favourites & drawer", "hidden" to "Hidden apps", "weather" to "Weather",
     "notifications" to "Notifications", "privacy" to "Privacy", "wallpaper" to "Wallpaper", "gestures" to "Gestures", "status" to "Battery & signal", "order" to "Order of lines", "about" to "About", "place" to "Place",
 )
@@ -304,7 +303,7 @@ private fun Note(text: String) {
 private fun MainPage(prefs: Prefs) {
     val vm = LocalVm.current
     val context = LocalContext.current
-    val target = Phrases.targets.firstOrNull { it.first == Phrases.resolveTarget(prefs.translateTo) }?.second ?: "English"
+    val target = Phrases.targets.firstOrNull { it.first == Phrases.effectiveTarget(prefs.translateTo) }?.second ?: "English"
     var picking by remember { mutableStateOf(false) }
     Group {
         row {
@@ -334,7 +333,7 @@ private fun MainPage(prefs: Prefs) {
                 { if (it == SettingsStyle.AUTO) "Automatic · ${it.resolve().label} on this phone" else it.label },
                 "layout-list", CIRCLES[1], describe = { it.summary }) { st -> vm.update { it.copy(settingsStyle = st) } }
         }
-        row { Item("Language", "${prefs.displayLang.label} · translated into $target", "language", CIRCLES[0]) { vm.settings += "language" } }
+        row { Item("Translation", "Japanese, translated into $target", "language", CIRCLES[0]) { vm.settings += "language" } }
         row { Item("Wallpaper", if (prefs.showWallpaper) "Shown, ${prefs.wallpaperDim}% darker" else "Black", "photo", CIRCLES[6]) { vm.settings += "wallpaper" } }
         row { Item("Clock", "${if (prefs.clockShuffle) "A new font daily" else prefs.clockFont.label} · ${prefs.clockLayout.label.lowercase()}", "clock", CIRCLES[1]) { vm.settings += "clock" } }
         row { Item("Fonts & layout", "${prefs.textFont.label} · ${prefs.infoAlign.label.lowercase()}", "typography", CIRCLES[5]) { vm.settings += "fonts" } }
@@ -414,17 +413,13 @@ private fun ColorDialog(current: Long, onDismiss: () -> Unit, onPick: (Long) -> 
 @Composable
 private fun LanguagePage(prefs: Prefs) {
     val vm = LocalVm.current
-    val system = Phrases.targets.firstOrNull { it.first == Phrases.resolveTarget("system") }?.second ?: "English"
+    val system = Phrases.targets.firstOrNull { it.first == Phrases.effectiveTarget("system") }?.second ?: "English"
     Group {
-        row {
-            ChoiceItem("Home screen language", DisplayLang.entries, prefs.displayLang, { it.label }, "language",
-                describe = { Phrases.say(it.tag, Phrase.NO_NOTIFICATIONS) }) { l -> vm.update { it.copy(displayLang = l) } }
-        }
         row {
             val options = listOf("system") + Phrases.targets.map { it.first }
             ChoiceItem("Translate into", options, prefs.translateTo,
                 { code -> if (code == "system") "Phone language ($system)" else Phrases.targets.first { it.first == code }.second }, "arrows-exchange",
-                describe = { code -> Phrases.say(Phrases.resolveTarget(code), Phrase.NO_NOTIFICATIONS) }) { c -> vm.update { it.copy(translateTo = c) } }
+                describe = { code -> Phrases.say(Phrases.effectiveTarget(code), Phrase.NO_NOTIFICATIONS) }) { c -> vm.update { it.copy(translateTo = c) } }
         }
         row {
             ChoiceItem("Translations on the home screen", LearnLines.entries, prefs.learnLines, { it.label }, "school", describe = { it.summary }) { l ->
@@ -469,10 +464,10 @@ private fun LanguagePage(prefs: Prefs) {
                 vm.update { it.copy(wordOfDay = v) }
             }
         }
-        if (prefs.displayLang == DisplayLang.JA && prefs.learnLines != LearnLines.OFF) row {
+        if (prefs.learnLines != LearnLines.OFF) row {
             SwitchItem("Reading on the home screen", "The kana or rōmaji above each translation", prefs.learnReading, "abc") { v -> vm.update { it.copy(learnReading = v) } }
         }
-        if (prefs.displayLang == DisplayLang.JA) row {
+        row {
             ChoiceItem("Reading hint", ReadingHint.entries, prefs.readingHint, { it.label }, "abc",
                 describe = { h -> when (h) { ReadingHint.KANA -> "すいようび"; ReadingHint.ROMAJI -> "suiyōbi"; ReadingHint.OFF -> "Translation only" } }) { h ->
                 vm.update { it.copy(readingHint = h) }
@@ -484,7 +479,7 @@ private fun LanguagePage(prefs: Prefs) {
             }
         }
     }
-    Note("Everything on the home screen is written in the language above, with small translations under the lines you choose: a little practice every time you unlock. Hold any line for the full translation and reading. It all comes from a dictionary inside the app; nothing is sent anywhere.")
+    Note("Everything on the home screen is written in Japanese, with small translations under the lines you choose: a little practice every time you unlock. Hold any line for the full translation and reading. It all comes from a dictionary inside the app; nothing is sent anywhere.")
 }
 
 /** The mark before each home-screen heading: free text, a few presets, or none; "//" one tap away. */
@@ -519,7 +514,7 @@ private fun PrefixItem(prefs: Prefs) {
                 }
                 Spacer(Modifier.height(16.dp))
                 BasicText(
-                    text + Phrases.say(prefs.displayLang.tag, Phrase.NOTIFICATIONS),
+                    text + Phrases.ja(Phrase.NOTIFICATIONS),
                     style = TextStyle(color = MaterialTheme.colorScheme.onSurface, fontFamily = font, fontSize = 24.sp),
                 )
             }
@@ -556,7 +551,7 @@ private fun fadeLabel(days: Int) = when (days) {
 @Composable
 private fun FontsPage(prefs: Prefs) {
     val vm = LocalVm.current
-    val sample = prefs.prefix + Phrases.say(prefs.displayLang.tag, Phrase.CLOUDY) + " 6°C"
+    val sample = prefs.prefix + Phrases.ja(Phrase.CLOUDY) + " 6°C"
     Group("Text") {
         row {
             ChoiceItem("Home screen font", FontChoice.textFonts, prefs.textFont, { it.label }, "typography", preview = { f ->
@@ -744,10 +739,8 @@ private fun DrawerPage(prefs: Prefs) {
             SliderItem("Columns", prefs.drawerColumns.toFloat(), 3f..6f, steps = 2, format = { "${it.roundToInt()}" }) { v -> vm.update { it.copy(drawerColumns = v.roundToInt()) } }
         }
         row {
-            val ok = Transcribe.supports(prefs.displayLang)
-            val sample = if (ok) "YouTube → ${Transcribe.label("YouTube", prefs.displayLang)}" else "Not available for Chinese: it has no everyday phonetic script"
-            SwitchItem("Write names as they sound", sample, prefs.phoneticLabels && ok, "language-katakana") { v ->
-                if (ok) vm.update { it.copy(phoneticLabels = v) }
+            SwitchItem("Write names in katakana", "YouTube → ${Transcribe.label("YouTube")}", prefs.phoneticLabels, "language-katakana") { v ->
+                vm.update { it.copy(phoneticLabels = v) }
             }
         }
         row {

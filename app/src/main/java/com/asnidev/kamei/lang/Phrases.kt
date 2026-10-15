@@ -5,17 +5,6 @@ import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 import java.util.Locale
 
-/** The languages the home screen can be written in: ones the people around you likely can't read. */
-enum class DisplayLang(val tag: String, val label: String, val datePattern: String) {
-    JA("ja", "日本語", "M月d日"),
-    ZH("zh", "中文", "M月d日"),
-    KO("ko", "한국어", "M월 d일"),
-    EL("el", "Ελληνικά", "d MMMM"),
-    ;
-
-    val locale: Locale get() = Locale.forLanguageTag(tag)
-}
-
 /** Every phrase the home screen says, apart from dates and numbers. `{n}` is a number, `{t}` a time. */
 enum class Phrase {
     NOTIFICATIONS, NO_NOTIFICATIONS, N_NOTIFICATIONS, ALLOW_NOTIFICATIONS,
@@ -28,20 +17,23 @@ enum class Phrase {
     BATTERY, SIGNAL_WEAK, SIGNAL_VERY_WEAK, NO_SERVICE,
 }
 
-/** Something the home screen shows, which a long hold translates; [reading] is its kana, for Japanese. */
+/** Something the home screen shows, which a long hold translates; [reading] is its kana. */
 data class Words(val display: String, val translated: String, val reading: String? = null)
 
 /**
- * The bundled dictionary: each language's text for every [Phrase], in the order
- * the enum lists them. Nothing is ever looked up online.
+ * The bundled dictionary: the home screen's Japanese, and each translation
+ * language's text for every [Phrase], in the order the enum lists them. Nothing
+ * is ever looked up online.
  */
 object Phrases {
 
-    /** Languages the long-hold popup can translate into. */
+    private val JA = Locale.JAPANESE
+
+    /** Languages the long-hold popup and the learning lines can translate into. */
     val targets: List<Pair<String, String>> = listOf(
         "en" to "English", "lv" to "Latviešu", "lt" to "Lietuvių", "et" to "Eesti", "ru" to "Русский",
         "uk" to "Українська", "de" to "Deutsch", "fr" to "Français", "es" to "Español", "pl" to "Polski",
-        "fi" to "Suomi", "sv" to "Svenska", "ja" to "日本語", "zh" to "中文", "ko" to "한국어", "el" to "Ελληνικά",
+        "fi" to "Suomi", "sv" to "Svenska", "zh" to "中文", "ko" to "한국어", "el" to "Ελληνικά",
     )
 
     private val table: Map<String, List<String>> = mapOf(
@@ -209,6 +201,9 @@ object Phrases {
 
     fun has(lang: String): Boolean = lang in table
 
+    /** The phrase as the home screen writes it, in Japanese. */
+    fun ja(phrase: Phrase, n: Int? = null, t: String? = null): String = say("ja", phrase, n, t)
+
     /** The phrase in [lang] (English when the dictionary lacks that language). */
     fun say(lang: String, phrase: Phrase, n: Int? = null, t: String? = null): String {
         val text = (table[lang] ?: table.getValue("en"))[phrase.ordinal]
@@ -223,25 +218,17 @@ object Phrases {
     }
 
     /**
-     * The language translations go into: [target], unless that's the home screen's
-     * own language (no use translating Japanese into Japanese), then the phone's,
-     * then English.
+     * The language translations go into: [target], unless that's Japanese (a phone
+     * set to Japanese, say: no use translating Japanese into Japanese), then English.
      */
-    fun effectiveTarget(display: DisplayLang, target: String): String {
-        val t = resolveTarget(target)
-        if (t != display.tag) return t
-        val phone = resolveTarget("system")
-        return if (phone != display.tag) phone else "en"
-    }
+    fun effectiveTarget(target: String): String = resolveTarget(target).takeIf { it != "ja" } ?: "en"
 
-    fun words(display: DisplayLang, target: String, phrase: Phrase, n: Int? = null, t: String? = null) =
-        Words(say(display.tag, phrase, n, t), say(resolveTarget(target), phrase, n, t), if (display == DisplayLang.JA) JaReading.say(phrase, n, t) else null)
+    fun words(target: String, phrase: Phrase, n: Int? = null, t: String? = null) =
+        Words(ja(phrase, n, t), say(effectiveTarget(target), phrase, n, t), JaReading.say(phrase, n, t))
 
-    fun weekday(display: DisplayLang, now: LocalDateTime): String =
-        DateTimeFormatter.ofPattern("EEEE", display.locale).format(now)
+    fun weekday(now: LocalDateTime): String = DateTimeFormatter.ofPattern("EEEE", JA).format(now)
 
-    fun date(display: DisplayLang, now: LocalDateTime): String =
-        DateTimeFormatter.ofPattern(display.datePattern, display.locale).format(now)
+    fun date(now: LocalDateTime): String = DateTimeFormatter.ofPattern("M月d日", JA).format(now)
 
     /** The whole date in the target language, e.g. "Wednesday, October 14, 2026". */
     fun fullDate(target: String, now: LocalDateTime): String =

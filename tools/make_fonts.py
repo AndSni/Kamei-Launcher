@@ -2,13 +2,16 @@
 """Cuts the bundled fonts down to the characters the home screen can show.
 
     python3 -m venv venv && venv/bin/pip install fonttools skia-pathops
-    venv/bin/python tools/make_fonts.py <dir with the downloaded Google Fonts .ttf files>
+    venv/bin/python tools/make_fonts.py <dir with the downloaded Google Fonts .ttf files> [name ...]
 
-A full Japanese font is 4-9 MB; the home screen only ever writes the phrases in
-lang/*.kt (phrases, readings, word list) plus dates, so each font keeps those characters, ASCII and
-Latin-1; clock faces keep only digits and the colon. Anything else (Hangul, say)
-falls back to the phone's own fonts. Variable fonts are pinned first (regular
-weight unless FONTS says otherwise). Run again whenever lang/ gains words.
+A full Japanese font is 4-9 MB; the home screen only ever writes Japanese: the
+phrases, readings and word list in lang/ and the kanji in ui/, plus dates. So
+each text font keeps those characters, ASCII and Latin-1 (rōmaji); clock faces
+keep only digits and the colon. Translations, and the drawer's katakana names,
+are drawn in the phone's own font, so their characters aren't kept.
+Variable fonts are pinned first (regular weight unless FONTS says otherwise).
+Run again whenever lang/ gains words. Names after the folder limit the run to
+those fonts.
 """
 import glob
 import os
@@ -20,7 +23,8 @@ from fontTools.ttLib.removeOverlaps import removeOverlaps
 from fontTools.varLib import instancer
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-LANG_DIR = os.path.join(ROOT, "app/src/main/java/com/asnidev/kamei/lang")
+SRC_DIR = os.path.join(ROOT, "app/src/main/java/com/asnidev/kamei")
+LANG_DIR = os.path.join(SRC_DIR, "lang")
 # Output name: which characters it keeps ("text" = everything the home screen writes,
 # "digits" = a clock face only), and any variable-font axes to pin (weight defaults to 400).
 FONTS = {
@@ -64,14 +68,35 @@ FONTS = {
     "rubikmonoone": ("digits", {}),
 }
 DIGITS = "0123456789: "
-# Weekdays and months as java.time writes them in Japanese and Chinese, and the weather kanji.
-EXTRA = "月火水木金土日曜星期一二三四五六七八九十天年时時分秒午前後晴曇雨雪霧雷霙風"
+# Weekdays and months as java.time writes them in Japanese, and the weather kanji.
+EXTRA = "月火水木金土日曜一二三四五六七八九十天年時分秒午前後晴曇雨雪霧雷霙風"
+
+
+def japanese(c):
+    """CJK punctuation, kana, kanji and full-width forms: what Japanese text is written in."""
+    o = ord(c)
+    return 0x3000 <= o <= 0x30FF or 0x3400 <= o <= 0x9FFF or 0xFF00 <= o <= 0xFFEF
+
+
+def read(name):
+    return open(os.path.join(LANG_DIR, name), encoding="utf-8").read()
 
 
 def characters():
-    # Everything the home screen can write lives in lang/: phrases, readings, the word list.
-    text = "".join(open(p, encoding="utf-8").read() for p in sorted(glob.glob(os.path.join(LANG_DIR, "*.kt"))))
-    chars = {c for c in text if ord(c) > 0x7F}
+    text = ""
+    # The Japanese row of the phrase table (the other rows are translations).
+    phrases = read("Phrases.kt")
+    start = phrases.index('"ja" to listOf(')
+    text += phrases[start:phrases.index("),", start)]
+    # The word list's Japanese and kana columns: key | 12 translations | ja | kana | ...
+    for line in read("Vocabulary.kt").splitlines():
+        cols = line.split("|")
+        if len(cols) > 14:
+            text += cols[13] + cols[14]
+    # Readings, and the kanji the UI writes itself.
+    text += read("JaReading.kt")
+    text += "".join(open(p, encoding="utf-8").read() for p in sorted(glob.glob(os.path.join(SRC_DIR, "ui", "*.kt"))))
+    chars = {c for c in text if japanese(c)}
     chars |= set(EXTRA)
     chars |= {chr(c) for c in range(0x20, 0x7F)}
     chars |= {chr(c) for c in range(0xA0, 0x180)}  # Latin-1 and Latin Extended-A (°, ā, ē…)
@@ -79,11 +104,13 @@ def characters():
     return "".join(sorted(chars))
 
 
-def main(src):
+def main(src, only):
     text = characters()
     out_dir = os.path.join(ROOT, "app/src/main/res/font")
     lic_dir = os.path.join(ROOT, "app/src/main/assets/licenses")
     for name, (keep, pins) in FONTS.items():
+        if only and name not in only:
+            continue
         # Downloads are named "<google fonts folder>-<file>.ttf"; this name is the folder.
         path = sorted(p for p in glob.glob(os.path.join(src, name + "-*.ttf")) if "Italic" not in p)[0]
         font = TTFont(path)
@@ -114,4 +141,4 @@ def main(src):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], set(sys.argv[2:]))
