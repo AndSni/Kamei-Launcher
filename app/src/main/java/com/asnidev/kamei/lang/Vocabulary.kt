@@ -1,7 +1,5 @@
 package com.asnidev.kamei.lang
 
-import java.time.LocalDate
-
 /** One word of the day: the word in every language, and how to read it in the non-Latin ones. */
 class VocabWord(val key: String, private val words: Map<String, String>, private val readings: Map<String, String>) {
     fun word(lang: String): String = words[lang] ?: words.getValue("en")
@@ -90,14 +88,15 @@ quiet|quiet|kluss|tylus|vaikne|тихий|тихий|ruhig|calme|tranquilo|cichy
     }
 
     /**
-     * The word for [day]: a fixed scrambled walk through the whole list (a step
-     * coprime to its size), so every word comes up once before any repeats.
-     * [extra] moves on to the following words, for a tap asking for another.
+     * The word for turn [slot] (a day, or a span of hours): a fixed scrambled walk
+     * through the whole list (a step coprime to its size), so every word comes up
+     * once before any repeats. [extra] moves on to the following words, for a tap
+     * asking for another.
      */
-    fun ofDay(day: LocalDate, extra: Int = 0): VocabWord {
+    fun of(slot: Long, extra: Int = 0): VocabWord {
         val n = all.size
         val step = generateSequence(37) { it + 1 }.first { gcd(it, n) == 1 }
-        return all[Math.floorMod((day.toEpochDay() + extra) * step, n.toLong()).toInt()]
+        return all[Math.floorMod((slot + extra) * step, n.toLong()).toInt()]
     }
 
     private tailrec fun gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)

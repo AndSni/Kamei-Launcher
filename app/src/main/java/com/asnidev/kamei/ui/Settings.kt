@@ -84,12 +84,14 @@ import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.data.TokyoAccent
 import com.asnidev.kamei.data.WeatherGlyphs
 import com.asnidev.kamei.data.WeatherSource
+import com.asnidev.kamei.data.WordEvery
 import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.data.dayFadeAt
 import com.asnidev.kamei.data.longFade
 import com.asnidev.kamei.lang.Phrase
 import com.asnidev.kamei.lang.Phrases
 import com.asnidev.kamei.lang.Transcribe
+import com.asnidev.kamei.lang.Vocabulary
 import com.asnidev.kamei.system.CustomFonts
 import com.asnidev.kamei.system.SystemActions
 import com.asnidev.kamei.weather.WeatherStatus
@@ -460,8 +462,22 @@ private fun LanguagePage(prefs: Prefs) {
             row { TimeItem("Gone by", prefs.dayFadeTo, prefs.clock24, "moon") { m -> vm.update { it.copy(dayFadeTo = m) } } }
         }
         row {
-            SwitchItem("Word of the day", "A new word each day under the weather, with its reading and meaning. Tap it for another", prefs.wordOfDay, "vocabulary") { v ->
+            SwitchItem("Word of the day", "A new word under the weather, with its reading and meaning. Tap it for another", prefs.wordOfDay, "vocabulary") { v ->
                 vm.update { it.copy(wordOfDay = v) }
+            }
+        }
+        if (prefs.wordOfDay) {
+            row {
+                ChoiceItem("New word", WordEvery.entries, prefs.wordEvery, { it.label }, "clock-hour-4",
+                    describe = { e -> "${Vocabulary.all.size} words: each comes back after ${repeatAfter(e)}" }) { e ->
+                    vm.update { it.copy(wordEvery = e) }
+                }
+            }
+            row {
+                val span = if (prefs.wordEvery == WordEvery.DAY) "the day" else "its ${prefs.wordEvery.hours} hour${if (prefs.wordEvery.hours > 1) "s" else ""}"
+                SwitchItem("Fade the meaning", "Fainter through $span, gone when the next word comes. Hold the word to see it again", prefs.wordFade, "contrast") { v ->
+                    vm.update { it.copy(wordFade = v) }
+                }
             }
         }
         if (prefs.learnLines != LearnLines.OFF) row {
@@ -480,6 +496,12 @@ private fun LanguagePage(prefs: Prefs) {
         }
     }
     Note("Everything on the home screen is written in Japanese, with small translations under the lines you choose: a little practice every time you unlock. Hold any line for the full translation and reading. It all comes from a dictionary inside the app; nothing is sent anywhere.")
+}
+
+/** How long until the word list comes round again at [every]: "2 days", "60 days". */
+private fun repeatAfter(every: WordEvery): String {
+    val hours = Vocabulary.all.size * every.hours
+    return if (hours < 48) "$hours hours" else "${hours / 24} days"
 }
 
 /** The mark before each home-screen heading: free text, a few presets, or none; "//" one tap away. */

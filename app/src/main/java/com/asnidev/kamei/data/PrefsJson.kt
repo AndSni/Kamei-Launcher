@@ -68,6 +68,8 @@ object PrefsJson {
         put("learnLines", p.learnLines.name)
         put("learnReading", p.learnReading)
         put("wordOfDay", p.wordOfDay)
+        put("wordEvery", p.wordEvery.name)
+        put("wordFade", p.wordFade)
         put("batteryLine", p.batteryLine)
         put("signalLine", p.signalLine)
         put("fadeDays", p.fadeDays)
@@ -154,6 +156,8 @@ object PrefsJson {
             learnLines = enumOr(o.optString("learnLines"), d.learnLines),
             learnReading = o.optBoolean("learnReading", d.learnReading),
             wordOfDay = o.optBoolean("wordOfDay", d.wordOfDay),
+            wordEvery = enumOr(o.optString("wordEvery"), d.wordEvery),
+            wordFade = o.optBoolean("wordFade", d.wordFade),
             batteryLine = o.optBoolean("batteryLine", d.batteryLine),
             signalLine = o.optBoolean("signalLine", d.signalLine),
             fadeDays = o.optInt("fadeDays", d.fadeDays).takeIf { it in Prefs.FADE_DAYS } ?: d.fadeDays,

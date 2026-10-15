@@ -324,8 +324,12 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
 
             // Word of the day
             if (prefs.wordOfDay) parts[HomeBlock.WORD] = {
-                var extra by remember(now.toLocalDate()) { mutableIntStateOf(0) }
-                val v = Vocabulary.ofDay(now.toLocalDate(), extra)
+                val minute = now.hour * 60 + now.minute
+                val slot = prefs.wordEvery.slot(now.toLocalDate().toEpochDay(), minute)
+                var extra by remember(slot) { mutableIntStateOf(0) }
+                val v = Vocabulary.of(slot, extra)
+                // The meaning fades over the word's time, to be gone when the next word comes.
+                val meaningFade = if (prefs.wordFade) 1f - prefs.wordEvery.elapsed(minute) else 1f
                 val word = v.word("ja")
                 val rawReading = v.reading("ja")?.takeIf { it != word }
                 val reading = rawReading?.let { r ->
@@ -347,9 +351,16 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                     Row {
                         BasicText(accented(pre, word, look.accent), style = big, modifier = Modifier.alignByBaseline())
                         Spacer(Modifier.width(12.dp))
+                        val hint = look.text.copy(alpha = 0.7f)
                         BasicText(
-                            listOfNotNull(reading, meaning).joinToString(" · "),
-                            style = learnStyle.copy(fontSize = 15.sp, color = look.text.copy(alpha = 0.7f)),
+                            buildAnnotatedString {
+                                if (reading != null) append(reading)
+                                if (meaningFade > 0.02f) withStyle(SpanStyle(color = hint.copy(alpha = 0.7f * meaningFade))) {
+                                    if (reading != null) append(" · ")
+                                    append(meaning)
+                                }
+                            },
+                            style = learnStyle.copy(fontSize = 15.sp, color = hint),
                             modifier = Modifier.alignByBaseline(),
                         )
                     }

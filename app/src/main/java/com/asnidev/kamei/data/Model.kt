@@ -251,6 +251,22 @@ fun Prefs.dayFadeAt(minute: Int): Float {
     return if (elapsed > span) 0f else 1f - elapsed.toFloat() / span
 }
 
+/** How often the word of the day changes, counted in local time from midnight. */
+enum class WordEvery(val hours: Int, val label: String) {
+    DAY(24, "Every day"),
+    H12(12, "Every 12 hours"),
+    H6(6, "Every 6 hours"),
+    H3(3, "Every 3 hours"),
+    H1(1, "Every hour"),
+    ;
+
+    /** Which word's turn it is: the day for [DAY] (as before), else the day's n-th span. */
+    fun slot(day: Long, minute: Int): Long = day * (24 / hours) + minute / 60 / hours
+
+    /** How far into its span the current word is, 0 at its start, nearly 1 at its end. */
+    fun elapsed(minute: Int): Float = (minute % (hours * 60)) / (hours * 60f)
+}
+
 /** Both fades together: the daily cycle within the longer one. */
 fun Prefs.fade(today: Long, minute: Int): Float = longFade(today) * dayFadeAt(minute)
 
@@ -383,6 +399,9 @@ data class Prefs(
     val learnReading: Boolean = false,
     /** A word a day, with its reading and meaning, under the weather. */
     val wordOfDay: Boolean = true,
+    /** How often a new word comes; with [wordFade] its meaning fades away over that time. */
+    val wordEvery: WordEvery = WordEvery.DAY,
+    val wordFade: Boolean = false,
     /** Warning lines: battery at 25% or less (not while charging), and weak or no mobile signal. */
     val batteryLine: Boolean = true,
     val signalLine: Boolean = true,

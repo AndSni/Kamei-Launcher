@@ -28,7 +28,7 @@ class VocabularyTest {
     fun eachWordOnceBeforeAnyRepeats() {
         val start = LocalDate.of(2026, 10, 14)
         val n = Vocabulary.all.size
-        val seen = (0 until n).map { Vocabulary.ofDay(start.plusDays(it.toLong())).key }.toSet()
+        val seen = (0 until n).map { Vocabulary.of(start.plusDays(it.toLong()).toEpochDay()).key }.toSet()
         assertEquals(n, seen.size)
         assertEquals("雨", Vocabulary.all.first { it.key == "rain" }.word("ja"))
         assertEquals("あめ", Vocabulary.all.first { it.key == "rain" }.reading("ja"))
