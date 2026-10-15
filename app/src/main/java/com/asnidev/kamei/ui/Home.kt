@@ -161,7 +161,7 @@ fun Home(prefs: Prefs) {
             .windowInsetsPadding(screenInsets(prefs)),
     ) {
         // Tokyo: a band of the accent colour along the top, like the site's green bar.
-        if (look.tokyo) Box(Modifier.fillMaxWidth().height(5.dp).background(look.band))
+        look.band?.let { Box(Modifier.fillMaxWidth().height(5.dp).background(it)) }
         Row(Modifier.fillMaxSize()) {
             // Material's cards reach nearer the edge; the others keep the sketch's margin.
             val start = if (look.cards) 14.dp else 28.dp

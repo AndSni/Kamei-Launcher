@@ -24,8 +24,11 @@ import androidx.compose.ui.text.font.Typeface
 import com.asnidev.kamei.system.CustomFonts
 import com.asnidev.kamei.LauncherViewModel
 import com.asnidev.kamei.R
+import com.asnidev.kamei.data.Accents
 import com.asnidev.kamei.data.FontChoice
 import com.asnidev.kamei.data.HomeTheme
+import com.asnidev.kamei.data.Prefs
+import com.asnidev.kamei.data.TokyoAccent
 
 /**
  * Everything the home screen and drawer are painted with, for the chosen theme in the
@@ -52,20 +55,12 @@ data class Look(
     val rain: Color,
     val warn: Color,
     val alarm: Color,
+    /** Tokyo's band along the top; null for no band. */
+    val band: Color? = null,
 ) {
     fun rainTint(blueness: Float): Color = lerp(text, rain, blueness.coerceIn(0f, 1f))
     fun alertTint(heat: Float): Color = lerp(warn, alarm, heat.coerceIn(0f, 1f))
 
-    /**
-     * Tokyo's top band: the accent, unless the phone's scheme is greyscale (as on
-     * Xperias with a monochrome theme), where a white or grey bar reads as a glitch;
-     * then the green of the site it comes from.
-     */
-    val band: Color get() {
-        val hsv = FloatArray(3)
-        android.graphics.Color.colorToHSV(accent.toArgb(), hsv)
-        return if (hsv[1] >= 0.2f) accent else if (light) Color(0xFF00873C) else Color(0xFF3FA66B)
-    }
     val cards get() = theme == HomeTheme.MATERIAL
     val tokyo get() = theme == HomeTheme.TOKYO
     /** Whether headings start with the user's prefix (Original); the others mark them their own way. */
@@ -100,11 +95,33 @@ private val FALLBACK_DARK = darkColorScheme(
 @Composable
 fun themeIsDark(theme: HomeTheme): Boolean = theme == HomeTheme.ORIGINAL || isSystemInDarkTheme()
 
+/**
+ * Tokyo's accent: the phone's (green instead when its scheme is greyscale, as on
+ * Xperias with a monochrome theme, where a white bar reads as a glitch), a picked
+ * colour, the battery level's colour, or none (the text colour, and no band).
+ */
+private fun tokyoAccent(prefs: Prefs, battery: Int?, phone: Color, text: Color, light: Boolean): Pair<Color, Color?> {
+    val green = Color(Accents.green(light))
+    fun fromPhone(): Color {
+        val hsv = FloatArray(3)
+        android.graphics.Color.colorToHSV(phone.toArgb(), hsv)
+        return if (hsv[1] >= 0.2f) phone else green
+    }
+    return when (prefs.tokyoAccent) {
+        TokyoAccent.AUTO -> fromPhone().let { it to it }
+        TokyoAccent.CUSTOM -> Color(prefs.tokyoColor).let { it to it }
+        TokyoAccent.BATTERY -> (battery?.let { Color(Accents.battery(it, light)) } ?: fromPhone()).let { it to it }
+        TokyoAccent.OFF -> text to null
+    }
+}
+
 @Composable
-fun rememberLook(theme: HomeTheme): Look {
+fun rememberLook(prefs: Prefs, battery: Int?): Look {
+    val theme = prefs.theme
     val dark = themeIsDark(theme)
     val scheme = phoneScheme(dark)
-    return remember(theme, scheme, dark) {
+    val accentKey = if (theme == HomeTheme.TOKYO) Triple(prefs.tokyoAccent, prefs.tokyoColor, battery.takeIf { prefs.tokyoAccent == TokyoAccent.BATTERY }) else null
+    return remember(theme, scheme, dark, accentKey) {
         when (theme) {
             HomeTheme.ORIGINAL -> Look(
                 theme, light = false, background = Color.Black, text = Ink.text, dim = Ink.dim, accent = scheme.primary,
@@ -118,17 +135,21 @@ fun rememberLook(theme: HomeTheme): Look {
                 rain = if (dark) Ink.rain else Color(0xFF1565C0), warn = if (dark) Ink.warn else Color(0xFFE65100),
                 alarm = if (dark) Ink.alarm else Color(0xFFC62828),
             )
-            HomeTheme.TOKYO -> if (dark) Look(
-                theme, light = false, background = Color(0xFF121212), text = Color(0xFFEDEDE8), dim = Color(0xFF9C9C96),
-                accent = scheme.primary, card = Color(0xFF1C1C1C), line = Color(0xFF2E2E2C), clock = Color(0xFFEDEDE8),
-                iconTint = Color(0xFFEDEDE8), iconCircle = Color.Transparent, onIconCircle = Color(0xFFEDEDE8),
-                rain = Ink.rain, warn = Ink.warn, alarm = Ink.alarm,
-            ) else Look(
-                theme, light = true, background = Color(0xFFFAFAF7), text = Color(0xFF1A1A1A), dim = Color(0xFF6B6B66),
-                accent = scheme.primary, card = Color(0xFFF0F0EB), line = Color(0xFFDEDED8), clock = Color(0xFF1A1A1A),
-                iconTint = Color(0xFF1A1A1A), iconCircle = Color.Transparent, onIconCircle = Color(0xFF1A1A1A),
-                rain = Color(0xFF1565C0), warn = Color(0xFFE65100), alarm = Color(0xFFC62828),
-            )
+            HomeTheme.TOKYO -> {
+                val ink = if (dark) Color(0xFFEDEDE8) else Color(0xFF1A1A1A)
+                val (accent, band) = tokyoAccent(prefs, battery, scheme.primary, ink, light = !dark)
+                if (dark) Look(
+                    theme, light = false, background = Color(0xFF121212), text = Color(0xFFEDEDE8), dim = Color(0xFF9C9C96),
+                    accent = accent, card = Color(0xFF1C1C1C), line = Color(0xFF2E2E2C), clock = Color(0xFFEDEDE8),
+                    iconTint = Color(0xFFEDEDE8), iconCircle = Color.Transparent, onIconCircle = Color(0xFFEDEDE8),
+                    rain = Ink.rain, warn = Ink.warn, alarm = Ink.alarm, band = band,
+                ) else Look(
+                    theme, light = true, background = Color(0xFFFAFAF7), text = Color(0xFF1A1A1A), dim = Color(0xFF6B6B66),
+                    accent = accent, card = Color(0xFFF0F0EB), line = Color(0xFFDEDED8), clock = Color(0xFF1A1A1A),
+                    iconTint = Color(0xFF1A1A1A), iconCircle = Color.Transparent, onIconCircle = Color(0xFF1A1A1A),
+                    rain = Color(0xFF1565C0), warn = Color(0xFFE65100), alarm = Color(0xFFC62828), band = band,
+                )
+            }
         }
     }
 }

@@ -176,7 +176,8 @@ private fun Root(vm: LauncherViewModel, activity: ComponentActivity) {
         }
     }
 
-    val look = rememberLook(prefs.theme)
+    val battery by vm.status.battery.collectAsState()
+    val look = rememberLook(prefs, battery?.percent)
     // Light themes need dark status and navigation bar icons.
     LaunchedEffect(look.light) {
         val style = if (look.light) SystemBarStyle.light(android.graphics.Color.TRANSPARENT, android.graphics.Color.TRANSPARENT)

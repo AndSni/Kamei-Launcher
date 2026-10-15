@@ -57,6 +57,8 @@ object PrefsJson {
         put("theme", p.theme.name)
         put("settingsStyle", p.settingsStyle.name)
         put("workMark", p.workMark.name)
+        put("tokyoAccent", p.tokyoAccent.name)
+        put("tokyoColor", p.tokyoColor)
         put("hideStatusBar", p.hideStatusBar)
         put("cutoutMode", p.cutoutMode.name)
         put("swipeLeft", p.swipeLeft.encode())
@@ -142,6 +144,8 @@ object PrefsJson {
             theme = enumOr(o.optString("theme"), d.theme),
             settingsStyle = enumOr(o.optString("settingsStyle"), d.settingsStyle),
             workMark = enumOr(o.optString("workMark"), d.workMark),
+            tokyoAccent = enumOr(o.optString("tokyoAccent"), d.tokyoAccent),
+            tokyoColor = o.optLong("tokyoColor", d.tokyoColor),
             hideStatusBar = o.optBoolean("hideStatusBar", d.hideStatusBar),
             cutoutMode = enumOr(o.optString("cutoutMode"), d.cutoutMode),
             swipeLeft = if (o.has("swipeLeft")) Gesture.decode(o.optString("swipeLeft")) else d.swipeLeft,

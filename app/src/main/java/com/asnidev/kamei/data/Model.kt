@@ -160,6 +160,46 @@ enum class SettingsStyle(val label: String, val summary: String) {
     }
 }
 
+/** Where Tokyo's accent (the top band and the heading tags) takes its colour from. */
+enum class TokyoAccent(val label: String, val summary: String) {
+    AUTO("From the phone", "Your phone's accent colour; green if its colours are greyscale"),
+    CUSTOM("Custom colour", "A colour you pick"),
+    BATTERY("Battery level", "Green when full, yellow at half, red at 10% and below"),
+    OFF("Off", "No band; the tags in the text colour"),
+}
+
+/** Accent colours worked out without Compose, so they can be tested. */
+object Accents {
+    /** Tokyo's green, from the site it comes from. */
+    fun green(light: Boolean): Long = if (light) 0xFF00873C else 0xFF3FA66B
+
+    /**
+     * The battery's colour as ARGB: bright green at 100%, yellow at 50%, bright red
+     * at 10% and below, blended in between. Darker shades on light backgrounds, so
+     * the tags stay readable.
+     */
+    fun battery(percent: Int, light: Boolean): Long {
+        val green = if (light) 0xFF00A844 else 0xFF00E676
+        val yellow = if (light) 0xFFE0A000 else 0xFFFFEA00
+        val red = if (light) 0xFFE0001B else 0xFFFF1744
+        val p = percent.coerceIn(0, 100)
+        return when {
+            p <= 10 -> red
+            p <= 50 -> mix(red, yellow, (p - 10) / 40f)
+            else -> mix(yellow, green, (p - 50) / 50f)
+        }
+    }
+
+    private fun mix(a: Long, b: Long, t: Float): Long {
+        fun ch(shift: Int): Long {
+            val x = (a shr shift) and 0xFF
+            val y = (b shr shift) and 0xFF
+            return (x + (y - x) * t).toLong().coerceIn(0, 255) shl shift
+        }
+        return 0xFF000000 or ch(16) or ch(8) or ch(0)
+    }
+}
+
 /** How apps from the work profile stand apart from their personal twins. */
 enum class WorkMark(val label: String, val summary: String) {
     DOT("Dot on the icon", "A small dot at the icon's corner"),
@@ -328,6 +368,9 @@ data class Prefs(
     val theme: HomeTheme = HomeTheme.ORIGINAL,
     val settingsStyle: SettingsStyle = SettingsStyle.AUTO,
     val workMark: WorkMark = WorkMark.DOT,
+    val tokyoAccent: TokyoAccent = TokyoAccent.AUTO,
+    /** ARGB of Tokyo's custom accent. */
+    val tokyoColor: Long = 0xFFD7003A,
     val hideStatusBar: Boolean = true,
     val cutoutMode: CutoutMode = CutoutMode.AUTO,
     /** Swipe left / right on the home screen (up is the drawer, down the notifications). */

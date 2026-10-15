@@ -6,6 +6,7 @@ import android.provider.Settings as AndroidSettings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -80,6 +81,7 @@ import com.asnidev.kamei.data.Place
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.ReadingHint
 import com.asnidev.kamei.data.SettingsStyle
+import com.asnidev.kamei.data.TokyoAccent
 import com.asnidev.kamei.data.WeatherGlyphs
 import com.asnidev.kamei.data.WeatherSource
 import com.asnidev.kamei.data.WorkMark
@@ -303,9 +305,21 @@ private fun MainPage(prefs: Prefs) {
     val vm = LocalVm.current
     val context = LocalContext.current
     val target = Phrases.targets.firstOrNull { it.first == Phrases.resolveTarget(prefs.translateTo) }?.second ?: "English"
+    var picking by remember { mutableStateOf(false) }
     Group {
         row {
             ChoiceItem("Theme", HomeTheme.entries, prefs.theme, { it.label }, "palette", CIRCLES[7], describe = { it.summary }) { t -> vm.update { it.copy(theme = t) } }
+        }
+        if (prefs.theme == HomeTheme.TOKYO) {
+            row {
+                ChoiceItem("Accent", TokyoAccent.entries, prefs.tokyoAccent, { it.label }, "brush", CIRCLES[4], describe = { it.summary }) { a ->
+                    vm.update { it.copy(tokyoAccent = a) }
+                    if (a == TokyoAccent.CUSTOM) picking = true
+                }
+            }
+            if (prefs.tokyoAccent == TokyoAccent.CUSTOM) row {
+                Item("Custom colour", hex(prefs.tokyoColor), "color-picker", CIRCLES[6], trailing = { Swatch(prefs.tokyoColor, false, 32.dp) }) { picking = true }
+            }
         }
         row {
             Item(
@@ -347,6 +361,54 @@ private fun MainPage(prefs: Prefs) {
         }
         row { Item("About", "Version ${BuildConfig.VERSION_NAME}", "info-circle", CIRCLES[0]) { vm.settings += "about" } }
     }
+    if (picking) ColorDialog(prefs.tokyoColor, onDismiss = { picking = false }) { c -> vm.update { it.copy(tokyoColor = c) }; picking = false }
+}
+
+private fun hex(argb: Long) = "#%06X".format(argb and 0xFFFFFF)
+
+/** Strong colours that hold up as a thin band and as tag text, on dark and light. */
+private val SWATCHES = listOf(
+    0xFFD7003A, 0xFFE8541E, 0xFFF2A900, 0xFFB5C400, 0xFF3FA66B, 0xFF00873C,
+    0xFF00A3A6, 0xFF0095D9, 0xFF2A5CAA, 0xFF5B4CC4, 0xFF8E44AD, 0xFFE4007F,
+    0xFF9C6B4E, 0xFF7A8B8C, 0xFFC0A060, 0xFFFF6F91, 0xFF4DB6AC, 0xFF90A4AE,
+)
+
+@Composable
+private fun Swatch(argb: Long, selected: Boolean, size: androidx.compose.ui.unit.Dp, onClick: (() -> Unit)? = null) {
+    val ring = MaterialTheme.colorScheme.onSurface
+    Box(
+        Modifier.size(size).clip(CircleShape)
+            .then(if (selected) Modifier.border(3.dp, ring, CircleShape).padding(5.dp).clip(CircleShape) else Modifier)
+            .background(Color(argb))
+            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier),
+    )
+}
+
+/** A grid of ready colours, or any colour typed as #RRGGBB. */
+@Composable
+private fun ColorDialog(current: Long, onDismiss: () -> Unit, onPick: (Long) -> Unit) {
+    var text by remember { mutableStateOf(hex(current)) }
+    val typed = text.trim().removePrefix("#").takeIf { it.length == 6 }?.toLongOrNull(16)?.let { 0xFF000000 or it }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Accent colour") },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                SWATCHES.chunked(6).forEach { line ->
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                        line.forEach { c -> Swatch(c, c == (typed ?: current), 38.dp) { text = hex(c) } }
+                    }
+                }
+                OutlinedTextField(
+                    text, { text = it.take(7) }, singleLine = true, label = { Text("Hex colour") },
+                    isError = typed == null,
+                    trailingIcon = { typed?.let { Swatch(it, false, 24.dp) } },
+                )
+            }
+        },
+        confirmButton = { TextButton({ typed?.let(onPick) }, enabled = typed != null) { Text("OK") } },
+        dismissButton = { TextButton(onDismiss) { Text("Cancel") } },
+    )
 }
 
 @Composable

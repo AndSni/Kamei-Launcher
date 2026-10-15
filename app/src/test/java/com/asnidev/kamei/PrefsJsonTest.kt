@@ -11,6 +11,7 @@ import com.asnidev.kamei.data.Place
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.PrefsJson
 import com.asnidev.kamei.data.SettingsStyle
+import com.asnidev.kamei.data.TokyoAccent
 import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.lang.DisplayLang
 import org.junit.Assert.assertEquals
@@ -37,6 +38,8 @@ class PrefsJsonTest {
             seeded = true,
             settingsStyle = SettingsStyle.PLAIN,
             workMark = WorkMark.BOTH,
+            tokyoAccent = TokyoAccent.CUSTOM,
+            tokyoColor = 0xFF0095D9,
         )
         assertEquals(p, PrefsJson.read(PrefsJson.write(p)))
     }
