@@ -5,7 +5,8 @@
     venv/bin/python tools/make_fonts.py <dir with the downloaded Google Fonts .ttf files> [name ...]
 
 A full Japanese font is 4-9 MB; the home screen only ever writes Japanese: the
-phrases, readings and word list in lang/ and the kanji in ui/, plus dates. So
+phrases and readings in lang/, the N5 and N4 words in assets/vocab.tsv and the
+kanji in ui/, plus dates. So
 each text font keeps those characters, ASCII and Latin-1 (rōmaji); clock faces
 keep only digits and the colon. Translations, and the drawer's katakana names,
 are drawn in the phone's own font, so their characters aren't kept.
@@ -68,6 +69,7 @@ FONTS = {
     "rubikmonoone": ("digits", {}),
 }
 DIGITS = "0123456789: "
+FONT_LEVELS = ("N5", "N4")
 # Weekdays and months as java.time writes them in Japanese, and the weather kanji.
 EXTRA = "月火水木金土日曜一二三四五六七八九十天年時分秒午前後晴曇雨雪霧雷霙風"
 
@@ -88,11 +90,12 @@ def characters():
     phrases = read("Phrases.kt")
     start = phrases.index('"ja" to listOf(')
     text += phrases[start:phrases.index("),", start)]
-    # The word list's Japanese and kana columns: key | 12 translations | ja | kana | ...
-    for line in read("Vocabulary.kt").splitlines():
-        cols = line.split("|")
-        if len(cols) > 14:
-            text += cols[13] + cols[14]
+    # The word list's Japanese and kana, for the levels the fonts carry (Vocabulary.FONT_LEVELS);
+    # words from higher levels with other kanji are drawn in the phone's font.
+    for line in open(os.path.join(ROOT, "app/src/main/assets/vocab.tsv"), encoding="utf-8"):
+        cols = line.split("\t")
+        if cols[0] in FONT_LEVELS:
+            text += cols[1] + cols[2]
     # Readings, and the kanji the UI writes itself.
     text += read("JaReading.kt")
     text += "".join(open(p, encoding="utf-8").read() for p in sorted(glob.glob(os.path.join(SRC_DIR, "ui", "*.kt"))))

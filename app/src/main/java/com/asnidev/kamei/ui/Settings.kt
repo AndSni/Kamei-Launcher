@@ -31,6 +31,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -88,6 +89,7 @@ import com.asnidev.kamei.data.WordEvery
 import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.data.dayFadeAt
 import com.asnidev.kamei.data.longFade
+import com.asnidev.kamei.lang.JlptLevel
 import com.asnidev.kamei.lang.Phrase
 import com.asnidev.kamei.lang.Phrases
 import com.asnidev.kamei.lang.Transcribe
@@ -467,9 +469,11 @@ private fun LanguagePage(prefs: Prefs) {
             }
         }
         if (prefs.wordOfDay) {
+            row { LevelsItem(prefs) }
             row {
+                val count = Vocabulary.from(prefs.wordLevels).size
                 ChoiceItem("New word", WordEvery.entries, prefs.wordEvery, { it.label }, "clock-hour-4",
-                    describe = { e -> "${Vocabulary.all.size} words: each comes back after ${repeatAfter(e)}" }) { e ->
+                    describe = { e -> "$count words: each comes back after ${repeatAfter(count, e)}" }) { e ->
                     vm.update { it.copy(wordEvery = e) }
                 }
             }
@@ -498,10 +502,52 @@ private fun LanguagePage(prefs: Prefs) {
     Note("Everything on the home screen is written in Japanese, with small translations under the lines you choose: a little practice every time you unlock. Hold any line for the full translation and reading. It all comes from a dictionary inside the app; nothing is sent anywhere.")
 }
 
-/** How long until the word list comes round again at [every]: "2 days", "60 days". */
-private fun repeatAfter(every: WordEvery): String {
-    val hours = Vocabulary.all.size * every.hours
-    return if (hours < 48) "$hours hours" else "${hours / 24} days"
+/** How long until [count] words come round again at [every]: "30 hours", "2 years". */
+private fun repeatAfter(count: Int, every: WordEvery): String {
+    val hours = count * every.hours
+    return when {
+        hours < 48 -> "$hours hours"
+        hours < 2 * 365 * 24 -> "${hours / 24} days"
+        else -> "${hours / 24 / 365} years"
+    }
+}
+
+/** Which JLPT levels the words come from: any mix, but at least one. */
+@Composable
+private fun LevelsItem(prefs: Prefs) {
+    val vm = LocalVm.current
+    var open by remember { mutableStateOf(false) }
+    val levels = prefs.wordLevels
+    Item("Word levels", levels.sorted().joinToString(" · ") { it.label } + " · ${Vocabulary.from(levels).size} words", "stairs") { open = true }
+    if (open) {
+        AlertDialog(
+            onDismissRequest = { open = false },
+            title = { Text("Word levels") },
+            text = {
+                Column {
+                    JlptLevel.entries.forEach { l ->
+                        val on = l in levels
+                        // The last level stays: no levels would mean no words.
+                        val can = !on || levels.size > 1
+                        Row(
+                            Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp))
+                                .clickable(enabled = can) { vm.update { it.copy(wordLevels = if (on) levels - l else levels + l) } }
+                                .padding(vertical = 8.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Checkbox(on, onCheckedChange = null, enabled = can)
+                            Spacer(Modifier.width(14.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text("JLPT ${l.label} · ${Vocabulary.from(setOf(l)).size} words", style = MaterialTheme.typography.bodyLarge)
+                                Text(l.summary, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = { TextButton({ open = false }) { Text("Done") } },
+        )
+    }
 }
 
 /** The mark before each home-screen heading: free text, a few presets, or none; "//" one tap away. */
@@ -1084,6 +1130,7 @@ private fun AboutPage() {
         row { Item("Tabler Icons", "MIT licence · tabler.io/icons", "icons") }
         row { Item("Fonts", FontChoice.entries.drop(1).joinToString(", ") { it.label } + " · SIL Open Font Licence", "typography") }
         row { Item("Weather data", "MET Norway (Yr) and Open-Meteo.com · CC BY 4.0", "cloud") }
+        row { Item("Word list", "JLPT lists by Jonathan Waller (tanos.co.uk, CC BY) via open-anki-jlpt-decks (MIT); readings from JMdict (EDRDG, CC BY-SA 4.0); translations from Wiktionary (CC BY-SA 4.0)", "vocabulary") }
     }
     Note("Licence texts are in the app's assets/licenses folder.")
 }

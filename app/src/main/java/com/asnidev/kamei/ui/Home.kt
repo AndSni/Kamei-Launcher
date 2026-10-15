@@ -65,6 +65,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.intl.LocaleList
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -205,8 +206,9 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
     val shade = { SystemActions.expandNotifications(context) }
     // Over a wallpaper a soft shadow keeps white text readable on light patches.
     val shadow = if (prefs.showWallpaper && !look.light) Shadow(Color.Black.copy(alpha = 0.7f), blurRadius = 8f) else null
-    val big = TextStyle(color = look.text, fontFamily = font, fontSize = 26.sp, lineHeight = 34.sp, shadow = shadow)
-    val small = TextStyle(color = look.text, fontFamily = font, fontSize = 15.sp, lineHeight = 22.sp, shadow = shadow)
+    // Japanese, so a character the font lacks falls back to the Japanese forms of the phone's font, not the Chinese.
+    val big = TextStyle(color = look.text, fontFamily = font, fontSize = 26.sp, lineHeight = 34.sp, shadow = shadow, localeList = LocaleList("ja"))
+    val small = TextStyle(color = look.text, fontFamily = font, fontSize = 15.sp, lineHeight = 22.sp, shadow = shadow, localeList = LocaleList("ja"))
     // Learning lines: the translation (and maybe the reading) under the text, in the phone's own font.
     // Only Original starts headings with the prefix; Material and Tokyo mark them their own way.
     val pre = if (look.usesPrefix) prefs.prefix else ""
@@ -323,15 +325,15 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
             } }
 
             // Word of the day
-            if (prefs.wordOfDay) parts[HomeBlock.WORD] = {
+            if (prefs.wordOfDay) parts[HomeBlock.WORD] = word@{
                 val minute = now.hour * 60 + now.minute
                 val slot = prefs.wordEvery.slot(now.toLocalDate().toEpochDay(), minute)
                 var extra by remember(slot) { mutableIntStateOf(0) }
-                val v = Vocabulary.of(slot, extra)
+                val v = Vocabulary.of(slot, prefs.wordLevels, extra) ?: return@word
                 // The meaning fades over the word's time, to be gone when the next word comes.
                 val meaningFade = if (prefs.wordFade) 1f - prefs.wordEvery.elapsed(minute) else 1f
-                val word = v.word("ja")
-                val rawReading = v.reading("ja")?.takeIf { it != word }
+                val word = v.ja
+                val rawReading = v.kana.takeIf { it != word }
                 val reading = rawReading?.let { r ->
                     when (prefs.readingHint) {
                         ReadingHint.KANA -> r
@@ -349,7 +351,9 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                     )
                 }) {
                     Row {
-                        BasicText(accented(pre, word, look.accent), style = big, modifier = Modifier.alignByBaseline())
+                        // Kanji the bundled fonts don't carry (N3): the whole word in the phone's font, not a mix.
+                        val wordStyle = if (Vocabulary.inBundledFonts(word)) big else big.copy(fontFamily = FontFamily.Default)
+                        BasicText(accented(pre, word, look.accent), style = wordStyle, modifier = Modifier.alignByBaseline())
                         Spacer(Modifier.width(12.dp))
                         val hint = look.text.copy(alpha = 0.7f)
                         BasicText(

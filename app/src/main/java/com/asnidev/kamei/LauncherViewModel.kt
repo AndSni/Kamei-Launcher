@@ -21,6 +21,7 @@ import com.asnidev.kamei.icons.AppType
 import com.asnidev.kamei.icons.Glyphs
 import com.asnidev.kamei.icons.IconPacks
 import com.asnidev.kamei.icons.IconRenderer
+import com.asnidev.kamei.lang.Vocabulary
 import com.asnidev.kamei.lang.Words
 import com.asnidev.kamei.system.CustomFonts
 import com.asnidev.kamei.system.DeviceStatus
@@ -87,6 +88,7 @@ class LauncherViewModel(app: Application) : AndroidViewModel(app) {
 
     init {
         CustomFonts.load(app)
+        Vocabulary.load(app.assets.open("vocab.tsv").bufferedReader().use { it.readText() })
         viewModelScope.launch(Dispatchers.IO) { glyphs.load() }
         // First start: the phone's default apps go into the favourites stack.
         viewModelScope.launch {

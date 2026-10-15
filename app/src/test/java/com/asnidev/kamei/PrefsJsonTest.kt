@@ -13,6 +13,7 @@ import com.asnidev.kamei.data.PrefsJson
 import com.asnidev.kamei.data.SettingsStyle
 import com.asnidev.kamei.data.TokyoAccent
 import com.asnidev.kamei.data.WorkMark
+import com.asnidev.kamei.lang.JlptLevel
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -36,6 +37,7 @@ class PrefsJsonTest {
             seeded = true,
             settingsStyle = SettingsStyle.PLAIN,
             workMark = WorkMark.BOTH,
+            wordLevels = setOf(JlptLevel.N3),
             tokyoAccent = TokyoAccent.CUSTOM,
             tokyoColor = 0xFF0095D9,
         )

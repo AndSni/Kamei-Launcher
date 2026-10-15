@@ -1,5 +1,6 @@
 package com.asnidev.kamei.data
 
+import com.asnidev.kamei.lang.JlptLevel
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -70,6 +71,7 @@ object PrefsJson {
         put("wordOfDay", p.wordOfDay)
         put("wordEvery", p.wordEvery.name)
         put("wordFade", p.wordFade)
+        put("wordLevels", JSONArray().apply { p.wordLevels.sorted().forEach { put(it.name) } })
         put("batteryLine", p.batteryLine)
         put("signalLine", p.signalLine)
         put("fadeDays", p.fadeDays)
@@ -158,6 +160,9 @@ object PrefsJson {
             wordOfDay = o.optBoolean("wordOfDay", d.wordOfDay),
             wordEvery = enumOr(o.optString("wordEvery"), d.wordEvery),
             wordFade = o.optBoolean("wordFade", d.wordFade),
+            wordLevels = o.optJSONArray("wordLevels")?.let { a ->
+                (0 until a.length()).mapNotNull { i -> runCatching { JlptLevel.valueOf(a.optString(i)) }.getOrNull() }.toSet()
+            }?.ifEmpty { null } ?: d.wordLevels,
             batteryLine = o.optBoolean("batteryLine", d.batteryLine),
             signalLine = o.optBoolean("signalLine", d.signalLine),
             fadeDays = o.optInt("fadeDays", d.fadeDays).takeIf { it in Prefs.FADE_DAYS } ?: d.fadeDays,

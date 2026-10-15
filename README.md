@@ -14,7 +14,7 @@ Kamei (仮名, "pseudonym", also read "kana") writes everything on your home scr
 ## Features
 
 - **Private by design.** Apps get unexpected glyphs that hint at them sideways (music → a feather, bank → an anchor), from Tabler's 4,900 line icons; app names can be written as they sound in katakana; notifications show as a short summary until you hold them.
-- **Learn as you go.** Small translations under the date and weather, readings in kana or rōmaji, a word of the day, and translations that fade over weeks or every morning; all from a dictionary inside the app, in 15 languages.
+- **Learn as you go.** Small translations under the date and weather, readings in kana or rōmaji, a word of the day from 1,095 JLPT N5–N3 words (pick your levels; a new one every day or every few hours, its meaning fading until the next), and translations that fade over weeks or every morning; all from a dictionary inside the app, in 15 languages.
 - **Weather that matters.** Yr (MET Norway) with radar nowcast, or Open-Meteo: the line turns bluer as rain comes closer and says when it starts or stops. Tap it to open Yr or Drops.
 - **Calm warnings.** Battery under 25% turns the line orange, then red, blinking at 5%; weak signal and no service (圏外) the same way.
 - **Three themes.** Original (white outlines on black), Material (rounded cards in your wallpaper colours) and Tokyo (paper, ink and tag chips), all following the phone's colours.
@@ -63,6 +63,7 @@ local `assembleRelease` produces an unsigned APK.
 
 - [Tabler Icons](https://tabler.io/icons) 3.31, MIT
 - Weather data: [MET Norway](https://api.met.no/) (Yr) and [Open-Meteo](https://open-meteo.com/), CC BY 4.0
+- Word list (`assets/vocab.tsv`, CC BY-SA 4.0, built by `tools/make_vocab.py`): JLPT lists by [Jonathan Waller](https://www.tanos.co.uk/jlpt/) (CC BY) via [open-anki-jlpt-decks](https://github.com/jamsinclair/open-anki-jlpt-decks) (MIT); readings from [JMdict](https://www.edrdg.org/jmdict/j_jmdict.html) (EDRDG, CC BY-SA 4.0); translations from [Wiktionary](https://en.wiktionary.org/) (CC BY-SA 4.0)
 - Fonts (SIL OFL 1.1, cut down to the characters the app writes): M PLUS 1 Code, Zen Maru Gothic, DotGothic16, Shippori Mincho, Klee One, Murecho, BIZ UDGothic, Kiwi Maru, Kaisei Decol, Dela Gothic One, Rampart One, Train One, Stick, RocknRoll One, Reggae One, Yusei Magic, Hachi Maru Pop, Potta One, Yuji Syuku, Inter, Space Grotesk, Unbounded, Bebas Neue, Big Shoulders Display, Syne, Instrument Serif, Fraunces, Orbitron, Major Mono Display, Rubik Mono One, Doto, Sixtyfour, Monoton, Bungee Hairline, Tilt Neon, Codystar
 
 ## License

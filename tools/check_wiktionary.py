@@ -1,5 +1,5 @@
 """Translation check (run with python3 -I, caches downloads in the given dir).
-Compare Kamei's word list and weather words against en.wiktionary translation tables.
+Compare Kamei's word list (assets/vocab.tsv) and weather words against en.wiktionary translation tables.
 usage: python3 -I wikt.py <kamei lang dir> <cache dir>"""
 import json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
 
@@ -37,11 +37,17 @@ def translations(word):
             found[code].add(m.group(1).strip())
     return found
 
-# Our vocabulary table.
-vocab_src = open(os.path.join(LANG_DIR, "Vocabulary.kt"), encoding="utf-8").read()
-table = vocab_src.split('TABLE = """', 1)[1].split('"""', 1)[0].strip().splitlines()
-cols = ["key", "en", "lv", "lt", "et", "ru", "uk", "de", "fr", "es", "pl", "fi", "sv", "ja", "ja_r", "zh", "zh_r", "ko", "ko_r", "el", "el_r"]
-rows = [dict(zip(cols, l.split("|"))) for l in table]
+# Our word list (assets/vocab.tsv): level, ja, kana, en, then the other languages.
+VOCAB = os.path.join(LANG_DIR, "../../../../../assets/vocab.tsv")
+cols = ["level", "ja", "kana", "en", "lv", "lt", "et", "ru", "uk", "de", "fr", "es", "pl", "fi", "sv", "zh", "ko", "el"]
+rows = []
+for line in open(VOCAB, encoding="utf-8"):
+    if line.startswith("#"):
+        continue
+    r = dict(zip(cols, line.rstrip("\n").split("\t")))
+    r["key"] = r["ja"]
+    r["en"] = r["en"].removeprefix("to ")
+    rows.append(r)
 
 # Weather nouns from the phrase table.
 ph = open(os.path.join(LANG_DIR, "Phrases.kt"), encoding="utf-8").read()
@@ -61,7 +67,9 @@ report = []
 for r in rows:
     tr = translations(r["en"])
     for c in CODES:
-        ours = r[c]
+        ours = r.get(c, "")
+        if not ours:
+            continue
         theirs = tr[c]
         if not theirs:
             report.append((r["key"], c, ours, "NO WIKTIONARY DATA"))

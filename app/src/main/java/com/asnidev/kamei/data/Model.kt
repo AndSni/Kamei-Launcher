@@ -1,5 +1,6 @@
 package com.asnidev.kamei.data
 
+import com.asnidev.kamei.lang.JlptLevel
 
 /** One launchable activity in one user profile ([user] is the profile's serial number). */
 data class AppKey(val pkg: String, val cls: String, val user: Long) {
@@ -402,6 +403,8 @@ data class Prefs(
     /** How often a new word comes; with [wordFade] its meaning fades away over that time. */
     val wordEvery: WordEvery = WordEvery.DAY,
     val wordFade: Boolean = false,
+    /** The JLPT levels the words come from; never empty. */
+    val wordLevels: Set<JlptLevel> = setOf(JlptLevel.N5, JlptLevel.N4),
     /** Warning lines: battery at 25% or less (not while charging), and weak or no mobile signal. */
     val batteryLine: Boolean = true,
     val signalLine: Boolean = true,

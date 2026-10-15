@@ -1,0 +1,1096 @@
+# level	ja	kana	en	lv	lt	et	ru	uk	de	fr	es	pl	fi	sv	zh	ko	el
+N5	青	あお	blue	zils	mėlyna	sinine	синий	синій	blau	bleu	azul	niebieski	sininen	blå	蓝色	파랑	μπλε
+N5	赤	あか	red	sarkans	raudona	punane	красный	червоний	rot	rouge	rojo	czerwony	punainen	röd	红色	빨강	κόκκινο
+N5	秋	あき	autumn	rudens	ruduo	sügis	осень	осінь	Herbst	automne	otoño	jesień	syksy	höst	秋天	가을	φθινόπωρο
+N5	朝	あさ	morning	rīts	rytas	hommik	утро	ранок	Morgen	matin	mañana	poranek	aamu	morgon	早上	아침	πρωί
+N5	明日	あした	tomorrow	rīt	rytoj	homme	завтра	завтра	morgen	demain	mañana	jutro	huomenna	i morgon	明天	내일	αύριο
+N5	雨	あめ	rain	lietus	lietus	vihm	дождь	дощ	Regen	pluie	lluvia	deszcz	sade	regn	雨	비	βροχή
+N5	家	いえ	home	mājas	namai	kodu	дом	дім	Zuhause	maison	casa	dom	koti	hem	家	집	σπίτι
+N5	犬	いぬ	dog	suns	šuo	koer	собака	собака	Hund	chien	perro	pies	koira	hund	狗	개	σκύλος
+N5	色	いろ	colour	krāsa	spalva	värv	цвет	колір	Farbe	couleur	color	kolor	väri	färg	颜色	색	χρώμα
+N5	海	うみ	sea	jūra	jūra	meri	море	море	Meer	mer	mar	morze	meri	hav	海	바다	θάλασσα
+N5	お茶	おちゃ	tea	tēja	arbata	tee	чай	чай	Tee	thé	té	herbata	tee	te	茶	차	τσάι
+N5	音楽	おんがく	music	mūzika	muzika	muusika	музыка	музика	Musik	musique	música	muzyka	musiikki	musik	音乐	음악	μουσική
+N5	風	かぜ	wind	vējš	vėjas	tuul	ветер	вітер	Wind	vent	viento	wiatr	tuuli	vind	风	바람	άνεμος
+N5	家族	かぞく	family	ģimene	šeima	perekond	семья	сім'я	Familie	famille	familia	rodzina	perhe	familj	家庭	가족	οικογένεια
+N5	学校	がっこう	school	skola	mokykla	kool	школа	школа	Schule	école	escuela	szkoła	koulu	skola	学校	학교	σχολείο
+N5	木	き	tree	koks	medis	puu	дерево	дерево	Baum	arbre	árbol	drzewo	puu	träd	树	나무	δέντρο
+N5	今日	きょう	today	šodien	šiandien	täna	сегодня	сьогодні	heute	aujourd'hui	hoy	dzisiaj	tänään	idag	今天	오늘	σήμερα
+N5	魚	さかな	fish	zivs	žuvis	kala	рыба	риба	Fisch	poisson	pez	ryba	kala	fisk	鱼	물고기	ψάρι
+N5	時間	じかん	time	laiks	laikas	aeg	время	час	Zeit	temps	tiempo	czas	aika	tid	时间	시간	χρόνος
+N5	仕事	しごと	work	darbs	darbas	töö	работа	робота	Arbeit	travail	trabajo	praca	työ	arbete	工作	일	δουλειά
+N5	静か	しずか	quiet	kluss	tylus	vaikne	тихий	тихий	ruhig	calme	tranquilo	cichy	hiljainen	tyst	安静	조용하다	ήσυχος
+N5	自転車	じてんしゃ	bicycle	velosipēds	dviratis	jalgratas	велосипед	велосипед	Fahrrad	vélo	bicicleta	rower	polkupyörä	cykel	自行车	자전거	ποδήλατο
+N5	白	しろ	white	balts	balta	valge	белый	білий	weiß	blanc	blanco	biały	valkoinen	vit	白色	하양	άσπρο
+N5	空	そら	sky	debesis	dangus	taevas	небо	небо	Himmel	ciel	cielo	niebo	taivas	himmel	天空	하늘	ουρανός
+N5	食べ物	たべもの	food	ēdiens	maistas	toit	еда	їжа	Essen	nourriture	comida	jedzenie	ruoka	mat	食物	음식	φαγητό
+N5	電車	でんしゃ	train	vilciens	traukinys	rong	поезд	потяг	Zug	train	tren	pociąg	juna	tåg	火车	기차	τρένο
+N5	友達	ともだち	friend	draugs	draugas	sõber	друг	друг	Freund	ami	amigo	przyjaciel	ystävä	vän	朋友	친구	φίλος
+N5	鳥	とり	bird	putns	paukštis	lind	птица	птах	Vogel	oiseau	pájaro	ptak	lintu	fågel	鸟	새	πουλί
+N5	猫	ねこ	cat	kaķis	katė	kass	кошка	кіт	Katze	chat	gato	kot	kissa	katt	猫	고양이	γάτα
+N5	花	はな	flower	zieds	gėlė	lill	цветок	квітка	Blume	fleur	flor	kwiat	kukka	blomma	花	꽃	λουλούδι
+N5	春	はる	spring	pavasaris	pavasaris	kevad	весна	весна	Frühling	printemps	primavera	wiosna	kevät	vår	春天	봄	άνοιξη
+N5	冬	ふゆ	winter	ziema	žiema	talv	зима	зима	Winter	hiver	invierno	zima	talvi	vinter	冬天	겨울	χειμώνας
+N5	本	ほん	book	grāmata	knyga	raamat	книга	книга	Buch	livre	libro	książka	kirja	bok	书	책	βιβλίο
+N5	町	まち	town	pilsēta	miestelis	linn	город	місто	Stadt	ville	pueblo	miasto	kaupunki	stad	城镇	마을	πόλη
+N5	水	みず	water	ūdens	vanduo	vesi	вода	вода	Wasser	eau	agua	woda	vesi	vatten	水	물	νερό
+N5	道	みち	road	ceļš	kelias	tee	дорога	дорога	Straße	route	camino	droga	tie	väg	路	길	δρόμος
+N5	目	め	eye	acs	akis	silm	глаз	око	Auge	œil	ojo	oko	silmä	öga	眼睛	눈	μάτι
+N5	山	やま	mountain	kalns	kalnas	mägi	гора	гора	Berg	montagne	montaña	góra	vuori	berg	山	산	βουνό
+N5	雪	ゆき	snow	sniegs	sniegas	lumi	снег	сніг	Schnee	neige	nieve	śnieg	lumi	snö	雪	눈	χιόνι
+N5	夜	よる	night	nakts	naktis	öö	ночь	ніч	Nacht	nuit	noche	noc	yö	natt	夜晚	밤	νύχτα
+N5	会う	あう	to meet	sagaidīt	sutikti	kohtama	встречать	зустрічати	treffen	rencontrer	encontrar	spotykać	tavata	träffa	遇见	만나다	συναντώ
+N5	青い	あおい	blue	zils	mėlynas	sinine	синий	синій	blau	bleu	azul	niebieski	sininen	blå	蓝色	푸르다	μπλε
+N5	赤い	あかい	red	sarkans	raudonas	punane	красный	червоний	rot	rouge	rojo	czerwony	punainen	röd	红	빨갛다	κόκκινος
+N5	開く	あく	to open	atvērt	atidaryti	avama	открывать	відкривати	öffnen	ouvrir	abrir	otwierać	avata	öppna	开	열다	ανοίγω
+N5	開ける	あける	to open	atvērt	atidaryti	avama	открывать	відкривати	öffnen	ouvrir	abrir	otwierać	avata	öppna	开	열다	ανοίγω
+N5	朝御飯	あさごはん	breakfast	brokastis	pusryčiai	hommikueine	завтрак	сніданок	Frühstück	petit déjeuner	desayuno	śniadanie	aamupala	frukost	早饭	아침	πρωινό
+N5	遊ぶ	あそぶ	to play	spēlēt	žaisti	mängima	играть	грати	spielen	jouer	jugar	grać	leikkiä	leka	玩	놀다	παίζω
+N5	暖かい	あたたかい	warm	silts	šiltas	soe	тёплый	теплий	warm	chaud	cálido	ciepły	lämmin	varm	暖和	따뜻하다	ζεστός
+N5	頭	あたま	head	galva	galva	pea	голова	голова	Kopf	tête	cabeza	głowa	pää	huvud	头	머리	κεφάλι
+N5	新しい	あたらしい	new	jauns	naujas	uus	новый	новий	neu	nouveau	nuevo	nowy	uusi	ny	新	새롭다	νέος
+N5	熱い	あつい	hot	karsts	karštas	kuum	горячий	гарячий	heiß	chaud	caliente	gorący	kuuma	het	热	뜨겁다	ζεστός
+N5	厚い	あつい	thick	resns	storas	paks	толстый	товстий	dick	épais	grueso	gruby	paksu	tjock	厚	두껍다	χοντρός
+N5	浴びる	あびる	to bathe	peldēties	maudytis	suplema	купаться	купатися	baden	prendre un bain	bañar	kąpać	kylpeä	bada	沐浴	목욕하다	λούζομαι
+N5	危ない	あぶない	dangerous	bīstams	pavojingas	ohtlik	опасный	небезпечний	gefährlich	dangereux	peligroso	niebezpieczny	vaarallinen	farlig	危险	위험하다	επικίνδυνος
+N5	甘い	あまい	sweet	salds	saldus	magus	сладкий	солодкий	süß	doux	dulce	słodki	makea	söt	甜	달콤하다	γλυκός
+N5	飴	あめ	candy	saldums	saldainis	komm	конфета	цукерка	Süßigkeit	bonbon	caramelo	cukierek	karkki	godis	糖果	캔디	καραμέλα
+N5	洗う	あらう	to wash	mazgāt	plauti	pesema	мыть	мити	waschen	laver	lavar	myć	pestä	tvätta	洗	씻다	πλένω
+N5	在る	ある	to be	būt	būti	olema	быть	бути	sein	être	ser	być	olla	vara	是	있다	υπάρχω
+N5	歩く	あるく	to walk	iet	eiti	kõndima	ходить	ходити	gehen	marcher	caminar	iść	kävellä	gå	走	걷다	περπατάω
+N5	行く	いく	to go	iet	eiti	minema	ходить	ходити	gehen	aller	ir	chodzić	mennä	gå	去	가다	πάω
+N5	池	いけ	pond	dīķis	kūdra	tiik	пруд	став	Teich	étang	charca	staw	lampi	damm	池塘	못	νερόλακος
+N5	医者	いしゃ	physician	ārsts	daktaras	arst	врач	лікар	Arzt	médecin	médico	lekarz	lääkäri	läkare	医生	의사	ιατρός
+N5	椅子	いす	chair	krēsls	kėdė	tool	стул	стілець	Sessel	chaise	silla	krzesło	tuoli	stol	椅子	의자	καρέκλα
+N5	忙しい	いそがしい	busy	nodarbināts	užsiėmusiam	toimekas	занятой	зайнятий	beschäftigt	occupé	ocupado	zajęty	kiireinen	upptagen	忙	바쁜	πολυάσχολος
+N5	いつも	いつも	always	vienmēr	visada	alati	всегда	завжди	immer	toujours	siempre	zawsze	aina	alltid	总是	항상	πάντα
+N5	入口	いりぐち	entrance	ieeja	įėjimas	sissepääs	вход	вхід	Eingang	entrée	entrada	wejście	sisäänkäynti	ingång	入口	입구	είσοδος
+N5	いる	いる	to be	būt	būti	olema	быть	бути	sein	être	ser	być	olla	vara	是	있다	υπάρχω
+N5	要る	いる	to need	vajadzēt	reikėti	vajama	нуждаться	потребувати	benötigen	avoir besoin de	necesitar	potrzebować	tarvita	behöva	需要	필요하다	χρειάζομαι
+N5	歌	うた	song	dziesma	daina	laul	песня	пісня	Lied	chanson	canción	piosenka	laulu	låt	歌曲	노래	τραγούδι
+N5	歌う	うたう	to sing	dziedāt	dainuoti	laulma	петь	співати	singen	chanter	cantar	śpiewać	laulaa	sjunga	唱歌	노래하다	τραγουδάω
+N5	生まれる	うまれる	to be born	dzimt	gimti	sündima	рождаться	народжуватися	geboren werden	naître	nacer	rodzić	syntyä	födas	出生	태어나다	γεννιέμαι
+N5	売る	うる	to sell	pārdot	parduoti	müüma	продавать	продавати	verkaufen	vendre	vender	sprzedawać	myydä	sälja	卖	팔다	πουλάω
+N5	絵	え	painting	glezna	tapybos kūrinys	maal	картина	картина	Gemälde	peinture	cuadro	obraz	maalaus	målning	图画	회화	ζωγραφιά
+N5	映画	えいが	movie	filma	filmas	film	фильм	фільм	Film	film	película	film	elokuva	film	电影	영화	ταινία
+N5	映画館	えいがかん	cinema	kinoteātris	kino teatras	kino	кинотеатр	кінотеатр	Kino	cinéma	cine	kino	elokuvateatteri	biograf	电影院	영화관	σινεμά
+N5	駅	えき	station	stacija	stotis	jaam	остановка	станція	Bahnhof	gare	estación	dworzec	asema	station	站	터미널	σταθμός
+N5	鉛筆	えんぴつ	pencil	zīmulis	pieštukas	pliiats	карандаш	олівець	Bleistift	crayon	lápiz	ołówek	lyijykynä	blyertspenna	铅笔	연필	μολύβι
+N5	美味しい	おいしい	delicious	garšīgs	skanus	maitsev	вкусный	смачний	deliziös	délicieux	delicioso	smaczny	herkullinen	delikat	好吃	맛있다	εύγευστος
+N5	大きい	おおきい	big	liels	didelis	suur	большой	великий	groß	grand	grande	duży	iso	stor	大	크다	μεγάλος
+N5	お母さん	おかあさん	mother	māte	motė	ema	мать	мати	Mutter	mère	madre	matka	äiti	mor	母亲	엄마	μητέρα
+N5	お金	おかね	money	nauda	pinigai	raha	деньги	гроші	Geld	argent	dinero	pieniądze	raha	pengar	钱	돈	χρήματα
+N5	置く	おく	to put	likt	padėti	panema	класть	класти	setzen	placer	poner	kłaść	panna	sätta	放	두다	βάζω
+N5	奥さん	おくさん	wife	sieva	pati	naine	жена	дружина	Ehefrau	femme	esposa	żona	vaimo	hustru	妻子	아내	σύζυγος
+N5	教える	おしえる	to teach	mācīt	mokyti	õpetama	преподавать	вчити	lehren	apprendre	enseñar	uczyć	opettaa	lära	教	가르치다	διδάσκω
+N5	押す	おす	to push	grūst	stumti	tõukama	толкать	штовхати	drücken	pousser	empujar	pchać	työntää	skjuta	推	밀다	σπρώχνω
+N5	遅い	おそい	slow	lēns	lėtas	aeglane	медленный	повільний	langsam	lent	lento	wolny	hidas	långsam	慢	느린	αργός
+N5	お手洗い	おてあらい	toilet	tualete	tualetas	klosett	туалет	туалет	Toilette	toilettes	baño	toaleta	käymälä	toalett	厕所	뒷간	τουαλέτα
+N5	お父さん	おとうさん	father	tēvs	tėvas	isa	отец	батько	Vater	père	padre	ojciec	isä	fader	父亲	아버지	πατέρας
+N5	男	おとこ	man	vīrs	vyras	mees	мужчина	чоловік	Mann	homme	hombre	mężczyzna	mies	man	男人	남자	άνδρας
+N5	男の子	おとこのこ	boy	puika	berniukas	poiss	мальчик	хлопець	Bub	garçon	niño	chłopiec	poika	pojke	男孩	소년	αγόρι
+N5	お腹	おなか	stomach	kuņģis	skrandis	kõht	желудок	шлунок	Magen	estomac	estómago	żołądek	mahalaukku	mage	胃	위	στομάχι
+N5	覚える	おぼえる	to remember	atminēties	prisiminti	mäletama	помнить	пам'ятати	erinnern	se rappeler	acordarse	pamiętać	muistaa	komma ihåg	记得	기억하다	θυμάμαι
+N5	重い	おもい	heavy	smags	sunkus	raske	тяжёлый	важкий	schwer	lourd	pesado	ciężki	painava	tung	重	무겁다	βαρύς
+N5	面白い	おもしろい	interesting	interesants	įdomus	huvitav	интересный	цікавий	interessant	intéressant	interesante	ciekawy	kiinnostava	intressant	有趣	흥미롭다	ενδιαφέρων
+N5	泳ぐ	およぐ	to swim	peldēt	plaukti	ujuma	плавать	плавати	schwimmen	nager	nadar	pływać	uida	simma	游泳	수영하다	κολυμπάω
+N5	女	おんな	woman	sieviete	moteris	naine	женщина	жінка	Frau	femme	mujer	kobieta	nainen	kvinna	妇女	여성	γυναίκα
+N5	女の子	おんなのこ	girl	meitene	mergina	tüdruk	девушка	дівчина	Mädchen	fille	niña	dziewczyna	tyttö	flicka	女孩儿	소녀	κορίτσι
+N5	外国人	がいこくじん	foreigner	ārzemnieks	užsienietis	välismaalane	иностранец	іноземець	Ausländer	étranger	extranjero	cudzoziemiec	ulkomaalainen	utlänning	外国人	외국인	ξένος
+N5	会社	かいしゃ	company	sabiedrība	bendrovė	äriühing	компания	товариство	Gesellschaft	société	empresa	firma	yhtiö	verksamhet	公司	회사	εταιρεία
+N5	階段	かいだん	stairs	kāpnes	laiptinė	trepp	лестница	сходи	Treppe	escalier	escalera	schody	portaat	trappa	楼梯	계단	σκάλα
+N5	買う	かう	to buy	pirkt	pirkti	ostma	покупать	купувати	kaufen	acheter	comprar	kupować	ostaa	köpa	买	사다	αγοράζω
+N5	顔	かお	face	seja	veidas	nägu	лицо	обличчя	Gesicht	visage	cara	twarz	kasvot	ansikte	脸	얼굴	πρόσωπο
+N5	鍵	かぎ	key	atslēga	raktas	võti	ключ	ключ	Schlüssel	clé	llave	klucz	avain	nyckel	钥匙	열쇠	κλειδί
+N5	書く	かく	to write	rakstīt	rašyti	kirjutama	писать	писати	schreiben	écrire	escribir	pisać	kirjoittaa	skriva	写	쓰다	γράφω
+N5	学生	がくせい	student	students	studentas	üliõpilane	студент	студент	Student	étudiant	estudiante	student	opiskelija	student	学生	학생	μαθητής
+N5	傘	かさ	umbrella	lietussargs	skėtis	vihmavari	зонтик	парасолька	Schirm	parapluie	paraguas	parasol	sateenvarjo	paraply	伞	우산	ομπρέλα
+N5	貸す	かす	to lend	aizdot	paskolinti	laenama	одалживать	позичати	leihen	prêter	prestar	pożyczać	lainata	låna	借出	빌리다	δανείζω
+N5	風邪	かぜ	cold	saaukstēšanās	peršalimas	külmetus	простуда	простуда	Erkältung	rhume	resfriado	przeziębienie	nuha	förkylning	感冒	감기	κρύωμα
+N5	家庭	かてい	family	ģimene	šeima	pere	семья	сім'я	Familie	famille	familia	rodzina	perhe	familj	家	가족	οικογένεια
+N5	角	かど	corner	stūris	kampas	nurk	угол	ріг	Ecke	coin	esquina	róg	kulma	korsning	角	모퉁이	γωνία
+N5	花瓶	かびん	vase	vāze	vaza	vaas	ваза	ваза	Vase	vase	jarrón	wazon	maljakko	vas	花瓶	꽃병	ανθοδοχείο
+N5	紙	かみ	paper	papīrs	popierius	paber	бумага	папір	Papier	papier	papel	papier	paperi	papper	纸	종이	χαρτί
+N5	辛い	からい	spicy	ass	aštrus	pikantne	острый	гострий	scharf	épicé	picante	ostry	pistävä	skarp	辣	맵다	αψύς
+N5	体	からだ	body	ķermenis	kūnas	keha	тело	тіло	Körper	corps	cuerpo	ciało	ruumis	kropp	身体	몸	σώμα
+N5	借りる	かりる	to borrow	aizņemties	skolintis	laenama	занимать	позичати	borgen	emprunter	pedir prestado	pożyczać	lainata	låna	借	빌리다	δανείζομαι
+N5	黄色い	きいろい	yellow	dzeltens	geltonas	kollane	жёлтый	жовтий	gelb	jaune	amarillo	żółty	keltainen	gul	黄	노란	κίτρινος
+N5	聞く	きく	to hear	dzirdēt	girdėti	kuulma	слышать	чути	hören	entendre	oír	słyszeć	kuulla	höra	听	듣다	ακούω
+N5	北	きた	north	ziemeļi	šiaurė	põhi	север	північ	Norden	nord	norte	północ	pohjoinen	nord	北	북	βορράς
+N5	汚い	きたない	dirty	netīrs	nešvarus	räpane	грязный	брудний	schmutzig	sale	sucio	brudny	likainen	oren	脏	더럽다	βρόμικος
+N5	喫茶店	きっさてん	café	kafejnīca	kavinė	kohvik	кафе	кав'ярня	Café	café	café	kawiarnia	kahvila	kafé	咖啡屋	카페	καφενείο
+N5	切符	きっぷ	ticket	biļete	bilietas	pilet	билет	квиток	Ticket	billet	entrada	bilet	pääsylippu	biljett	票	표	εισιτήριο
+N5	昨日	きのう	yesterday	vakar	vakar	eile	вчера	учора	gestern	hier	ayer	wczoraj	eilen	i går	昨天	어제	χθες
+N5	牛肉	ぎゅうにく	beef	liellopa gaļa	jautiena	veiseliha	говядина	яловичина	Rindfleisch	bœuf	carne de res	wołowina	naudanliha	nötkött	牛肉	쇠고기	βοδινό
+N5	牛乳	ぎゅうにゅう	milk	piens	pienas	piim	молоко	молоко	Milch	lait	leche	mleko	maito	mjölk	奶	젖	γάλα
+N5	教室	きょうしつ	classroom	klase	klasė	klassiruum	класс	клас	Klassenzimmer	salle de classe	aula	aula	luokkahuone	klassrum	教室	교실	αίθουσα διδασκαλίας
+N5	去年	きょねん	last year	pērn	pernai	mullu	в прошлом году	минулого року	letztes Jahr	l'année dernière	el año pasado	zeszłego roku	viime vuonna	i fjol	去年	작년	πέρυσι
+N5	切る	きる	to cut	griezt	kirpti	lõikama	резать	різати	einschneiden	couper	cortar	ciąć	leikata	skära	切	끊다	κόβω
+N5	綺麗	きれい	pretty	glīts	gražus	ilus	хорошенький	гарний	anmutig	joli	guapo	ładny	sievä	vacker	漂亮	예쁜	χαριτωμένος
+N5	銀行	ぎんこう	bank	banka	bankas	pank	банк	банк	Bank	banque	banca	bank	pankki	bank	银行	은행	τράπεζα
+N5	薬	くすり	medicine	zāles	vaistas	ravim	лекарство	ліки	Arznei	médicament	medicamento	lekarstwo	lääke	läkemedel	药	약	φάρμακο
+N5	果物	くだもの	fruit	auglis	vaisius	puuvili	плод	плід	Frucht	fruit	fruta	owoc	hedelmä	frukt	果	열매	καρπός
+N5	口	くち	mouth	mute	burna	suu	рот	рот	Mund	bouche	boca	usta	suu	mun	嘴	입	στόμα
+N5	靴	くつ	shoe	kurpes	kurpė	king	туфля	черевик	Schuh	chaussure	zapato	but	kenkä	sko	鞋子	신발	παπούτσι
+N5	靴下	くつした	sock	zeķe	įklotė	sokk	носок	шкарпетка	Socke	chaussette	calcetín	skarpeta	sukka	socka	袜子	양말	κάλτσα
+N5	国	くに	country	zeme	šalis	maa	страна	країна	Land	pays	país	kraj	maa	land	地区	나라	χώρα
+N5	暗い	くらい	dark	tumšs	tamsus	tume	тёмный	темний	dunkel	obscur	oscuro	ciemny	pimeä	mörk	暗	어둡다	σκοτεινός
+N5	来る	くる	to come	nākt	ateiti	tulema	приходить	приходити	kommen	venir	venir	przychodzić	tulla	komma	来	오다	έρχομαι
+N5	車	くるま	car	automašīna	automobilis	auto	машина	автівка	Auto	voiture	coche	samochód	auto	bil	汽车	차	αυτοκίνητο
+N5	黒い	くろい	black	melns	juodas	must	чёрный	чорний	schwarz	noir	negro	czarny	musta	svart	黑	검다	μαύρος
+N5	警官	けいかん	police officer	policists	policininkas	politseinik	полицейский	поліціянт	Polizist	policier	policía	policjant	poliisi	polis	警察	경찰관	αστυνομικός
+N5	公園	こうえん	park	parks	parkas	park	парк	парк	Park	parc	parque	park	puisto	park	公园	공원	πάρκο
+N5	交差点	こうさてん	intersection	krustošanās	sankryža	ristmik	перекрёсток	перехресток	Kreuzung	carrefour	cruce	skrzyżowanie	risteys	korsning	路口	사거리	διασταύρωση
+N5	紅茶	こうちゃ	black tea	melnā tēja	juodoji arbata	must tee	чёрный чай	чорний чай	Schwarztee	thé noir	té negro	czarna herbata	musta tee	svart te	红茶	홍차	μαύρο τσάι
+N5	声	こえ	voice	balss	balsas	hääl	голос	голос	Stimme	voix	voz	głos	ääni	röst	声音	목소리	φωνή
+N5	答える	こたえる	to answer	atbildēt	atsakyti	vastama	отвечать	відповідати	antworten	répondre	responder	odpowiadać	vastata	svara	回答	대답하다	απαντώ
+N5	言葉	ことば	language	valoda	kalba	keel	язык	мова	Sprache	langue	lengua	język	kieli	språk	语言	언어	γλώσσα
+N5	子供	こども	child	bērns	vaikas	laps	ребёнок	дитина	Kind	enfant	hijo	dziecko	lapsi	barn	小孩	어린이	παιδί
+N5	御飯	ごはん	meal	ēdiens	valgis	söök	еда	їжа	Mahlzeit	repas	comida	posiłek	ateria	måltid	餐	끼니	γεύμα
+N5	今晩	こんばん	tonight	šonakt	šiąnakt	täna öösel	сегодня ночью	сьогодні вночі	heute Nacht	cette nuit	esta noche	dziś w nocy	tänä yönä	i natt	今晚	오늘 저녁	απόψε
+N5	財布	さいふ	wallet	maks	dėklas	rahatasku	бумажник	гаманець	Portemonnaie	portefeuille	cartera	portfel	lompakko	plånbok	钱包	지갑	πορτοφόλι
+N5	砂糖	さとう	sugar	cukurs	cukrus	suhkur	сахар	цукор	Zucker	sucre	azúcar	cukier	sokeri	socker	糖	설탕	ζάχαρη
+N5	寒い	さむい	cold	auksts	šaltas	külm	холодный	холодний	kalt	froid	frío	zimny	kylmä	kall	冷	차다	κρύος
+N5	塩	しお	salt	sāls	druska	sool	соль	сіль	Salz	sel	sal	sól	suola	salt	盐	소금	αλάτι
+N5	辞書	じしょ	dictionary	vārdnīca	žodynas	sõnaraamat	словарь	словник	Wörterbuch	dictionnaire	diccionario	słownik	sanakirja	ordbok	词典	사전	λεξικό
+N5	自動車	じどうしゃ	automobile	automobilis	automobilis	auto	автомобиль	автомобіль	Automobil	voiture	automóvil	samochód	auto	bil	汽车	자동차	αυτοκίνητο
+N5	死ぬ	しぬ	to die	mirt	mirti	surema	умирать	умирати	sterben	mourir	morir	umierać	kuolla	dö	死	죽다	πεθαίνω
+N5	字引	じびき	dictionary	vārdnīca	žodynas	sõnaraamat	словарь	словник	Wörterbuch	dictionnaire	diccionario	słownik	sanakirja	ordbok	词典	사전	λεξικό
+N5	写真	しゃしん	picture	bilde	nuotrauka	pilt	фотография	фотографія	Foto	photo	foto	zdjęcie	valokuva	bild	照片	사진	φωτογραφία
+N5	食堂	しょくどう	cafeteria	ēdnīca	valgykla	söökla	кафетерий	їдальня	Cafeteria	cafétéria	cafetería	kafeteria	kahvio	kafeteria	食堂	식당	καφετέρια
+N5	知る	しる	to know	zināt	žinoti	teadma	знать	знати	wissen	savoir	saber	wiedzieć	tietää	veta	知道	알다	ξέρω
+N5	白い	しろい	white	balts	baltas	valge	белый	білий	weiß	blanc	blanco	biały	valkoinen	vit	白	희다	άσπρος
+N5	新聞	しんぶん	newspaper	avīze	laikraštis	ajaleht	газета	газета	Zeitung	journal	periódico	gazeta	sanomalehti	tidning	报纸	신문	εφημερίδα
+N5	吸う	すう	to suck	sūkt	čiulpti	imema	сосать	смоктати	saugen	sucer	chupar	ssać	imeä	suga	吸吮	빨다	βυζαίνω
+N5	少し	すこし	little	maz	mažai	pisut	мало	мало	wenig	peu	poco	mało	hieman	lite	少	적은	λίγο
+N5	住む	すむ	to reside	dzīvot	gyventi	elama	проживать	мешкати	wohnen	habiter	residir	mieszkać	asustaa	bo	居住	살다	μένω
+N5	する	する	to do	darīt	daryti	tegema	делать	робити	tun	faire	hacer	robić	tehdä	göra	做	하다	κάνω
+N5	座る	すわる	to sit	sēdēt	sėdėti	istuma	сидеть	сидіти	sitzen	être assis	sentarse	siedzieć	istua	sitta	坐	앉다	κάθομαι
+N5	生徒	せいと	pupil	skolnieks	mokinys	õpilane	ученик	учень	Schüler	élève	alumno	uczeń	oppilas	elev	学生	학생	μαθητής
+N5	石鹸	せっけん	soap	ziepes	muilas	seep	мыло	мило	Seife	savon	jabón	mydło	saippua	tvål	肥皂	비누	σαπούνι
+N5	狭い	せまい	narrow	šaurs	siauras	kitsas	узкий	вузький	eng	étroit	estrecho	wąski	kapea	trång	窄	좁은	στενός
+N5	先生	せんせい	teacher	skolotāja	mokytojas	õpetaja	учитель	учитель	Lehrer	professeur	enseñador	nauczyciel	opettaja	lärare	教师	선생	δάσκαλος
+N5	大使館	たいしかん	embassy	vēstniecība	ambasada	suursaatkond	посольство	посольство	Botschaft	ambassade	embajada	ambasada	suurlähetystö	ambassad	大使馆	대사관	πρεσβεία
+N5	大切	たいせつ	important	svarīgs	svarbus	tähtis	важный	важливий	wichtig	important	importante	ważny	tärkeä	viktig	重要	중요하다	σημαντικός
+N5	台所	だいどころ	kitchen	virtuve	virtuvė	köök	кухня	кухня	Küche	cuisine	cocina	kuchnia	keittiö	kök	厨房	부엌	κουζίνα
+N5	大変	たいへん	very	ļoti	labai	väga	очень	дуже	sehr	très	muy	bardzo	hyvin	mycket	很	아주	πολύ
+N5	高い	たかい	tall	garš	aukštas	pikk	высокий	високий	groß	grand	alto	wysoki	pitkä	lång	高	크다	ψηλός
+N5	立つ	たつ	to stand	stāvēt	stovėti	seisma	стоять	стояти	stehen	être debout	estar de pie	stać	seisoa	stå	站	서다	στέκομαι
+N5	建物	たてもの	building	celtne	pastatas	hoone	здание	будинок	Gebäude	immeuble	edificio	budynek	rakennus	byggnad	建筑	건물	κτίριο
+N5	頼む	たのむ	to request	prasīt	prašyti	paluma	запрашивать	просити	anfordern	demander	pedir	prosić	pyytää	anhålla om	请求	부탁하다	ζητώ
+N5	たばこ	たばこ	tobacco	tabaka	tabakas	tubakas	табак	тютюн	Tabak	tabac	tabaco	tytoń	tupakka	tobak	烟草	담배	καπνός
+N5	食べる	たべる	to eat	ēst	valgyti	sööma	есть	їсти	essen	manger	comer	jeść	syödä	äta	吃	먹다	τρώω
+N5	卵	たまご	egg	ola	kiaušinis	muna	яйцо	яйце	Ei	œuf	huevo	jajo	muna	ägg	卵子	알	αβγό
+N5	誕生日	たんじょうび	birthday	dzimšanas diena	gimtadienis	sünnipäev	день рождения	день народження	Geburtstag	anniversaire	cumpleaños	urodziny	syntymäpäivä	födelsedag	生日	생일	γενέθλια
+N5	小さい	ちいさい	small	mazs	mažas	väike	маленький	маленький	klein	petit	pequeño	mały	pieni	liten	小	작다	μικρός
+N5	小さな	ちいさな	small	mazs	mažas	väike	маленький	маленький	klein	petit	pequeño	mały	pieni	liten	小	작다	μικρός
+N5	地下鉄	ちかてつ	subway	metro	metro	metroo	метро	метро	U-Bahn	métro	metro	metro	metro	tunnelbana	地铁	지하철	μετρό
+N5	地図	ちず	map	karte	žemėlapis	kaart	карта	карта	Landkarte	carte	mapa	mapa	kartta	karta	地图	지도	χάρτης
+N5	父	ちち	father	tēvs	tėvas	isa	отец	батько	Vater	père	padre	ojciec	isä	fader	父亲	아버지	πατέρας
+N5	ちょっと	ちょっと	little	maz	mažai	pisut	мало	мало	wenig	peu	poco	mało	hieman	lite	少	적은	λίγο
+N5	使う	つかう	to use	lietot	vartoti	kasutama	использовать	уживати	benutzen	utiliser	usar	używać	käyttää	använda	用	쓰다	χρησιμοποιώ
+N5	冷たい	つめたい	cold	auksts	šaltas	külm	холодный	холодний	kalt	froid	frío	zimny	kylmä	kall	冷	차다	κρύος
+N5	強い	つよい	strong	stiprs	stiprus	tugev	сильный	сильний	stark	fort	fuerte	silny	vahva	kraftfull	强	강하다	δυνατός
+N5	手紙	てがみ	letter	vēstule	laiškas	kiri	письмо	лист	Brief	lettre	carta	list	kirje	brev	信	편지	επιστολή
+N5	出口	でぐち	exit	iziešana	išėjimas	väljapääs	выход	вихід	Ausweg	sortie	salida	wyjście	ulospääsy	utgång	出口	출구	έξοδος
+N5	天気	てんき	weather	laiks	oras	ilm	погода	погода	Wetter	temps	tiempo atmosférico	pogoda	sää	väder	天气	날씨	καιρός
+N5	電気	でんき	electricity	elektrība	elektra	elekter	электричество	електрика	Elektrizität	électricité	electricidad	elektryczność	sähkö	el	电	전기	ηλεκτρισμός
+N5	電話	でんわ	to telephone	telefonēt	telefonuoti	helistama	телефонировать	телефонувати	telefonieren	téléphoner	telefonear	telefonować	soittaa	telefonera	打电话	전화를 걸다	τηλεφωνώ
+N5	戸	と	door	durvis	durys	uks	дверь	двері	Tür	porte	puerta	drzwi	ovi	dörr	门	문	πόρτα
+N5	どうして	どうして	why	kāpēc	kodėl	miks	почему	чому	warum	pourquoi	por qué	dlaczego	miksi	varför	为甚么	왜	γιατί
+N5	どうぞ	どうぞ	please	lūdzu	prašau	palun	пожалуйста	будь ласка	bitte	s'il vous plaît	por favor	proszę	olkaa hyvä	tack	请	제발	παρακαλώ
+N5	動物	どうぶつ	animal	dzīvnieks	gyvūnas	loom	животное	тварина	Tier	animal	animal	zwierzę	eläin	djur	动物	동물	ζώο
+N5	遠い	とおい	far	tāls	tolimas	kauge	далёкий	далекий	fern	lointain	lejano	daleki	kaukainen	fjärran	远	먼	μακριά
+N5	時計	とけい	watch	pulkstenis	laikrodis	kell	наручные часы	годинник	Uhr	montre	reloj	zegarek	kello	klocka	手表	시계	ρολόι
+N5	年	とし	age	vecums	amžius	iga	возраст	вік	Alter	âge	edad	wiek	ikä	ålder	年岁	연령	ηλικία
+N5	図書館	としょかん	library	bibliotēka	biblioteka	raamatukogu	библиотека	бібліотека	Bibliothek	bibliothèque	biblioteca	biblioteka	kirjasto	bibliotek	图书馆	도서관	βιβλιοθήκη
+N5	とても	とても	very	ļoti	labai	väga	очень	дуже	sehr	très	muy	bardzo	hyvin	mycket	很	아주	πολύ
+N5	飛ぶ	とぶ	to fly	lidot	skristi	lendama	летать	літати	fliegen	voler	volar	latać	lentää	flyga	飞	날다	πετώ
+N5	止まる	とまる	to stop	apstāties	sustabdyti	peatuma	останавливаться	зупинятися	anhalten	s'arrêter	parar	zatrzymać się	pysähtyä	stanna	停	그치다	σταματώ
+N5	取る	とる	to take	ņemt	imti	võtma	брать	брати	nehmen	prendre	tomar	brać	ottaa	fatta	拿	잡다	παίρνω
+N5	無くす	なくす	to lose	zaudēt	netekti	kaotama	терять	втрачати	verlieren	perdre	perder	gubić	menettää	förlora	丢	잃다	χάνω
+N5	名前	なまえ	name	vārds	vardas	nimi	имя	ім'я	Name	nom	nombre	imię	nimi	namn	名	이름	όνομα
+N5	習う	ならう	to learn	mācīties	išmokti	õppima	учиться	вчитися	lernen	apprendre	aprender	uczyć się	oppia	lära	学习	배우다	μαθαίνω
+N5	なる	なる	to become	kļūt	tapti	muutuma	становиться	ставати	werden	devenir	volverse	zostawać	tulla	bli	成	되다	γίνομαι
+N5	肉	にく	flesh	miesa	kūnas	liha	мягкая ткань	м'ясо	Fleisch	chair	carne	ciało	liha	kött	肉	살	σάρκα
+N5	西	にし	west	rietumi	vakarai	lääs	запад	захід	West	ouest	oeste	zachód	länsi	väst	西	서	δύση
+N5	荷物	にもつ	luggage	bagāža	bagažas	pagas	багаж	багаж	Gepäck	bagage	equipaje	bagaż	matkatavarat	bagage	行李	수하물	αποσκευές
+N5	庭	にわ	garden	dārzs	sodas	aed	сад	сад	Garten	jardin	jardín	sad	puutarha	trädgård	花园	정원	κήπος
+N5	寝る	ねる	to sleep	gulēt	miegoti	magama	спать	спати	schlafen	dormir	dormir	spać	nukkua	sova	睡觉	자다	κοιμάμαι
+N5	飲む	のむ	to drink	dzert	gerti	jooma	пить	пити	trinken	boire	beber	pić	juoda	dricka	喝	마시다	πίνω
+N5	歯	は	tooth	zobs	dantis	hammas	зуб	зуб	Zahn	dent	diente	ząb	hammas	tand	牙齿	이	δόντι
+N5	灰皿	はいざら	ashtray	pelnu trauks	peleninė	tuhatoos	пепельница	попільничка	Aschenbecher	cendrier	cenicero	popielniczka	tuhkakuppi	askkopp	烟灰缸	재떨이	τασάκι
+N5	入る	はいる	to enter	ienākt	įeiti	sisenema	входить	входити	reingehen	entrer	entrar	wchodzić	astua	inträda	进入	들어가다	μπαίνω
+N5	葉書	はがき	postcard	pastkarte	atvirutė	postkaart	почтовая открытка	листівка	Postkarte	carte postale	tarjeta postal	karta pocztowa	postikortti	vykort	明信片	그림엽서	κάρτα
+N5	箱	はこ	box	kaste	dėžė	karp	коробка	коробка	Kasten	boîte	caja	pudło	laatikko	ask	箱子	상자	κιβώτιο
+N5	橋	はし	bridge	tilts	tiltas	sild	мост	міст	Brücke	pont	puente	most	silta	bro	桥	다리	γέφυρα
+N5	始まる	はじまる	to begin	sākt	pradėti	hakkama	начинать	починати	anfangen	commencer	comenzar	zaczynać	alkaa	börja	开始	시작하다	αρχίζω
+N5	走る	はしる	to run	skriet	bėgti	jooksma	бегать	бігати	rennen	courir	correr	biegać	juosta	springa	跑	달리다	τρέχω
+N5	働く	はたらく	to work	strādāt	dirbti	töötama	работать	працювати	arbeiten	travailler	trabajar	pracować	työskennellä	jobba	工作	일하다	δουλεύω
+N5	鼻	はな	nose	deguns	nosis	nina	нос	ніс	Nase	nez	nariz	nos	nenä	näsa	鼻子	코	μύτη
+N5	話	はなし	story	stāsts	pasakojimas	lugu	рассказ	оповідь	Erzählung	histoire	relato	opowieść	tarina	historia	故事	이야기	ιστορία
+N5	話す	はなす	to speak	runāt	kalbėti	rääkima	говорить	говорити	sprechen	parler	hablar	mówić	puhua	tala	讲	말하다	μιλώ
+N5	母	はは	mother	māte	motė	ema	мать	мати	Mutter	mère	madre	matka	äiti	mor	母亲	엄마	μητέρα
+N5	早い	はやい	early	agrs	ankstus	varajane	ранний	ранній	früh	de bonne heure	temprano	wczesny	varhainen	tidig	早	이르다	πρώιμος
+N5	東	ひがし	east	austrumi	rytai	ida	восток	схід	Osten	est	este	wschód	itä	öster	东	동	ανατολή
+N5	引く	ひく	to pull	vilkt	traukti	tõmbama	тянуть	тягати	ziehen	tirer	tirar	ciągnąć	vetää	dra	拖拉	끌다	τραβώ
+N5	弾く	ひく	to play	spēlēt	groti	mängida	играть	грати	spielen	jouer	tocar	grać	soittaa	spela	演奏	치다	παίζω
+N5	低い	ひくい	short	īss	žemas	lühike	низкий	низький	klein	petit	bajo	niski	lyhyt	kort	矮	작다	κοντός
+N5	飛行機	ひこうき	airplane	lidmašīna	lėktuvas	lennuk	самолёт	літак	Flugzeug	avion	avión	samolot	lentokone	plan	飞机	비행기	αεροπλάνο
+N5	左	ひだり	left	kreiss	kairioji	vasak	левый	лівий	link	gauche	izquierda	lewy	vasen	vänster	左	왼	αριστερός
+N5	人	ひと	man	cilvēks	žmogus	inimene	человек	людина	Mensch	homme	hombre	człowiek	ihminen	människa	人	사람	άνθρωπος
+N5	病院	びょういん	hospital	slimnīca	ligoninė	haigla	больница	лікарня	Krankenhaus	hôpital	hospital	szpital	sairaala	sjukhus	医院	병원	νοσοκομείο
+N5	封筒	ふうとう	envelope	aploksne	vokas	ümbrik	конверт	конверт	Briefumschlag	enveloppe	sobre	koperta	kirjekuori	kuvert	信封	봉투	φάκελος
+N5	服	ふく	clothes	drēbes	apranga	kehakate	одежда	одяг	Kleider	vêtements	ropa	ubrania	vaate	kläder	衣服	옷	ρούχο
+N5	豚肉	ぶたにく	pork	cūkgaļa	kiauliena	sealiha	свинина	свинина	Schweinefleisch	porc	cerdo	wieprzowina	sianliha	fläsk	猪肉	돼지고기	χοιρινό
+N5	太い	ふとい	fat	resns	storas	paks	толстый	товстий	dick	gros	gordo	gruby	lihava	fet	胖	뚱뚱하다	χοντρός
+N5	古い	ふるい	ancient	sens	sens	iidne	древний	древній	historisch	ancien	antiguo	starożytny	ikivanha	urgammal	古代	고대의	αρχαίος
+N5	文章	ぶんしょう	sentence	teikums	sakinys	lause	предложение	речення	Satz	phrase	oración	zdanie	virke	mening	句子	문장	πρόταση
+N5	部屋	へや	room	istaba	kambarys	tuba	комната	кімната	Raum	pièce	cuarto	pokój	huone	rum	房间	방	δωμάτιο
+N5	勉強	べんきょう	to study	pētīt	studijuoti	õppima	учиться	вчитися	studieren	étudier	estudiar	uczyć się	tutkia	studera	学习	공부하다	μελετώ
+N5	帽子	ぼうし	hat	cepure	skrybėlė	müts	шляпа	капелюх	Kopfbedeckung	chapeau	sombrero	kapelusz	hattu	hatt	帽子	모자	καπέλο
+N5	本棚	ほんだな	bookshelf	grāmatu plaukts	knygų lentyna	raamaturiiul	книжная полка	книжкова полиця	Regal	bibliothèque	estantería	półka na książki	kirjahylly	bokhylla	书架	책장	ράφι για βιβλία
+N5	待つ	まつ	to wait	gaidīt	laukti	ootama	ждать	чекати	warten	attendre	esperar	czekać	odottaa	vänta	等	기다리다	περιμένω
+N5	窓	まど	window	logs	langas	aken	окно	вікно	Fenster	fenêtre	ventana	okno	ikkuna	fönster	窗户	창문	παράθυρο
+N5	万年筆	まんねんひつ	fountain pen	tintes pildspalva	automatinis plunksnakotis	sulepea	авторучка	авторучка	Füllfederhalter	stylo-plume	estilógrafo	wieczne pióro	täytekynä	reservoarpenna	钢笔	만년필	πένα
+N5	右	みぎ	right	labais	dešinys	parem	правый	правий	recht	droit	derecho	prawy	oikea	höger	右	오른	δεξιός
+N5	短い	みじかい	short	īss	trumpas	lühike	короткий	короткий	kurz	court	corto	krótki	lyhyt	kort	短	짧다	σύντομος
+N5	店	みせ	shop	veikals	parduotuvė	pood	магазин	крамниця	Laden	boutique	tienda	sklep	myymälä	affär	商店	가게	μαγαζί
+N5	見せる	みせる	to show	parādīt	parodyti	näitama	показывать	показувати	zeigen	montrer	mostrar	pokazywać	näyttää	visa	展示	전시하다	εμφανίζω
+N5	緑	みどり	green	zaļš	žalias	roheline	зелёный	зелений	grün	vert	verde	zielony	vihreä	grön	绿色	녹색	πράσινος
+N5	南	みなみ	south	dienvidi	pietūs	lõuna	юг	південь	Süden	sud	sur	południe	etelä	söder	南	남	νότος
+N5	耳	みみ	ear	auss	ausis	kõrv	ухо	вухо	Ohr	oreille	oreja	ucho	korva	öra	耳朵	귀	αυτί
+N5	見る	みる	to see	redzēt	matyti	nägema	видеть	бачити	sehen	voir	ver	widzieć	nähdä	se	见	보다	βλέπω
+N5	難しい	むずかしい	difficult	sarežģīts	sunkus	keeruline	трудный	важкий	schwer	difficile	difícil	trudny	vaikea	svår	难	어렵다	δύσκολος
+N5	村	むら	village	ciems	kaimas	küla	деревня	село	Dorf	village	aldea	wieś	kylä	by	村	마을	χωριό
+N5	眼鏡	めがね	spectacles	brilles	akiniai	prillid	очки	окуляри	Brille	lunettes	gafas	okulary	silmälasit	glasögon	眼镜	안경	γυαλιά
+N5	もう	もう	already	jau	jau	juba	уже	уже	bereits	déjà	ya	już	jo	redan	已经	벌써	ήδη
+N5	持つ	もつ	to hold	turēt	turėti	hoidma	держать	тримати	halten	tenir	aguantar	trzymać	pitää	hålla	拿	들다	κρατώ
+N5	物	もの	thing	lieta	daiktas	asi	вещь	річ	Ding	chose	cosa	rzecz	asia	sak	东西	물건	πράγμα
+N5	門	もん	gate	vārti	vartai	värav	ворота	ворота	Tor	portail	puerta	brama	portti	port	门口	문	πόρτα
+N5	野菜	やさい	vegetable	dārzenis	daržovė	köögivili	овощ	овоч	Gemüse	légume	verdura	warzywo	vihannes	grönsak	蔬菜	남새	λαχανικό
+N5	易しい	やさしい	easy	viegls	lengvas	kerge	лёгкий	легкий	leicht	facile	fácil	łatwy	helppo	lätt	容易	쉬운	εύκολος
+N5	休む	やすむ	to rest	atpūsties	ilsėtis	puhkama	отдыхать	відпочивати	ruhen	reposer	descansar	odpoczywać	levätä	vila	休息	쉬다	αναπαύομαι
+N5	やる	やる	to do	darīt	daryti	tegema	делать	робити	tun	faire	hacer	robić	tehdä	göra	做	하다	κάνω
+N5	有名	ゆうめい	famous	slavens	garsus	kuulus	известный	відомий	bekannt	fameux	famoso	sławny	kuuluisa	känd	有名	유명하다	διάσημος
+N5	呼ぶ	よぶ	to call	saukt	šaukti	kutsuma	звать	кликати	rufen	appeler	llamar	wzywać	kutsua	kalla	叫	부르다	καλώ
+N5	読む	よむ	to read	lasīt	skaityti	lugema	читать	читати	lesen	lire	leer	czytać	lukea	läsa	读	읽다	διαβάζω
+N5	弱い	よわい	weak	vārgs	silpnas	nõrk	слабый	слабкий	schwach	faible	débil	słaby	heikko	svag	弱	약하다	αδύναμος
+N5	旅行	りょこう	to travel	ceļot	keliauti	sõitma	путешествовать	подорожувати	reisen	voyager	viajar	podróżować	matkustaa	resa	旅行	여행하다	ταξιδεύω
+N5	冷蔵庫	れいぞうこ	refrigerator	ledusskapis	šaldytuvas	külmkapp	холодильник	холодильник	Kühlschrank	réfrigérateur	frigorífico	lodówka	jääkaappi	kylskåp	冰箱	냉장고	ψυγείο
+N5	廊下	ろうか	corridor	koridors	koridorius	koridor	коридор	коридор	Korridor	couloir	corredor	korytarz	käytävä	korridor	走廊	복도	διάδρομος
+N5	若い	わかい	young	jauns	jaunas	noor	молодой	молодий	jung	jeune	joven	młody	nuori	ung	年轻	어리다	νεαρός
+N5	分かる	わかる	to understand	saprast	suprasti	mõistma	понимать	розуміти	verstehen	comprendre	entender	rozumieć	ymmärtää	förstå	明白	알다	καταλαβαίνω
+N5	忘れる	わすれる	to forget	aizmirst	pamiršti	unustama	забывать	забувати	verlernen	oublier	olvidar	zapominać	unohtaa	glömma	忘记	잊다	ξεχνώ
+N5	悪い	わるい	bad	slikts	blogas	halb	плохой	поганий	schlecht	mauvais	malo	zły	huono	dålig	坏	나쁘다	κακός
+N5	明るい	あかるい	bright	gaišs	ryškus		яркий	яскравий	glänzend	brillant	brillante	jasny	kirkas	ljus	亮	밝다	λαμπερός
+N5	言う	いう	to say	sacīt	sakyti	ütlema	говорить	говорити	sagen	dire	decir	mówić	sanoa	säga	说	말하다	
+N5	色々	いろいろ	various	dažādi	įvairus		разный	різний	verschiedene	divers	varios	różny	eri	olika	各种	여러 가지의	διάφορος
+N5	薄い	うすい	thin	tievs	plonas	peen	тонкий	тонкий	dünn	mince		cienki	ohut	tunn	薄	가늘다	λεπτός
+N5	同じ	おなじ	same	vienāds		sama	одинаковый	однаковий	selbe	même	mismo	ten sam	sama	samma	同一	똑같다	ίδιος
+N5	軽い	かるい	light	viegls	lengvas		лёгкий	легкий	leicht	léger	ligero	lekki	kevyt	lätt	轻	가볍다	αβαρής
+N5	着る	きる	to put on	vilkt	auti		надевать	надівати	anziehen	mettre	ponerse	wkładać	pukea ylleen	sätta på sig	穿上	입다	βάζω
+N5	咲く	さく	to flower	ziedēt	žydėti		цвести	цвісти	blühen	fleurir	florecer	kwitnąć	kukkia	blomma	开花	피다	ανθώ
+N5	閉める	しめる	to close	aizvērt	uždaryti	sulgema	закрывать	зачиняти	schließen	fermer	cerrar	zamykać	sulkea	stänga	关	닫다	
+N5	近い	ちかい	near	tuvu	artimas	lähedal	близкий	близький	nah	près	cercano	bliski	läheinen	nära	近	가깝다	
+N5	机	つくえ	desk	rakstāmgalds		kirjutuslaud	письменный стол	письмовий стіл	Schreibtisch	bureau	escritorio	biurko	työpöytä	skolbänk	书桌	책상	γραφείο
+N5	作る	つくる	to make	darīt		tegema	делать	робити	machen	faire	hacer	konstruować	tehdä	göra	制造	만들다	κατασκευάζω
+N5	つまらない	つまらない	boring		nuobodus	igav	скучный	нудний	langweilig	ennuyeux	aburrido	nudny	tylsä	långtråkig	乏味	무료하다	βαρετός
+N5	出る	でる	to exit		išeiti	lahkuma	выходить	виходити	abgehen	sortir	partir	wychodzić	lähteä	gå	出门	나오다	βγαίνω
+N5	温い	ぬるい	lukewarm	remdens		leige	тепловатый	теплуватий	lauwarm	tiède	tibio	letni	haalea	ljum	温	미지근한	χλιαρός
+N5	飲み物	のみもの	drink	dzēriens	gėrimas	jook	напиток	напій	Getränk	verre		napój	juoma	dryck	饮料	음료	ποτό
+N5	速い	はやい	fast	ātrs	greitas		быстрый	швидкий	schnell	rapide	rápido	szybki	nopea	snabb	快	빠르다	γρήγορος
+N5	吹く	ふく	to blow	pūst	pūsti		дуть	дути	blasen	souffler	soplar	dmuchać	puhaltaa	blåsa	吹	불다	φυσώ
+N5	細い	ほそい	thin	tievs	plonas	peen	тонкий	тонкий	dünn	mince		cienki	ohut	tunn	薄	가늘다	λεπτός
+N5	毎日	まいにち	daily		kasdien	iga päev	ежедневно	щоденно	täglich	quotidiennement	diariamente	codziennie	päivittäin	dagligen	每天	매일	ημερησίως
+N5	まだ	まだ	yet	vēl	dar		до сих пор	ще	noch	jusqu'à présent	aún	jeszcze	vielä	ännu	还	아직	ακόμα
+N5	まっすぐ	まっすぐ	straight		tiesus	otse	прямой	прямий	gerade	droit	recto	prosty	suora	rak	直	똑바르다	ίσιος
+N5	休み	やすみ	day off		laisva diena	vaba päev	выходной	вихідний день	Ruhetag	jour de congé	día de libranza	dzień wolny	vapaapäivä	vilodag	休息日	휴일	ρέπο
+N5	いくつ	いくつ	how many	cik	kiek	kui mitu	сколько	скільки	wie viele	combien	cuántos	ile	kuinka monta	hur många	多少	몇	πόσοι
+N5	いくら	いくら	how much	cik	kiek	kui palju	сколько	скільки	wie viel	combien	cuánto	ile	paljonko	hur mycket	多少	얼마나	πόσος
+N5	痛い	いたい	hurt	sāpēt	skaudėti	valutama	болеть	боліти	weh tun	faire mal	doler	boleć	sattua	göra ont	疼	아프다	πονώ
+N5	今	いま	now	tagad	dabar	nüüd	сейчас	тепер	jetzt	maintenant	ahora	teraz	nyt	nu	现在	지금	τώρα
+N5	意味	いみ	to meaning	jēga	prasmė	tähendus	значение	значення	Bedeutung	signification	sentido	znaczenie	merkitys	mening	意义	뜻	σημασία
+N5	うるさい	うるさい	noisy		triukšmauti		шумный	гучний	laut	bruyant	ruidoso	hałaśliwy	äänekäs	högljudd	吵闹	시끄럽다	θορυβώδης
+N5	多い	おおい	many	daudz	daug	palju	много	багато	viele	beaucoup	muchos	wiele	moni	många	多	많은	πολλοί
+N5	起きる	おきる	to get up	celties			вставать	вставати	aufstehen	se lever	levantarse	wstawać	nousta ylös	gå upp	起床	일어나다	σηκώνομαι
+N5	大人	おとな	adult	pieaugušais	suaugęs	täiskasvanu	взрослый	дорослий	Erwachsener	adulte	adulto	dorosły	aikuinen	vuxen	成人	성인	ενήλικας
+N5	買い物	かいもの	to shopping	pirkšana	pirkimas	ostud	покупка	купівля	Einkaufen	shopping	''shopping''	zakupy	shoppailu	shopping	买东西	쇼핑	ψώνια
+N5	黄色	きいろ	yellow	dzeltens	geltonas	kollane	жёлтый	жовтий	Gelb	jaune	amarillo	żółć	keltainen	gul	黄色	황색	κίτρινο
+N5	消える	きえる	to vanish			kaduma	исчезать	зникати	verschwinden	disparaître	desvanecerse	znikać	hävitä	försvinna	消失	사라지다	εξαφανίζομαι
+N5	黒	くろ	black	melns	juoduma	must	чёрный	чорний	Schwarz	noir	negro	czerń	musta	svart	黑色	검정	μαύρο
+N5	消す	けす	to erase		trinti		стирать	стирати	auslöschen	effacer	borrar	wymazywać	poistaa	radera	拭除	지우다	σβήνω
+N5	結婚	けっこん	to marriage	laulība	santuoka	abielu	брак	шлюб	Ehe	mariage	matrimonio	małżeństwo	avioliitto	äktenskap	婚姻	결혼	γάμος
+N5	午後	ごご	afternoon	pēcpusdiena	popietė	pärastlõuna	послеобеденное время	пополудень	Nachmittag	après-midi	tarde	popołudnie	iltapäivä	eftermiddag	下午	오후	απόγευμα
+N5	午前	ごぜん	morning	rīts	rytas	hommik	утро	ранок	Morgen	matin	mañana	ranek	aamu	morgon	上午	아침	πρωί
+N5	今年	ことし	this year	šogad			в этом году	у цьому році	dieses Jahr	cette année	este año	tego roku	tänä vuonna	i år	今年	올해	φέτος
+N5	散歩	さんぽ	to walk	pastaiga	pasivaikščiojimas	jalutuskäik	ходьба	прогулянка	Spaziergang	promenade	paseo	spacer	kävely	promenad	散步	산책	περίπατος
+N5	下	した	under	zem	po	all	под	під	unter	sous	bajo	pod	alla	under	之下	아래	κάτω
+N5	質問	しつもん	to question	jautājums	klausimas	küsimus	вопрос	питання	Frage	question	pregunta	pytanie	kysymys	fråga	问题	질문	ερώτηση
+N5	宿題	しゅくだい	homework		namų darbai		домашнее задание	домашнє завдання	Hausaufgabe	devoirs	deberes	zadanie domowe	läksyt	läxa	作业	숙제	εργασία για το σπίτι
+N5	醤油	しょうゆ	soy sauce		sojų padažas		соевый соус	соєвий соус	Sojasoße	sauce de soja	salsa de soja	sos sojowy	soija	soja	酱油	간장	σάλτσα σόγιας
+N5	少ない	すくない	little	maz	mažai	vähe	мало	мало	wenig	peu	poco	mało	vähän	lite	少	적다	λίγο
+N5	背	せい	height	augums			рост	зріст	Größe	taille	altura	wzrost	pituus	längd	身高	키	ύψος
+N5	その	その	that	tas	tas	see	тот	той	jener	ce	ese	tamten	tuo	den	那	그	εκείνος
+N5	大学	だいがく	college		koledžas		вуз	коледж	Fachhochschule	université	escuela universitaria	szkoła wyższa	korkeakoulu	högskola	大学	대학	κολέγιο
+N5	沢山	たくさん	many	daudz	daug	palju	много	багато	viele	beaucoup	muchos	wiele	moni	många	多	많은	πολλοί
+N5	多分	たぶん	probably	droši vien			вероятно	певно	wahrscheinlich	probablement	probablemente	prawdopodobnie	todennäköisesti	nog	大概	아마	πιθανώς
+N5	茶色	ちゃいろ	brown	brūns	rudas	pruun	коричневый	коричневий	Braun	marron	marrón	brąz	ruskea	brun	棕色	갈색	καστανό
+N5	次	つぎ	next			järgmine	следующий	наступний	nächster	prochain	próximo	następny	seuraava	nästa	下一个	다음	επόμενος
+N5	時々	ときどき	sometimes	dažreiz	kartais	vahel	иногда	деколи	manchmal	parfois	a veces	czasem	joskus	ibland	有时	때때로	ενίοτε
+N5	所	ところ	place	vieta	vieta	paik	место	місце	Platz	lieu	lugar	miejsce	paikka	plats	地方	장소	τόπος
+N5	登る	のぼる	to climb			ronima	подниматься	підніматися	klettern	grimper	escalar	rosnąć	kohota	klättra	登	오르다	ανεβαίνω
+N5	便利	べんり	convenient	ērts			удобный	зручний	bequem	commode	conveniente	dogodny	mukava	praktisk	方便	편리하다	βολικός
+N5	よく	よく	often	bieži	dažnai	tihti	часто	часто	häufig	souvent	a menudo	często	usein	ofta	经常	수시로	συχνά
+N5	横	よこ	horizontal	horizontāls	horizontalus	horisontaalne	горизонтальный	горизонтальний	horizontal	horizontal	horizontal	poziomy	vaakasuora	vågrät	水平	가로	οριζόντιος
+N5	来年	らいねん	next year		kitąmet		в будущем году	наступного року	nächstes Jahr	l'année prochaine	el año próximo	w przyszłym roku	ensi vuonna	nästa år	明年	내년	του χρόνου
+N5	零	れい	zero	nulle	nulis	null	нуль	нуль	null	zéro	cero	zero	nolla	noll	零	영	μηδέν
+N5	上げる	あげる	to raise	celt			поднимать	піднімати	heben	élever	levantar	podnosić	nostaa	höja	举	올리다	
+N5	明後日	あさって	day after tomorrow		porytdiena	ülehomme	послезавтра	післязавтрашній день	Übermorgen	surlendemain	pasado mañana	pojutrze	ylihuominen	övermorgon	后天	모레	μεθαύριο
+N5	漢字	かんじ	kanji				кандзи	кандзі	Kanji	kanji	kanji	kanji	kanji	kanji	日本汉字	한자	κάντζι
+N5	こんな	こんな	such	tāds	toks	selline	такой	такий	solch	tel	así	taki	sellainen	sådan	这样	그런	
+N5	涼しい	すずしい	cool	vēss			прохладный	прохолодний	kühl	frais	fresco	chłodny	viileä	sval	凉快	쌀쌀하다	
+N5	先週	せんしゅう	last week			eelmisel nädalal	на прошлой неделе	минулого тижня	letzte Woche	la semaine dernière	la semana pasada	w zeszłym tygodniu	viime viikolla	förra	上周		αποβδόμαδα
+N5	全部	ぜんぶ	all		visas	kõik	весь	весь	all	tous	todos	wszystek	kaikki	alla	都	모든	όλοι
+N5	段々	だんだん	gradually				постепенно	поступово	nach und nach	progressivement	gradualmente	stopniowo	asteittain	gradvis	逐渐	점점	βαθμιαία
+N5	違う	ちがう	to differ				отличаться	відрізнятися	unterscheiden	différer	diferir	różnić	erota	olik	不同	다르다	διαφέρω
+N5	疲れる	つかれる	to tire				уставать	втомлюватися	ermüden	fatiguer	cansar	męczyć	väsyä	tröttna	劳累	피곤하다	κουράζομαι
+N5	中	なか	inside	iekšā	viduje	sees	внутри	усередині	drinnen	dedans	dentro	wewnątrz	sisäpuoli	in	里边		μέσα
+N5	脱ぐ	ぬぐ	to take off				снимать	знімати	ausziehen	enlever	quitarse	zdejmować	ottaa pois	ta av	脱	벗다	βγάζω
+N5	半	はん	half	puse	pusė	pool	пол-		halb	demi	medio	pół-	puoli	halv	半	반	ήμισυς
+N5	晩	ばん	evening	vakars	vakaras	õhtu	вечер	вечір	Abend	soir		wieczór	ilta	kväll	晚上	저녁	εσπέρα
+N5	半分	はんぶん	half		pusė	pool	половина	половина	Hälfte	moitié	mitad	połowa	puolikas	hälft	半	반	μισό
+N5	暇	ひま	free time				свободное время	вільний час	Freizeit	temps libre	tiempo libre	czas wolny	vapaa-aika	fritid	空闲	여가	ελεύθερος χρόνος
+N5	平仮名	ひらがな	hiragana				хирагана	хіраґана	Hiragana	hiragana	hiragana	hiragana	hiragana	hiragana	平假名	히라가나	χιραγκάνα
+N5	二人	ふたり	couple	pāris			пара	пара	Paar	paire	par	dwa	pari	par	对		ζεύγος
+N5	夕方	ゆうがた	evening	vakars	vakaras	õhtu	вечер	вечір	Abend	soir		wieczór	ilta	kväll	晚上	저녁	εσπέρα
+N4	月	つき	moon	mēness	mėnulis	kuu	луна	місяць	Mond	lune	luna	księżyc	kuu	måne	月亮	달	φεγγάρι
+N4	星	ほし	star	zvaigzne	žvaigždė	täht	звезда	зірка	Stern	étoile	estrella	gwiazda	tähti	stjärna	星星	별	αστέρι
+N4	雲	くも	cloud	mākonis	debesis	pilv	облако	хмара	Wolke	nuage	nube	chmura	pilvi	moln	云	구름	σύννεφο
+N4	美しい	うつくしい	beautiful	skaists	gražus	ilus	красивый	гарний	schön	beau	hermoso	piękny	kaunis	vacker	美丽	아름답다	όμορφος
+N4	心	こころ	heart	sirds	širdis	süda	сердце	серце	Herz	cœur	corazón	serce	sydän	hjärta	心	마음	καρδιά
+N4	森	もり	forest	mežs	miškas	mets	лес	ліс	Wald	forêt	bosque	las	metsä	skog	森林	숲	δάσος
+N4	石	いし	stone	akmens	akmuo	kivi	камень	камінь	Stein	pierre	piedra	kamień	kivi	sten	石头	돌	πέτρα
+N4	火	ひ	fire	uguns	ugnis	tuli	огонь	вогонь	Feuer	feu	fuego	ogień	tuli	eld	火	불	φωτιά
+N4	夢	ゆめ	dream	sapnis	sapnas	unenägu	сон	сон	Traum	rêve	sueño	sen	uni	dröm	梦	꿈	όνειρο
+N4	光	ひかり	light	gaisma	šviesa	valgus	свет	світло	Licht	lumière	luz	światło	valo	ljus	光	빛	φως
+N4	盗む	ぬすむ	to steal	zagt	vogti	varastama	красть	красти	stehlen	voler	robar	kraść	varastaa	baxa	偷	훔치다	κλέβω
+N4	生きる	いきる	to live	dzīvot	gyventi	elama	жить	жити	leben	vivre	vivir	żyć	elää	leva	生	살다	ζω
+N4	意見	いけん	opinion	doma	nuomonė	arvamus	мнение	думка	Meinung	avis	opinión	opinia	mielipide	mening	意见	의견	γνώμη
+N4	医学	いがく	medicine	medicīna	medicina	meditsiin	медицина	медицина	Medizin	médecine	medicina	medycyna	lääketiede	medicin	医学	의학	ιατρική
+N4	壊す	こわす	to break	salauzt	sulaužyti	murdma	разбивать	розбивати	brechen	rompre	romper	łamać	murtaa	bryta	打破	깨트리다	σπάζω
+N4	運転手	うんてんしゅ	driver	vadītājs	vairuotojas	juht	водитель	водій	Fahrer	conducteur	conductor	kierowca	kuljettaja	förare	司机	운전사	οδηγός
+N4	お宅	おたく	house	māja	namas	maja	дом	хата	Haus	maison	casa	dom	talo	hus	房屋	집	σπίτι
+N4	柔らかい	やわらかい	soft	mīksts	minkštas	pehme	мягкий	м'який	weich	mou	blando	miękki	pehmeä	mjuk	软	부드럽다	απαλός
+N4	比べる	くらべる	to compare	salīdzināt	lyginti	võrdlema	сравнивать	порівнювати	vergleichen	comparer	comparar	porównywać	verrata	jämföra	比	비교하다	συγκρίνω
+N4	ほとんど	ほとんど	almost	gandrīz	beveik	peaaegu	почти	майже	fast	presque	casi	prawie	melkein	nästan	几乎	거의	σχεδόν
+N4	郊外	こうがい	suburb	priekšpilsēta	priemiestis	eeslinn	пригород	передмістя	Vorstadt	banlieue	afueras	przedmieście	esikaupunkialue	förort	近郊	근교	προάστιο
+N4	規則	きそく	rule	likums	taisyklė	juhis	правило	правило	Regel	règle	regla	reguła	sääntö	regel	规则	규칙	κανόνας
+N4	焼く	やく	to bake	cept	kepti	küpsetama	печь	пекти	backen	cuire	hornear	piec	paistaa	baka	烤	굽다	ψήνω
+N4	機会	きかい	chance	iespēja	proga	võimalus	возможность	шанс	Gelegenheit	chance	oportunidad	szansa	mahdollisuus	chans	机会	기회	ευκαιρία
+N4	いらっしゃる	いらっしゃる	to come	nākt	ateiti	tulema	приходить	приходити	kommen	venir	venir	przychodzić	tulla	komma	来	오다	έρχομαι
+N4	贈り物	おくりもの	gift	dāvana	dovana	kink	подарок	подарунок	Geschenk	présent	regalo	prezent	lahja	present	礼物	선물	δώρο
+N4	泥棒	どろぼう	thief	zaglis	vagis	varas	вор	злодій	Dieb	voleur	ladrón	złodziej	varas	tjuv	贼	도둑	κλέφτης
+N4	台風	たいふう	typhoon	taifūns	taifūnas	taifuun	тайфун	тайфун	Taifun	typhon	tifón	tajfun	taifuuni	tyfon	台风	태풍	τυφώνας
+N4	日	ひ	day	diena	para	ööpäev	сутки	день	Tag	jour	día	dzień	päivä	dygn	天	일주야	ημέρα
+N4	葉	は	leaf	lapa	lapas	leht	лист	лист	Blatt	feuille	hoja	liść	lehti	blad	叶	잎	φύλλο
+N4	必要	ひつよう	necessary	vajadzīgs	reikalingas	vajalik	необходимый	необхідний	nötig	nécessaire	necesario	potrzebny	tarpeellinen	nödvändig	必要	필요하다	απαραίτητος
+N4	地震	じしん	earthquake	zemestrīce	žemės drebėjimas	maavärin	землетрясение	землетрус	Erdbeben	tremblement de terre	terremoto	trzęsienie ziemi	maanjäristys	jordbävning	地震	지진	σεισμός
+N4	人口	じんこう	population	iedzīvotāji	gyventojai	elanikkond	население	населення	Bevölkerung	population	población	ludność	väestö	befolkning	人口	인구	πληθυσμός
+N4	深い	ふかい	deep	dziļš	gilus	sügav	глубокий	глибокий	tief	profond	profundo	głęboki	syvä	djup	深	깊다	βαθύς
+N4	悲しい	かなしい	sad	skumjš	liūdnas	kurb	грустный	смутний	traurig	triste	triste	smutny	surullinen	ledsen	哀伤	슬프다	θλιμμένος
+N4	祈る	いのる	to pray	lūgt	maldauti	palvetama	молиться	молитися	beten	prier	rezar	modlić się	rukoilla	be	祈祷	빌다	προσεύχομαι
+N4	致す	いたす	to do	darīt	daryti	tegema	делать	робити	tun	faire	hacer	robić	tehdä	göra	做	하다	κάνω
+N4	噛む	かむ	to bite	kost	kąsti	hammustama	откусывать	кусати	beißen	mordre	morder	odgryzać	purra	bita	咬	물어떼다	δαγκώνω
+N4	赤ちゃん	あかちゃん	baby	zīdainis	kūdikis	beebi	младенец	дитина	Baby	bébé	bebé	niemowlę	vauva	spädbarn	婴儿	아기	βρέφος
+N4	小説	しょうせつ	novel	romāns	romanas	romaan	роман	роман	Roman	roman	novela	powieść	romaani	roman	小说	소설	μυθιστόρημα
+N4	親	おや	parent	vecāki	tėvai	vanem	родитель	родитель	Elternteil	parent	padre	rodzic	vanhempi	förälder	亲	부모	γονέας
+N4	触る	さわる	to touch	skart	liesti	puudutama	трогать	доторкатися	anfassen	toucher	tocar	dotykać	koskea	röra	接触	닿다	αγγίζω
+N4	動物園	どうぶつえん	zoo	zooloģiskais dārzs	zoologijos sodas	loomaaed	зоопарк	зоопарк	Zoo	zoo	zoo	ogród zoologiczny	eläintarha	zoo	动物园	동물원	ζωολογικός κήπος
+N4	丁寧	ていねい	polite	pieklājīgs	mandagus	viisakas	вежливый	ввічливий	höflich	poli	cortés	uprzejmy	kohtelias	hövlig	有礼貌	공손하다	ευγενικός
+N4	無理	むり	impossible	neiespējams	neįmanoma	võimatu	невозможный	неможливий	unmöglich	impossible	imposible	niemożliwy	mahdoton	omöjlig	不可能的	불가능하다	ακατόρθωτος
+N4	品物	しなもの	goods	prece	prekė	kaup	товар	товар	Güter	biens	géneros	towar	tavara	gods	产品	상품	αγαθά
+N4	人形	にんぎょう	doll	lelle	lėlė	nukk	кукла	лялька	Puppe	poupée	muñeca	lalka	nukke	docka	玩偶	인형	κούκλα
+N4	投げる	なげる	to throw	mest	mesti	heitma	бросать	кидати	werfen	jeter	lanzar	rzucać	heittää	kasta	抛	던지다	ρίχνω
+N4	力	ちから	strength	spēks	jėga	tugevus	сила	сила	Stärke	force	fuerza	siła	voimakkuus	styrka	力气	힘	δύναμη
+N4	受ける	うける	to receive	saņemt	gauti	saama	получать	отримувати	bekommen	recevoir	recibir	dostać	saada	få	收到	받다	δέχομαι
+N4	気分	きぶん	mood	oma	nuotaika	tuju	настроение	настрій	Gemüt	humeur	humor	nastrój	mieli	stämning	心情	기분	διάθεση
+N4	準備	じゅんび	to prepare	gatavot	ruošti	valmistada	готовить	готувати	vorbereiten	préparer	preparar	przygotować	valmistella	förbereda	准备	준비하다	προετοιμάζω
+N4	世界	せかい	world	pasaule	pasaulis	maailm	мир	світ	Welt	monde	mundo	świat	maailma	värld	世界	세계	κόσμος
+N4	住所	じゅうしょ	address	adrese	adresas	aadress	адрес	адреса	Adresse	adresse	dirección	adres	osoite	adress	地址	주소	διεύθυνση
+N4	林	はやし	forest	mežs	miškas	mets	лес	ліс	Wald	forêt	bosque	las	metsä	skog	森林	숲	δάσος
+N4	線	せん	line	līnija	linija	liin	линия	лінія	Linie	ligne	línea	linia	viiva	linje	直线	줄	γραμμή
+N4	決める	きめる	to decide	lemt	nuspręsti	otsustama	решать	вирішувати	entscheiden	décider	decidir	decydować	ratkaista	besluta	解决	해결하다	αποφασίζω
+N4	飛行場	ひこうじょう	airfield	aerodroms	aerodromas	lennuväli	аэродром	аеродром	Flugplatz	aérodrome	aeródromo	lądowisko	lentokenttä	flygfält	飞机场	비행장	αεροδρόμιο
+N4	決して	けっして	never	nekad	niekada	iial	никогда	ніколи	nie	jamais	nunca	nigdy	ei koskaan	aldrig	从未	절대로	ποτέ
+N4	事務所	じむしょ	office	kantoris	kontora	kontor	офис	офіс	Büro	bureau	oficina	biuro	toimisto	kontor	办公室	사무소	γραφείο
+N4	客	きゃく	guest	viesis	svečias	külaline	гость	гість	Gast	invité	huésped	gość	vieras	gäst	客人	손님	επισκέπτης
+N4	なさる	なさる	to do	darīt	daryti	tegema	делать	робити	tun	faire	hacer	robić	tehdä	göra	做	하다	κάνω
+N4	文法	ぶんぽう	grammar	gramatika	gramatika	grammatika	грамматика	граматика	Grammatik	grammaire	gramática	gramatyka	kielioppi	grammatik	语法	문법	γραμματική
+N4	終わり	おわり	end	gals	pabaiga	lõpp	конец	кінець	Ende	fin	fin	koniec	pää	slut	结束	끝	τέλος
+N4	壁	かべ	wall	siena	siena	sein	стена	стіна	Mauer	murs	muro	mur	muuri	mur	墙壁	벽	τείχος
+N4	歯医者	はいしゃ	dentist	zobārsts	dantų gydytojas	hambaarst	зубной врач	зубний лікар	Zahnarzt	dentiste	dentista	dentysta	hammaslääkäri	tandläkare	牙医	치과의사	οδοντίατρος
+N4	泣く	なく	to cry	raudāt	verkti	nutma	плакать	плакати	weinen	pleurer	llorar	płakać	itkeä	gråta	哭	울다	κλαίω
+N4	熱	ねつ	fever	drudzis	karščiavimas	palavik	температура	гарячка	Fieber	fièvre	fiebre	gorączka	kuume	feber	发热	열	πυρετός
+N4	赤ん坊	あかんぼう	baby	zīdainis	kūdikis	beebi	младенец	дитина	Baby	bébé	bebé	niemowlę	vauva	spädbarn	婴儿	아기	βρέφος
+N4	事故	じこ	accident	gadījums	įvykis	õnnetus	несчастный случай	випадок	Unfall	accident	accidente	wypadek	onnettomuus	olycka	事故	사고	ατύχημα
+N4	変	へん	strange	svešs	keistas	imelik	странный	дивний	seltsam	étrange	extraño	dziwny	outo	konstig	奇怪	이상하다	παράξενος
+N4	辞典	じてん	dictionary	vārdnīca	žodynas	sõnaraamat	словарь	словник	Wörterbuch	dictionnaire	diccionario	słownik	sanakirja	ordbok	词典	사전	λεξικό
+N4	くれる	くれる	to give	dot	duoti	andma	давать	давати	geben	donner	dar	dawać	antaa	ge	给	주다	δίνω
+N4	頂く	いただく	to receive	saņemt	gauti	saama	получать	отримувати	bekommen	recevoir	recibir	dostać	saada	få	收到	받다	δέχομαι
+N4	祖母	そぼ	grandmother	vecāmāte	bobutė	vanaema	бабушка	бабуся	Großmutter	grand-mère	abuela	babcia	isoäiti	farmor	奶奶	할머니	γιαγιά
+N4	場所	ばしょ	place	vieta	vieta	paik	место	місце	Platz	lieu	lugar	miejsce	paikka	plats	地方	장소	τόπος
+N4	選ぶ	えらぶ	to choose	atlasīt	pasirinkti	valima	выбирать	вибирати	wählen	choisir	escoger	wybierać	valita	välja	选择	고르다	διαλέγω
+N4	挨拶	あいさつ	to greet	sveikt	sveikinti	tervitama	приветствовать	вітати	begrüßen	saluer	saludar	witać	tervehtiä	hälsa	迎接	인사	χαιρετώ
+N4	お嬢さん	おじょうさん	daughter	meita	duktė	tütar	дочь	дочка	Tochter	fille	hija	córka	tytär	dotter	女儿	딸	κόρη
+N4	探す	さがす	to search	meklēt	ieškoti	otsima	искать	шукати	suchen	chercher	rebuscar	szukać	etsiä	genomsöka	搜索	찾다	ψάχνω
+N4	形	かたち	shape	forma	forma	kuju	форма	форма	Form	forme	forma	kształt	muoto	form	形状	모양	μορφή
+N4	消しゴム	けしゴム	eraser	dzēšgumija	trintukas	kustutuskumm	резинка	гумка	Radiergummi	gomme	borrador	gumka	pyyhekumi	suddgummi	橡皮	지우개	γομολάστιχα
+N4	海岸	かいがん	coast	krasts	pajūris	rand	морской берег	побережжя	Küste	côte	costa	wybrzeże	merenrannikko	gräns mot hav	海岸	연안	ακτή
+N4	技術	ぎじゅつ	technique	tehnika	technika	tehnika	техника	техніка	Technik	technique	técnica	technika	tekniikka	teknik	技术	기술	τεχνική
+N4	鏡	かがみ	mirror	spogulis	veidrodis	peegel	зеркало	дзеркало	Spiegel	glace	espejo	lustro	peili	spegel	镜子	거울	καθρέφτης
+N4	店員	てんいん	clerk	ierēdnis	tarnautojas	äriteenija	клерк	клерк	Büroangestellte	greffier	auxiliar administrativo	urzędnik	konttoristi	tjänsteman	书记	사무원	υπάλληλος
+N4	泊まる	とまる	to stay	palikt	pasilikti	jääma	оставаться	затримуватися	aufhalten	rester	quedar	zostawać	viipyä	stanna	呆	머무르다	μένω
+N4	空気	くうき	air	gaiss	oras	õhk	воздух	повітря	Luft	air	aire	powietrze	ilma	luft	空气	공기	αέρας
+N4	空港	くうこう	airport	lidosta	oro uostas	lennujaam	аэропорт	аеропорт	Flughafen	aéroport	aeropuerto	lotnisko	lentoasema	flygplats	机场	공항	αεροδρόμιο
+N4	手袋	てぶくろ	glove	cimds	pirštinė	sõrmik	перчатка	рукавичка	Handschuh	gant	guante	rękawica	hansikas	vante	手套	장갑	γάντι
+N4	興味	きょうみ	interest	interese	interesas	huvi	интерес	цікавість	Interesse	intérêt	interés	zainteresowanie	kiinnostus	intresse	兴趣	흥미	ενδιαφέρον
+N4	亡くなる	なくなる	to die	mirt	mirti	surema	умирать	умирати	sterben	mourir	morir	umierać	kuolla	dö	死	죽다	πεθαίνω
+N4	科学	かがく	science	zinātne	mokslas	teadus	наука	наука	Wissenschaft	science	ciencia	nauka	tiede	vetenskap	科学	과학	επιστήμη
+N4	気持ち	きもち	mood	oma	nuotaika	tuju	настроение	настрій	Gemüt	humeur	humor	nastrój	mieli	stämning	心情	기분	διάθεση
+N4	祖父	そふ	grandfather	vectēvs	senelis	vanaisa	дедушка	дід	Großvater	grand-père	abuelo	dziadek	isoisä	farfar	爷爷	할아버지	παππούς
+N4	港	みなと	harbor	osta	uostas	sadam	гавань	гавань	Hafen	port	puerto	port	satama	hamn	海港	항구	λιμάνι
+N4	凄い	すごい	great	lielisks	puikus	suurepärane	прекрасный	прекрасний	großartig	excellent	muy bueno	wspaniały	erinomainen	jättebra	很好	대단하다	εξαιρετικός
+N4	火事	かじ	fire	ugunsgrēks	gaisras	tulekahju	пожар	пожежа	Feuer	feu	incendio	pożar	tulipalo	brasa	火灾	큰불	φωτιά
+N4	教会	きょうかい	church	baznīca	bažnyčia	kirik	церковь	церква	Kirche	église	iglesia	kościół	kirkko	kyrka	教会	교회	εκκλησία
+N4	理由	りゆう	reason	cēlonis	priežastis	põhjus	причина	причина	Grund	raison	razón	przyczyna	syy	anledning	理由	이유	λόγος
+N4	打つ	うつ	to hit	sist	smogti	lööma	ударять	вдаряти	schlagen	frapper	golpear	uderzać	iskeä	slå	打击	치다	χτυπώ
+N4	謝る	あやまる	to apologize	atvainoties	atsiprašyti	vabandama	извиняться	вибачатися	entschuldigen	excuser	disculparse	przepraszać	pyytää anteeksi	be om ursäkt	道歉	사과하다	ζητάω συγγνώμη
+N4	米	こめ	rice	rīsi	ryžis	riis	рис	рис	Reis	riz	arroz	ryż gotowany	riisi	ris	米	쌀	ρύζι
+N4	隅	すみ	corner	stūris	kampas	nurk	угол	кут	Ecke	coin	rincón	kąt	nurkka	hörn	角落	구석	γωνία
+N4	喉	のど	throat	rīkle	gerklė	kurk	горло	горло	Kehle	gorge	garganta	gardło	kurkku	hals	嗓子	멱	λαιμός
+N4	歴史	れきし	history	vēsture	istorija	ajalugu	история	історія	Geschichte	histoire	historia	historia	historia	historia	历史	역사	ιστορία
+N4	血	ち	blood	asinis	kraujas	veri	кровь	кров	Blut	sang	sangre	krew	veri	blod	血	피	αίμα
+N4	毛	け	hair	mats	plaukas	karv	волос	волосина	Haar	poil	pelo	włos	hius	hårstrå	毛	털	τρίχα
+N4	変える	かえる	to change	mainīt	keisti	muutma	изменять	змінювати	ändern	changer	cambiar	zmieniać	muuttaa	ändra	改变	바꾸다	αλλάζω
+N4	子	こ	child	bērns	vaikas	laps	ребёнок	дитина	Kind	enfant	hijo	dziecko	lapsi	barn	小孩	어린이	παιδί
+N4	通り	とおり	street	iela	gatvė	tänav	улица	вулиця	Straße	rue	calle	ulica	katu	gata	街	거리	οδός
+N4	下着	したぎ	underwear	apakšveļa	apatiniai	ihupesu	нижнее бельё	нижня білизна	Unterwäsche	sous-vêtement	ropa interior	bielizna	alusvaatteet	underplagg	内衣	속옷	εσώρουχο
+N4	経済	けいざい	economy	ekonomika	ekonomika	majandus	экономика	економіка	Wirtschaft	économie	economía	ekonomia	talous	ekonomi	经济	경제	οικονομία
+N4	変わる	かわる	to change	mainīties	keistis	muutuma	изменяться	змінюватися	ändern	changer	cambiar	zmieniać	muuttua	ändra	变为	바뀌다	αλλάζω
+N4	引き出し	ひきだし	drawer	atvilktne	stalčius	sahtel	ящик	шухляда	Schublade	tiroir	cajón	szuflada	vetolaatikko	byrålåda	抽屉	서랍	συρτάρι
+N4	音	おと	sound	skaņa	garsas	heli	звук	звук	Klang	son	sonido	dźwięk	ääni	ljud	声音	소리	ήχος
+N4	産業	さんぎょう	industry	rūpniecība	pramonė	tööstus	промышленность	промисловість	Industrie	industrie	industria	przemysł	teollisuus	industri	工业	공업	βιομηχανία
+N4	島	しま	island	sala	sala	saar	остров	острів	Insel	île	isla	wyspa	saari	ö	岛	섬	νήσος
+N4	道具	どうぐ	tool	instruments	įrankis	tööriist	инструмент	інструмент	Gerät	outil	herramienta	narzędzie	työkalu	verktyg	工具	도구	εργαλείο
+N4	妻	つま	wife	sieva	pati	naine	жена	дружина	Ehefrau	femme	esposa	żona	vaimo	hustru	妻子	아내	σύζυγος
+N4	駐車場	ちゅうしゃじょう	parking lot	stāvvieta	stovėjimo aikštelė	parkla	автостоянка	автостоянка	Parkplatz	parking	aparcamiento	parking	pysäköintialue	parkeringsplats	停车场	주차장	χώρος στάθμευσης
+N4	髪	かみ	hair	mats	plaukai	juuksed	волосы	волосся	Haar	cheveu	cabello	włosy	hiukset	hår	头发	머리칼	μαλλί
+N4	枝	えだ	branch	zars	šaka	oks	ветвь	вітка	Ast	branche	rama	gałąź	oksa	gren	支	나뭇가지	κλαδί
+N4	送る	おくる	to send	sūtīt	siųsti	saatma	посылать	посилати	senden	envoyer	enviar	wysyłać	lähettää	skicka	送	보내다	στέλνω
+N4	あげる	あげる	to give	dot	duoti	andma	давать	давати	geben	donner	dar	dawać	antaa	ge	给	주다	δίνω
+N4	政治	せいじ	politics	politika	politika	poliitika	политика	політика	Politik	politique	política	polityka	politiikka	politik	政治	정치	πολιτική
+N4	指輪	ゆびわ	ring	gredzens	žiedas	sõrmus	кольцо	перстень	Ring	anneau	anillo	pierścień	sormus	ring	戒指	가락지	δαχτυλίδι
+N4	見つける	みつける	to discover	atklāt	atrasti	avastama	открывать	відкривати	entdecken	découvrir	descubrir	odkrywać	löytää	upptäcka	发现	발견하다	ανακαλύπτω
+N4	腕	うで	arm	roka	ranka	käsivars	рука	рука	Arm	bras	brazo	ramię	käsivarsi	arm	胳膊	팔	χέρι
+N4	日記	にっき	diary	dienasgrāmata	dienoraštis	päevik	дневник	щоденник	Tagebuch	journal intime	diario	dziennik	päiväkirja	dagbok	日记	일기	ημερολόγιο
+N4	手伝う	てつだう	to help	līdzēt	padėti	aitama	помогать	допомагати	helfen	aider	ayudar	pomagać	auttaa	hjälpa	帮助	돕다	βοηθώ
+N4	息子	むすこ	son	dēls	sūnus	poeg	сын	син	Sohn	fils	hijo	syn	poika	son	儿子	아들	γιος
+N4	笑う	わらう	to laugh	smieties	juoktis	naerma	смеяться	сміятися	lachen	rire	reír	śmiać się	nauraa	skratta	笑	웃다	γελάω
+N4	文学	ぶんがく	literature	literatūra	literatūra	literatuur	литература	література	Literatur	littérature	literatura	literatura	kirjallisuus	litteratur	文学	문학	λογοτεχνία
+N4	字	じ	letter	burts	raidė	täht	буква	буква	Buchstabe	lettre	letra	litera	kirjain	bokstav	字母	문자	γράμμα
+N4	褒める	ほめる	to praise	slavēt	girti	ülistama	хвалить	хвалити	loben	louer	alabar	chwalić	ylistää	berömma	赞扬	칭찬하다	επαινώ
+N4	最後	さいご	end	gals	pabaiga	lõpp	конец	кінець	Ende	fin	fin	koniec	pää	slut	结束	끝	τέλος
+N4	値段	ねだん	price	cena	kaina	hind	цена	ціна	Preis	prix	precio	cena	hinta	pris	价格	값	τιμή
+N4	展覧会	てんらんかい	exhibition	izstāde	paroda	näitus	выставка	виставка	Ausstellung	exposition	exposición	wystawa	näyttely	utställning	展览会	전람회	έκθεση
+N4	汽車	きしゃ	train	vilciens	traukinys	rong	поезд	потяг	Zug	train	tren	pociąg	juna	tåg	火车	기차	τρένο
+N4	召し上がる	めしあがる	to eat	ēst	valgyti	sööma	есть	їсти	essen	manger	comer	jeść	syödä	äta	吃	먹다	τρώω
+N4	最初	さいしょ	first	pirmais	pirmas	esimene	первый	перший	erster	premier	primer	pierwszy	ensimmäinen	förste	第一	첫째	πρώτος
+N4	集める	あつめる	to collect	vākt	rinkti	koguma	собирать	збирати	sammeln	rassembler	juntar	zbierać	koota	samla	庋藏	수집	συγκεντρώνω
+N4	数学	すうがく	mathematics	matemātika	matematika	matemaatika	математика	математика	Mathematik	mathématiques	matemáticas	matematyka	matematiikka	matematik	数学	수학	μαθηματικά
+N4	文化	ぶんか	culture	kultūra	kultūra	kultuur	культура	культура	Kultur	culture	cultura	kultura	kulttuuri	kultur	文化	문화	πολιτισμός
+N4	払う	はらう	to pay	maksāt	sumokėti	maksma	платить	платити	bezahlen	payer	pagar	płacić	maksaa	betala	付	지불하다	πληρώνω
+N4	習慣	しゅうかん	custom	paraža	paprotys	tava	обычай	звичай	Brauch	coutume	costumbre	zwyczaj	tapa	sed	习惯	습관	συνήθεια
+N4	焼ける	やける	to burn	degt	deginti	põlema	гореть	горіти	brennen	brûler	arder	palić się	palaa	brinna	烧	불타다	καίγομαι
+N4	続ける	つづける	to continue	turpināt	tęsti	jätkama	продолжать	продовжувати	fortsetzen	continuer	continuar	kontynuować	jatkaa	fortsätta	继续	계속하다	συνεχίζω
+N4	割れる	われる	to break	salūzt	sulaužyti	murduma	ломаться	ламати	zerbrechen	se rompre	romperse	łamać się	särkyä	gå sönder	打破	부러지다	σπάω
+N4	背中	せなか	back	mugura	nugara	selg	спина	спина	Rücken	dos	espalda	plecy	selkä	rygg	背部	등	πλάτη
+N4	眠い	ねむい	sleepy	miegains	mieguistas	unine	сонный	сонний	schläfrig	somnolent	tener sueño	senny	uninen	trött	昏昏欲睡	졸리다	νυσταγμένος
+N4	考える	かんがえる	to think	domāt	galvoti	mõtlema	думать	думати	denken	penser	pensar	myśleć	ajatella	tänka	想	생각하다	σκέφτομαι
+N4	首	くび	neck	kakls	kaklas	kael	шея	шия	Hals	cou	cuello	szyja	kaula	hals	颈	목	λαιμός
+N4	工業	こうぎょう	industry	rūpniecība	pramonė	tööstus	промышленность	промисловість	Industrie	industrie	industria	przemysł	teollisuus	industri	工业	공업	βιομηχανία
+N4	研究室	けんきゅうしつ	laboratory	laboratorija	laboratorija	laboratoorium	лаборатория	лабораторія	Labor	laboratoire	laboratorio	laboratorium	laboratorio	laboratorium	实验室	실험실	εργαστήριο
+N4	工場	こうじょう	factory	rūpnīca	gamykla	tehas	фабрика	фабрика	Fabrik	usine	fábrica	fabryka	tehdas	fabrik	工厂	공장	εργοστάσιο
+N4	舟	ふね	boat	laiva	valtis	paat	лодка	човен	Boot	bateau	barca	łódź	vene	båt	船	배	βάρκα
+N4	動く	うごく	to move	kustināt	judėti	liikuma	двигаться	рухатися	bewegen	mouvoir	moverse	ruszać	liikkua	flytta sig	动	움직이다	κινώ
+N4	勝つ	かつ	to win	uzvarēt	nugalėti	võitma	побеждать	перемагати	gewinnen	gagner	ganar	zwyciężać	voittaa	vinna	赢	이기다	νικώ
+N4	砂	すな	sand	smiltis	smėlis	liiv	песок	пісок	Sand	sable	arena	piasek	hiekka	sand	沙	모래	άμμος
+N4	警察	けいさつ	police	policija	policija	politsei	полиция	поліція	Polizei	police	policía	policja	poliisi	polis	警察	경찰	αστυνομία
+N4	簡単	かんたん	simple	parasts	paprastas	lihtne	простой	простий	einfach	simple	simple	prosty	yksinkertainen	enkel	简单	간단하다	απλός
+N4	参る	まいる	to go	iet	eiti	minema	ходить	ходити	gehen	aller	ir	chodzić	mennä	gå	去	가다	πάω
+N4	戻る	もどる	to return	atnākt atpakaļ	grįžti	naasma	возвращаться	повертатися	zurückkehren	revenir	retornar	wracać	palata	återvända	返回	돌아가다	γυρίζω
+N4	草	くさ	grass	zāle	žolė	muru	трава	трава	Gras	herbe	pasto	trawa	heinä	gräs	草	풀	χορτάρι
+N4	訪ねる	たずねる	to visit	apmeklēt	lankyti	külastama	посещать	відвідувати	besuchen	visiter	visitar	odwiedzać	käydä	besöka	访问	방문하다	επισκέπτομαι
+N4	看護婦	かんごふ	nurse	māsa	seselė	õde	медсестра	медсестра	Krankenschwester	infirmière	enfermera	pielęgniarka	sairaanhoitaja	sjuksköterska	护士	간호원	νοσοκόμα
+N4	眠る	ねむる	to sleep	gulēt	miegoti	magama	спать	спати	schlafen	dormir	dormir	spać	nukkua	sova	睡觉	자다	κοιμάμαι
+N4	上がる	あがる	to rise	celt	kilti	tõusma	подниматься	підніматися	steigen	monter	levantarse	unieść się	nousta	stiga	起来	오르다	αναδύομαι
+N4	娘	むすめ	daughter	meita	duktė	tütar	дочь	дочка	Tochter	fille	hija	córka	tytär	dotter	女儿	딸	κόρη
+N4	湖	みずうみ	lake	ezers	ežeras	järv	озеро	озеро	See	lac	lago	jezioro	järvi	sjö	湖	호수	λίμνη
+N4	糸	いと	thread	diegs	siūlas	lõng	нить	нитка	Faden	fil	hilo	nić	lanka	tråd	线	실	νήμα
+N4	番組	ばんぐみ	program	programma	programa	programm	программа	програма	Programm	émission	programa	audycja	ohjelma	program	节目	프로그램	πρόγραμμα
+N4	急	きゅう	steep	stāvs	status	järsk	крутой	крутий	steil	escarpé	escarpado	stromy	jyrkkä	brant	陡	가파르다	απότομος
+N4	棚	たな	shelf	plaukts	lentyna	riiul	полка	полиця	Regal	rayon	estante	półka	hylly	hylla	架子	선반	ράφι
+N4	嬉しい	うれしい	happy	laimīgs	laimingas	õnnelik	счастливый	щасливий	zufrieden	heureux	feliz	szczęśliwy	onnellinen	glad	高兴	행복하다	ευχαριστημένος
+N4	趣味	しゅみ	hobby	hobijs	hobis	harrastus	хобби	хобі	Hobby	passe-temps	afición	hobby	harrastus	hobby	爱好	취미	χόμπυ
+N4	電報	でんぽう	telegram	telegramma	telegrama	telegramm	телеграмма	телеграма	Telegramm	télégramme	telegrama	telegram	sähke	telegram	电报	전보	τηλεγράφημα
+N4	家内	かない	wife	sieva	pati	naine	жена	дружина	Ehefrau	femme	esposa	żona	vaimo	hustru	妻子	아내	σύζυγος
+N4	指	ゆび	finger	pirksts	pirštas	sõrm	палец	палець	Finger	doigt	dedo	palec	sormi	finger	手指	손가락	δάχτυλο
+N4	ごみ	ごみ	trash		šiukšlė	rämps	мусор	сміття	Abfall	déchet	basura	śmieci	roska	skräp	垃圾	쓰레기	απορρίματα
+N4	浅い	あさい	shallow	sekls	seklus		мелкий	мілкий	flach	peu profond	no	płytki	matala	ytlig	浅	얕다	ρηχός
+N4	申し上げる	もうしあげる	to say	sacīt	sakyti	ütlema	говорить	говорити	sagen	dire	decir	mówić	sanoa	säga	说	말하다	
+N4	逃げる	にげる	to escape	izbēgt	pabėgti	pääsema	спасаться	рятуватися	entgehen	échapper	escapar	wydostawać się	paeta	fly	逃生		δραπετεύω
+N4	怖い	こわい	scary	biedējoši	baisu		страшный	страшний	schrecklich	sinistre	temible	straszny	pelottava	läskig	恐怖	공포	τρομακτικός
+N4	光る	ひかる	to shine		šviesti	särama	светить	світити	leuchten	briller	brillar	świecić	loistaa	lysa	发亮	비추다	λάμπω
+N4	小学校	しょうがっこう	primary school	sākumskola	pradinė mokykla		семилетка	початкова школа	Grundschule	école primaire	primaria	szkoła podstawowa	peruskoulu	grundskola	小学	초등학교	δημοτικό σχολείο
+N4	珍しい	めずらしい	unusual	neparasts	neįprastas	veider	необычный	незвичний	ungewöhnlich	inhabituel	inusual	niezwykły	erikoinen	ovanlig	稀有		ασυνήθιστος
+N4	乗り物	のりもの	vehicle	transportlīdzeklis	važiuoklė		транспортное средство	транспортний засіб	Fahrzeug	véhicule	vehículo	pojazd	ajoneuvo	fordon	车辆	차량	όχημα
+N4	申す	もうす	to say	sacīt	sakyti	ütlema	говорить	говорити	sagen	dire	decir	mówić	sanoa	säga	说	말하다	
+N4	真面目	まじめ	serious	nopietns		tõsine	серьёзный	серйозний	ernst	sérieux	serio	poważny	vakava	allvarsam	严肃	엄숙하다	σοβαρός
+N4	今夜	こんや	this evening	šovakar		täna õhtul	сегодня вечером	сьогодні ввечері	heute Abend	ce soir	esta tarde	wieczorem	tänä iltana	i kväll	今天晚上	오늘 밤에	απόψε
+N4	交通	こうつう	traffic	satiksme	eismas	liiklus	движение	рух	Verkehr	circulation	tráfico	ruch drogowy	liikenne	trafik	交通	교통	
+N4	釣る	つる	to fish	zvejot	žvejoti		рыбачить	рибалити	fischen	pêcher	pescar	łowić ryby	kalastaa	fiska	钓鱼	낚다	ψαρεύω
+N4	沸かす	わかす	to boil	uzvārīt	užvirinti		кипятить	кип'ятити	sieden	bouillir	hervir	gotować	kiehuttaa	koka	煮沸	비등하다	βράζω
+N4	遊び	あそび	play	spēle	žaidimas	mäng	игра	гра	Spiel	jeu	juego	zabawa	leikki	spel	玩	놀이	
+N4	天気予報	てんきよほう	weather forecast	laika prognoze	orų prognozė	ilmaennustus	прогноз погоды	прогноз погоди	Wettervorhersage	météo	pronóstico del tiempo	prognoza	sääennuste	väderprognos	天气预报	일기 예보	
+N4	寺	てら	temple	templis	šventykla		храм	храм	Tempel	temple	templo	świątynia	temppeli	tempel	寺庙	절	ναός
+N4	普通	ふつう	normal	parasts		harilik	нормальный	нормальний	normal	normal	normal	normalny	säännöllinen	normal	正常	정상	φυσιολογικός
+N4	席	せき	seat		vieta	iste	сиденье	сидіння	Sitz	place	asiento	siedzenie	istumapaikka	sittplats	座位	자리	κάθισμα
+N4	世話	せわ	to care		rūpintis	hoolima	заботиться	турбуватися	kümmern	soigner	cuidar	opiekować się	hoitaa	ta hand om	关照	보살피다	φροντίζω
+N4	おっしゃる	おっしゃる	to say	sacīt	sakyti	ütlema	говорить	говорити	sagen	dire	decir	mówić	sanoa	säga	说	말하다	
+N4	仕方	しかた	way	veids	būdas		способ	спосіб	Weise	manière	manera	sposób	tapa	sätt	方法	방법	τρόπος
+N4	優しい	やさしい	kind	laipns	malonus		добрый	добрий	freundlich	gentil	amable	miły	ystävällinen	snäll	亲切	친절하다	αγαθός
+N4	経験	けいけん	to experience	pieredzēt	patirti		испытывать	переживати	erfahren	éprouver	experimentar	doświadczać	kokea	uppleva	经历	경험하다	βιώνω
+N4	鳴る	なる	to sound		skambėti	helisema	звучать	звучати	klingen	sonner	sonar	brzmieć	soida	ljuda	响	울리다	
+N4	沸く	わく	to boil	vārīties	užvirti		закипать	кипіти	kochen	bouillir	hervir	wrzeć	kiehua	koka	沸腾		βράζω
+N4	漫画	まんが	comic	komikss	komiksas	koomiks	комикс	комікс	Bildergeschichte	bande dessinée	cómic	komiks	sarjakuva		漫画	만화	
+N4	床屋	とこや	barbershop			juuksurisalong	парикмахерская	перукарня	Friseurgeschäft	salon de coiffure	peluquería	zakład fryzjerski	parturi	frisersalong	理发店	이발소	κουρείο
+N4	運動	うんどう	to exercise	vingrojums	pratimas	harjutus	упражнение	вправа	Übung	exercice	ejercicio	ćwiczenie	kuntoilu	träning	运动	운동	γυμναστική
+N4	もし	もし	if	ja	jei	kui	если	якщо	wenn	si	si	jeśli	jos	om	如果	만약	αν
+N4	発音	はつおん	to pronunciation	izruna	tarimas	hääldus	произношение	вимова	Aussprache	prononciation	pronunciación	wymowa	ääntämys	uttal	发音	발음	προφορά
+N4	点	てん	point		taškas		пункт	крапка	Punkt	point	punto	punkt	piste	punkt	点	점	σημείο
+N4	建てる	たてる	to construct		statyti	ehitama	строить	будувати	bauen	construire	construir	budować	rakentaa	konstruera	建造		κατασκευάζω
+N4	起こす	おこす	to wake  up	pamodināt		äratama	будить	будити	aufwecken	réveiller	despertar	budzić	herättää	väcka	唤醒	깨우다	
+N4	嘘	うそ	lie	meli	melas	vale	ложь	брехня	Lüge	mensonge	mentira	kłamstwo	vale	lögn	谎言	거짓말	ψέμα
+N4	捕まえる	つかまえる	to catch	ķert		püüdma	ловить	ловити	fangen	attraper	capturar	łapać	napata	fånga	捉		πιάνω
+N4	季節	きせつ	season	gadalaiks	metų laikas	aastaaeg	время года	пора року	Jahreszeit	saison	estación	pora roku	vuodenaika	årstid	季	계절	εποχή
+N4	戦争	せんそう	to war	karš	karas	sõda	война	війна	Krieg	guerre	guerra	wojna	sota	krig	战争	전쟁	πόλεμος
+N4	調べる	しらべる	to check	pārbaudīt	patikrinti		проверять	перевіряти	überprüfen	vérifier	verificar	sprawdzić	tarkistaa	kontrollera	检查	확인하다	
+N4	柔道	じゅうどう	judo			judo	дзюдо	дзюдо	Judo	judo	yudo	dżudo	judo	judo	柔道	유도	τζούντο
+N4	試合	しあい	to match	mačs	mačas	matš	матч	матч	Spiel	match	partido	mecz	ottelu	match	比赛	경기	ματς
+N4	原因	げんいん	to cause	iemesls	priežastis	alus	причина	причина	Ursache	cause	causa	przyczyna	syy	orsak	原因	원인	αιτία
+N4	受付	うけつけ	reception			vastuvõtt	приёмная	приймальня	Rezeption	réception	recepción	recepcja	vastaanotto	reception	接待处	접수처	υποδοχή
+N4	景色	けしき	scenery			maastik	пейзаж	краєвид	Landschaft	décor naturel	paisaje	sceneria	maisema	sceneri	风景	경치	τοπίο
+N4	予定	よてい	to schedule	saraksts	sąrašas	ajakava	расписание	розклад	Termin	planning	horario	harmonogram	aikataulu	schema	时间表	스케줄	χρονοδιάγραμμα
+N4	塗る	ぬる	to paint	krāsot			красить	фарбувати	bemalen	peindre	pintar	malować	maalata	måla	油漆	칠하다	βάφω
+N4	すっかり	すっかり	completely	pilnīgi		täielikult	совершенно	повністю	vollständig	complètement	completamente	całkowicie	täysin	fullständigt	完全	완전히	
+N4	寂しい	さびしい	lonely		vienišas	üksildane	одинокий	самотній	einsam	seul	solitario	samotny	yksinäinen	ensam	寂寞	외롭다	
+N4	育てる	そだてる	to bring up	audzināt	ugdyti		воспитывать	виховувати	erziehen	élever		wychowywać	kasvattaa	uppfostra	抚养	키우다	ανατρέφω
+N4	貿易	ぼうえき	to trade	tirgošanās	prekyba	kaubandus	торговля	торгівля	Handel	commerce	comercio	handel	kauppa	handel	贸易	거래	εμπόριο
+N4	試験	しけん	to examination	eksāmens	egzaminas	eksam	экзамен	екзамен	Prüfung	examen	examen	egzamin	tentti	tentamen	考试	시험	εξέταση
+N4	会話	かいわ	to conversation	saruna	pokalbis	vestlus	разговор	розмова	Gespräch	conversation	conversación	rozmowa	keskustelu	samtal	会话	대화	συνομιλία
+N4	校長	こうちょう	principal	skolas pārzinis			директор	директор	Rektor	directeur	director	dyrektor	rehtori	rektor	校长	교장	διευθυντής
+N4	引っ越す	ひっこす	to move			kolima	переезжать	переїжджати	umziehen	déménager	mudar	przeprowadzać	muuttaa	flytta	搬家	이사하다	μετακομίζω
+N4	男性	だんせい	man	vīrs	vyras	mees	мужчина	чоловік	Mann	homme	hombre	mężczyzna	mies	man	男人	남자	άνδρας
+N4	生産	せいさん	to production	ražošana	gamyba	tootmine	производство	виробництво	Produktion	production	producción	wytwarzanie	valmistaminen	produktion	生产	생산	παραγωγή
+N4	教育	きょういく	to education	audzināšana	auklėjimas	haridus	образование	освіта	Ausbildung	éducation	educación	edukacja	kasvatus	utbildning	教育	교육	εκπαίδευση
+N4	女性	じょせい	woman	sieviete	moteris	naine	женщина	жінка	Frau	femme	mujer	kobieta	nainen	kvinna	妇女	여성	γυναίκα
+N4	例えば	たとえば	for example	piemēram	pavyzdžiui	näiteks	например	наприклад	zum Beispiel	par exemple	por ejemplo	na przykład	esimerkiksi	till exempel	比如	예컨대	για παράδειγμα
+N4	特に	とくに	especially			eriliselt	особенно	особливо	besonders	spécialement	especialmente	szczególnie	erityisesti	särskilt	特别	특히	ειδικά
+N4	計画	けいかく	to plan	plāns	planas	plaan	план	план	Plan	plan	plan	plan	suunnitelma	plan	计划	계획	σχέδιο
+N4	十分	じゅうぶん	enough	gana	pakankamai	piisavalt	достаточно	досить	genug	assez	bastante	dość	tarpeeksi	tillräckligt	够	충분히	αρκετός
+N4	正しい	ただしい	right			õige	правильный	правильний	richtig	correct	correcto	poprawny	oikea	rätt	正确	옳다	σωστό
+N4	輸入	ゆにゅう	to import	imports	importas	import	импорт	імпорт	Import	importation	importación	import	tuonti	import	进口	수입	εισαγωγή
+N4	返事	へんじ	to reply	atbilde	atsakymas	vastus	ответ	відповідь	Antwort	réponse	respuesta	odpowiedź	vastaus	svar	回答	대답	απάντηση
+N4	説明	せつめい	to explanation	skaidrojums	paaiškinimas	selgitus	объяснение	пояснення	Erläuterung	explication	explicación	objaśnienie	selittäminen	förklaring	解释	설명	εξήγηση
+N4	危険	きけん	danger	briesmas	pavojus	oht	опасность	небезпека	Gefahr	danger	peligro	niebezpieczeństwo	vaara	fara	危险	위험	κίνδυνος
+N4	負ける	まける	to lose	zaudēt			проигрывать	програвати	verlieren	perdre	perder	przegrywać	hävitä	förlora	输	지다	ηττώμαι
+N4	講義	こうぎ	to lecture	lekcija	paskaita	loeng	лекция	лекція	Vorlesung	conférence	aleccionamiento	wykład	luento	föreläsning	演讲	강의	διάλεξη
+N4	暖房	だんぼう	to heating	apkure	šildymas	küte	отопление	опалення	Heizung	chauffage	calefacción	ogrzewanie	lämmitys	uppvärmning	暖气	난방	καλοριφέρ
+N4	運ぶ	はこぶ	to carry	nest			носить	носити	tragen	porter	llevar	nosić	kantaa	bära	携带	나르다	κουβαλώ
+N4	注射	ちゅうしゃ	to injection	injekcija	injekcija	süst	инъекция	ін'єкція	Injektion	injection	inyección	zastrzyk	ruiskutus	injektion	注射	주사	ένεση
+N4	続く	つづく	to continue	turpināties		jätkuma	продолжаться		weitermachen	continuer	continuar	kontynuować	jatkua	fortsätta	继续	계속하다	συνεχίζω
+N4	将来	しょうらい	future	nākotne	ateitis	tulevik	будущее	майбутнє	Zukunft	avenir	futuro	przyszłość	tulevaisuus	framtid	未来	미래	μέλλον
+N4	出発	しゅっぱつ	to departure	aiziešana	išėjimas	väljumine	отправление	відправлення	Abfahrt	départ	salida	odejście	lähtö	avgång	出发	출발	αναχώρηση
+N4	自由	じゆう	liberty	brīvība	laisvė	vabadus	свобода	свобода	Freiheit	liberté	libertad	wolność	vapaus	frihet	自由	자유	ελευθερία
+N4	失敗	しっぱい	to failure	neizdošanās	nepasisekimas	ebaõnnestumine	провал	крах	Misserfolg	échec	fallo	niepowodzenie	epäonnistuminen	misslyckande	失败	실패	αποτυχία
+N4	移る	うつる	to move			kolima	переезжать	переїжджати	umziehen	déménager	mudar	przeprowadzać	muuttaa	flytta	搬家	이사하다	μετακομίζω
+N4	水泳	すいえい	to swimming	peldēšana	plaukimas	ujumine	плавание	плавання	Schwimmen	natation	natación	pływactwo	uinti	simning	游泳	수영	κολύμβηση
+N4	入院	にゅういん	to hospitalization	hospitalizācija	hospitalizacija	haiglasviibimine	госпитализация	госпіталізація	Krankenhauseinweisung	hospitalisation	hospitalización	hospitalizacja	sairaalahoito	sjukhusvistelse	住院	입원	νοσηλεία
+N4	安全	あんぜん	safety	drošība	saugumas	ohutus	безопасность	безпека	Sicherheit	sécurité	seguridad	bezpieczeństwo	turvallisuus	säkerhet	安全	안전	ασφάλεια
+N4	相談	そうだん	to consultation	konsultācija	konsultacija	konsultatsioon	консультация	консультація	Beratung	consultation	consulta	konsultacja	konsultaatio	samhälle	会诊	협의	διαβούλευση
+N4	翻訳	ほんやく	to translation	tulkošana	vertimas	tõlge	перевод	переклад	Übersetzung	traduction	traducción	tłumaczenie	kääntäminen	översättning	翻译	번역	μετάφραση
+N4	食事	しょくじ	to meal	ēdiens	valgis	söök	еда	їжа	Mahlzeit	repas	comida	posiłek	ateria	måltid	餐	끼니	γεύμα
+N4	競争	きょうそう	to competition	konkurence	konkurencija	võistlus	соревнование	конкуренція	Konkurrenz	compétition	competición	rywalizacja	kilpailu	konkurrens	比赛	경쟁	ανταγωνισμός
+N4	会議	かいぎ	to session	sēde	posėdis	sessioon	сессия	сесія	Sitzung	session	sesión	sesja	istunto	session	会议	회의	σύνοδος
+N4	輸出	ゆしゅつ	to export	eksports	eksportas	eksport	экспорт	експорт	Export	exportation	exportación	eksport	vienti	utförsel	出口	수출	εξαγωγή
+N4	拾う	ひろう	to pick up		pakelti		подбирать	підбирати	aufheben	soulever	coger	podnosić	nostaa		拾取	줍다	σηκώνω
+N4	複雑	ふくざつ	complex				сложный	складний	kompliziert	complexe	complejo	skomplikowany	monimutkainen	komplex	复杂	복잡하다	πολύπλοκος
+N4	止める	やめる	to stop			peatama	останавливать	зупиняти	anhalten	arrêter	parar	zatrzymać	pysäyttää	stanna	停下	멈추다	
+N4	壊れる	こわれる	to break	salūzt			ломаться		kaputtgehen	se casser	descomponerse	zespuć się	hajota	gå sönder	坏	부서지다	χαλάω
+N4	時代	じだい	age				эпоха	епоха	Zeit	âge	edad	epoka	aika	tid	时代	시대	εποχή
+N4	包む	つつむ	to wrap				заворачивать	завертати	wickeln	envelopper	envolver	zawijać	kääriä	slå in	包装	싸다	τυλίγω
+N4	利用	りよう	to use	lietojums		kasutama	употребление	вживання	Benutzung	usage	uso	użycie	käyttö	användning	用	사용	χρήση
+N4	そんな	そんな	such	tāds	toks	selline	такой	такий	solch	tel	así	taki	sellainen	sådan	这样	그런	
+N4	痩せる	やせる	to lose weight				худеть	худнути	abnehmen	perdre du poids	perder peso	chudnąć	laihtua	gå ner i vikt	减肥	살이 빠지다	αδυνατίζω
+N4	一度	いちど	once				один раз	раз	einmal	une fois	una vez	raz	kerta	en gång	一次	한 번	μια φορά
+N4	匂い	におい	odor				запах	запах	Geruch	odeur	olor	zapach	tuoksu	lukt	气味	냄새	οσμή
+N4	残る	のこる	to remain				оставаться	залишатися	bleiben	rester	quedarse	pozostać	jäädä jäljelle	bli kvar	留	머무르다	παραμένω
+N4	届ける	とどける	to deliver				доставлять	доставляти	liefern	livrer	entregar	dostarczać	viedä perille	leverera	传递	배달하다	παραδίδω
+N4	確か	たしか	certain				уверенный	упевнений	gewiss	certain	certero	pewny	varma	säker	肯定	확실하다	βέβαιος
+N4	味	あじ	flavor		skonis		вкус	смак	Geschmack	goût	sabor	smak	maku	smak	味道	향미	
+N4	写す	うつす	to copy				копировать	копіювати	kopieren	copier	copiar	kopiować	kopioida	kopiera	复制	복사하다	αντιγράφω
+N4	着物	きもの	kimono				кимоно	кімоно	Kimono	kimono	kimono	kimono	kimono	kimono	和服	기모노	κιμονό
+N4	専門	せんもん	specialty				специальность	спеціальність	Spezialität	spécialité	especialidad	specjalność	erikoisuus	specialitet	专业	특산물	ειδικότητα
+N4	放送	ほうそう	to broadcasting	pārraide	transliavimas	ülekanne	вещание	мовлення	Rundfunk	radiodiffusion	retransmisión	nadawanie	lähetystoiminta	sändning	广播	방송	
+N4	似る	にる	to resemble				походить	бути подібним	ähneln	ressembler	resemblar a	być podobnym	muistuttaa	likna	相似	비슷하다	μοιάζω
+N4	合う	あう	to fit	sakrist			подходить	підходити	passen	convenir	caber	pasować	sopia	passa	适合		κάνω
+N4	遅れる	おくれる	to be late			hilinema	опаздывать	спізнюватися	verspäten	être en retard	llegar tarde	spóźniać	olla myöhässä	vara sen	迟到	늦다	
+N4	直す	なおす	to fix				чинить	лагодити	reparieren	réparer	arreglar	naprawiać	korjata	fixa	修理	고치다	διορθώνω
+N4	近所	きんじょ	neighborhood		kaimynystė	naabrus	соседство	сусідство	Nachbarschaft	voisinage	vecindad	sąsiedztwo	naapurusto	grannskap	附近	근처	γειτονιά
+N4	この間	このあいだ	recently				недавно	недавно	neulich	dernièrement	recientemente	niedawno	äskettäin	nyligen	最近	근래	πρόσφατα
+N4	植える	うえる	to plant				сажать	садити	pflanzen	planter	plantar	sadzić	istuttaa	plantera	种	심다	φυτεύω
+N4	取り替える	とりかえる	to swap	mainīt			меняться		tauschen	permuter	canjear	zamieniać	vaihtaa	byta	交换	교환하다	ανταλλάσσω
+N4	急ぐ	いそぐ	to hurry		skubėti		спешить	поспішати	beeilen	dépêcher	apresurarse	śpieszyć	kiiruhtaa	skynda	赶工	서두르다	
+N4	全然	ぜんぜん	not at all				вовсе нет	взагалі не	überhaupt nicht	pas du tout	en absoluto	wcale nie	ei lainkaan	inte alls	毫不	결코	καθόλου
+N4	研究	けんきゅう	to research	pētīt			исследовать	досліджувати	forschen	rechercher	investigar	badać	tutkia	forska	研究	연구하다	
+N4	たまに	たまに	occasionally				иногда	зрідка	gelegentlich	occasionnellement	ocasionalmente	okazjonalnie	joskus	ibland	偶尔	가끔	περιστασιακά
+N4	心配	しんぱい	to anxiety			rahutus	беспокойство	занепокоєння	Besorgnis	anxiété	zozobra	niepokój	ahdistus	ängslan	焦虑	걱정	άγχος
+N4	通る	とおる	to pass				проходить	проходити	hinüberkommen	passer	pasar		kulkea	förflytta	过	지나가다	περνάω
+N4	厳しい	きびしい	strict				строгий	строгий	streng	strict	estricto	surowy	ankara	sträng	严格	엄격하다	
+N4	中学校	ちゅうがっこう	middle school				средняя школа		Mittelstufe	cycle	escuela media	gimnazjum	keskikoulu	mellanstadie	初级中学	중학교	γυμνάσιο
+N4	思う	おもう	to think		manyti		думать		denken	penser	pensar	myśleć	luulla	tro	想		νομίζω
+N4	残念	ざんねん	regret			kahetsema	сожалеть	жалкувати	bedauern	regretter	lamentar	żałować	olla pahoillaan	beklaga	后悔	후회하다	μετανιώνω
+N4	飾る	かざる	to decorate				украшать		ausschmücken	décorer	decorar	dekorować	somistaa	dekorera	装饰	꾸미다	διακοσμώ
+N4	恥ずかしい	はずかしい	ashamed				пристыженный	присоромлений	beschämt	honteux	avergonzado	zawstydzony	häpeissään	skamsen	惭愧		αισχρός
+N4	間違える	まちがえる	to make a mistake			eksima	ошибаться	помилятися	versehen	se tromper	errar	popełniać błąd	tehdä virhe	begå ett misstag	犯错误		
+N4	場合	ばあい	occasion				случай	випадок	Gelegenheit	occasion	ocasión	wypadek	tilaisuus	tillfälle	场合	기회	
+N4	行う	おこなう	to carry out				выполнять	виконувати	realisieren	réaliser	cumplir	wykonywać	toteuttaa	utföra	进行	실행하다	
+N4	捨てる	すてる	to throw away				выбрасывать	викидати	fortwerfen	rejeter	tirar	wyrzucać	heittää pois	kasta bort	弃置	버리다	
+N4	知らせる	しらせる	to notify				уведомлять	повідомляти	mitteilen	notifier	notificar	notyfikować	ilmoittaa	meddela	通知	통치하다	
+N4	熱心	ねっしん	zealous		pavydus	agar	рьяный		eifrig	zélé	celoso	zagorzały	intohimoinen	ivrig	热心		
+N4	始める	はじめる	to start				начинать	починати	anfangen	commencer		zacząć	aloittaa	börja	开始	시작하다	ξεκινώ
+N4	漬ける	つける	to pickle	skābēt			засаливать	квасити	einlegen	saler	encurtir	kisić	suolata	lägga in	腌菜		
+N4	増える	ふえる	to increase			kasvama	возрастать	зростати	zunehmen	augmenter	aumentar		kasvaa	växa	增加		αυξάνομαι
+N4	思い出す	おもいだす	to recall				вспоминать	згадувати	erinnern	souvenir	remembrar		muistaa	minnas	回忆	회상하다	αναπολώ
+N4	味噌	みそ	miso				мисо		Miso	miso	miso	miso	miso	miso	味噌	미소	μίσο
+N4	お祝い	おいわい	congratulation				поздравление	привітання	Glückwunsch	félicitation	felicitación	gratulacje	onnittelu	gratulation	祝贺	축하	
+N4	招待	しょうたい	to invitation		kvietimas		приглашение	запрошення	Einladung	invitation	invitación	zaproszenie	kutsu	inbjudning	邀请	초대	πρόσκληση
+N4	法律	ほうりつ	legislation				закон	закон	Gesetz	loi	legislación	ustawodawstwo	lainsäädäntö	lagstiftning	立法	법률	
+N4	足す	たす	to add				прибавлять	додавати	addieren	additionner		dodać	laskea yhteen	addera	加	더하기하다	αθροίζω
+N4	随分	ずいぶん	extremely				чрезвычайно	вкрай	extrem	extrêmement	extremadamente	niezwykle	äärimmäisen	extremt	非常		άκρως
+N4	叱る	しかる	to scold				бранить	сварити	beschimpfen	gronder	regañar	łajać	torua	skälla ut	骂	꾸짖다	
+N4	うまい	うまい	skillful	veikls			искусный		geschickt	habile	hábil		taitava	skicklig	熟练	잘하다	επιδέξιος
+N4	裏	うら	back				зад	зад	Rückseite	derrière	revés	tył	kääntöpuoli	baksida	后面	뒤	
+N4	為	ため	in order to			et	чтобы	щоб	zu	pour	a fin de	żeby	jotta	för att	为了	위하여	για να
+N4	支度	したく	to preparation			ettevalmistus	подготовка	підготовка	Vorbereitung	préparation	preparación	przygotowanie	valmistelu	förberedelse	准备	준비	παρασκευή
+N4	折れる	おれる	to break	salūzt			ломаться		brechen	casser	romper	złamać się	murtua	bryta	折	부러지다	
+N4	市民	しみん	citizen			linnaelanik	горожанин		Einwohner	citoyen		mieszkaniec	kaupunkilainen	innevånare	市民	시민	δημότης
+N4	割合	わりあい	rate			proportsioon	пропорция		Rate	taux	tasa	tempo	tahti	grad	比率	비율	
+N4	最も	もっとも	most			kõige	наи-	най-	-ster	le plus	más	naj-		mest	最	가장	
+N4	太る	ふとる	to put on weight				набирать вес	товстіти	zunehmen	prendre du poids	subir de peso	tyć	lihoa	öka i vikt	发胖	살이 찌다	
+N4	乗り換える	のりかえる	to transfer				переносить		übertragen	transférer	transferir	przenosić	siirtää	överföra	转移	옮기다	μετακινώ
+N4	別れる	わかれる	to separate	sadalīties			разделяться	розділятися	sich trennen	séparer	separar		erottua	dela		분리되다	κόβω
+N4	止む	やむ	to cease				прекращаться		aufhören	cesser	cesar	zaprzestać	loppua	upphöra	停止	그치다	
+N4	表	おもて	front				фасад	фасад	Front	façade			julkisivu	framsida	正面	정면	πρόσοψη
+N4	そう	そう	so				так	так	so	aussi	tan	tak	niin	så	这么	그렇게	τόσο
+N4	さっき	さっき	just now				только что		gerade eben	à l'instant	recién	właśnie	juuri nyt	precis nu	刚才		μόλις
+N4	坂	さか	slope				склон	схил	Steigung	pente	pendiente	zbocze	rinne	brant	斜坡		
+N4	連絡	れんらく	to contact				контактировать		kontaktieren	contacter	contactar	kontaktować	ottaa yhteyttä	kontakta	联系	연락하다	
+N4	事	こと	matter				дело	справа	Angelegenheit		asunto	sprawa	pulma	fråga	事情	일	
+N4	通う	かよう	to commute				ездить		pendeln	faire la navette	pendular	dojeżdżać	käydä töissä	pendla	通勤	통하다	
+N4	ごちそう	ごちそう	to feast				пир	бенкет	Festmahl	festin	festín	uczta	pidot	fest	盛宴	연회	γιορτή
+N4	冷房	れいぼう	to air conditioning				кондиционер	кондиціонер	Klimaanlage	climatiseur	aire acondicionado	klimatyzacja	ilmastointi	luftkonditionering	空调	공기조화	κλιματιστικό
+N4	予約	よやく	to reservation				резервирование	резервування	Reservierung	réservation	reserva	rezerwacja	varaus	reservation	预约	예약	κράτηση
+N4	最近	さいきん	recently				недавно	недавно	neulich	dernièrement	recientemente	niedawno	äskettäin	nyligen	最近	근래	πρόσφατα
+N4	不便	ふべん	inconvenience			ebamugavus	неудобство	незручність	Unannehmlichkeit	dérangement	inconveniencia	niedogodność	hankaluus	olägenhet	不便	불편	
+N4	講堂	こうどう	auditorium				аудитория	аудиторія		amphi	auditorio	audytorium	auditorio	hörsal	礼堂		αίθουσα
+N4	伝える	つたえる	to convey				передавать	передавати	übermitteln	véhiculer	enunciar	przekazać	ilmaista	förmedla	表达		
+N4	滑る	すべる	to slide				скользить	ковзати	gleiten	glisser	resbalar		liukua	glida	滑	미끄러지다	
+N4	田舎	いなか	rural		kaimiškas		сельский	сільський	ländlich	rural	rural	wiejski	maalaismainen		农村	시골	αγροτικός
+N4	約束	やくそく	to appointment				встреча	зустріч	Termin	rendez-vous	cita	wizyta	tapaaminen	möte	约会	약속	ραντεβού
+N4	向かう	むかう	to face				предстать		ausrichten	faire face à	encarar	obrócić się	olla päin	vända	朝	향하다	
+N4	紹介	しょうかい	to introduction		įvadas		введение		Einführung	introduction	introducción	wprowadzenie	perehdytys	introduktion	介绍	소개	εισαγωγή
+N4	下げる	さげる	to lower				опускать		herunterlassen	faire descendre	bajar	opuszczać	laskea	vira ned	降低		χαμηλώνω
+N4	集まる	あつまる	to assemble				собираться		versammeln	rassembler	juntar	zbierać się	kokoontua	samlas	聚集	모으다	
+N4	大抵	たいてい	generally				обычно	зазвичай	hauptsächlich	généralement	generalmente	zwykle	yleensä	i största allmänhet	通常		συνήθως
+N4	揺れる	ゆれる	to shake				трястись	трястися	schütteln	secouer			vavista	skaka	哆嗦	흔들다	
+N4	出席	しゅっせき	to attendance				посещение	відвідування	Anwesenheit	présence	asistencia	obecność	läsnäolo		出席	출석	παρουσία
+N4	故障	こしょう	to breakdown				авария		Betriebsstörung	panne	avería	awaria	rikko	haveri	故障	고장	κατάρρευση
+N4	やっと	やっと	at last				наконец	нарешті	endlich	enfin	por fin	wreszcie	lopulta	slutligen	终于		επιτέλους
+N4	親切	しんせつ	kindness				доброта	доброта	Liebenswürdigkeit	bonté	amabilidad	życzliwość	kiltteys		恩惠	친절	καλοσύνη
+N4	もちろん	もちろん	certainly				конечно		sicher	certainement		na pewno	totta kai	naturligtvis	当然		βεβαίως
+N3	愛	あい	love	mīlestība	meilė	armastus	любовь	любов	Liebe	amour	amor	miłość	rakkaus	kärlek	爱	사랑	αγάπη
+N3	馬	うま	horse	zirgs	arklys	hobune	лошадь	кінь	Pferd	cheval	caballo	koń	hevonen	häst	马	말	άλογο
+N3	作法	さほう	etiquette	etiķete	etiketas	etikett	этикет	етикет	Etikette	étiquette	etiqueta	etykieta	etiketti	etikett	礼仪	예의	εθιμοτυπία
+N3	皿	さら	plate	šķīvis	lėkštė	taldrik	тарелка	тарілка	Teller	assiette	plato	talerz	lautanen	fat	盘子	접시	πιάτο
+N3	猿	さる	monkey	pērtiķis	beždžionė	pärdik	обезьяна	мавпа	Affe	singe	mono	małpa	apina	apa	猴子	원숭이	πίθηκος
+N3	酸素	さんそ	oxygen	skābeklis	deguonis	hapnik	кислород	кисень	Sauerstoff	oxygène	oxígeno	tlen	happi	syre	氧	산소	οξυγόνο
+N3	詩	し	poem	dzejolis	eilėraštis	luuletus	стихотворение	вірш	Gedicht	poème	poema	wiersz	runo	dikt	诗	시	ποίημα
+N3	ジェット機	ジェットき	jet plane	reaktīvā lidmašīna	reaktyvinis lėktuvas	reaktiivlennuk	реактивный самолёт	реактивний літак	Strahlflugzeug	jet	jet	odrzutowiec	suihkukone	jetplan	喷气机	제트기	τζετ
+N3	事件	じけん	event	notikums	įvykis	sündmus	событие	подія	Ereignis	événement	evento	wydarzenie	tapahtuma	händelse	事件	행사	γεγονός
+N3	事実	じじつ	fact	fakts	faktas	fakt	факт	факт	Tatsache	fait	hecho	fakt	tosiasia	faktum	真相	사실	γεγονός
+N3	詩人	しじん	poet	dzejnieks	poetas	luuletaja	поэт	поет	Dichter	poète	poeta	poeta	runoilija	poet	诗人	시인	ποιητής
+N3	沈む	しずむ	to sink	slīkt	grimzti	vajuma	тонуть	опускатися	sinken	couler	hundirse	tonąć	upota	sjunka	沉	가라앉다	βυθίζομαι
+N3	自然	しぜん	nature	vide	gamta	loodus	природа	природа	Natur	nature	naturaleza	natura	luonto	natur	自然	자연	φύση
+N3	思想	しそう	idea	ideja	idėja	mõte	идея	ідея	Idee	idée	idea	idea	ajatus	idé	主意	생각	ιδέα
+N3	舌	した	tongue	mēle	liežuvis	keel	язык	язик	Zunge	langue	lengua	język	kieli	tunga	舌头	혀	γλώσσα
+N3	質	しつ	quality	kādība	kokybė	kvaliteet	качество	якість	Qualität	qualité	calidad	jakość	laatu	kvalitet	质量	질	ποιότητα
+N3	失業	しつぎょう	unemployment	bezdarbs	nedarbas	tööpuudus	безработица	безробіття	Arbeitslosigkeit	chômage	desempleo	bezrobocie	työttömyys	arbetslöshet	失业	실업	ανεργία
+N3	湿度	しつど	humidity	mitrums	drėgmė	õhuniiskus	влажность	вологість	Feuchtigkeit	humidité	humedad	wilgotność	kosteus	luftfuktighet	湿度	습도	υγρασία
+N3	自動	じどう	automatic	automātisks	automatinis	automaatne	автоматический	автоматичний	automatisch	automatique	automático	automatyczny	automaattinen	automatisk	自动	자동	αυτόματος
+N3	品	しな	goods	prece	prekė	kaup	товар	товар	Güter	biens	géneros	towar	tavara	gods	产品	상품	αγαθά
+N3	しばしば	しばしば	often	bieži	dažnai	tihti	часто	часто	häufig	souvent	a menudo	często	usein	ofta	经常	수시로	συχνά
+N3	芝生	しばふ	lawn	mauriņš	veja	muru	газон	газон	Rasen	gazon	césped	trawnik	nurmi	gräsmatta	草地	풀밭	γκαζόν
+N3	支払う	しはらう	to pay	maksāt	sumokėti	maksma	платить	платити	bezahlen	payer	pagar	płacić	maksaa	betala	付	지불하다	πληρώνω
+N3	資本	しほん	capital	kapitāls	kapitalas	kapital	капитал	капітал	Kapital	capital	capital	kapitał	pääoma	kapital	资本	자본	κεφάλαιο
+N3	示す	しめす	to show	parādīt	parodyti	näitama	показывать	показувати	zeigen	montrer	mostrar	pokazywać	näyttää	visa	展示	전시하다	εμφανίζω
+N3	しゃべる	しゃべる	to talk	runāt	kalbėti	rääkima	говорить	розмовляти	reden	parler	hablar	mówić	puhua	prata	说话	말하다	μιλώ
+N3	週	しゅう	week	nedēļa	savaitė	nädal	неделя	тиждень	Woche	semaine	semana	tydzień	viikko	vecka	星期	주	εβδομάδα
+N3	州	しゅう	state	pavalsts	valstija	osariik	штат	штат	Staat	État	estado	stan	osavaltio	stat	州	주	πολιτεία
+N3	宗教	しゅうきょう	religion	reliģija	religija	usk	религия	релігія	Religion	religion	religión	religia	uskonto	religion	宗教	종교	θρησκεία
+N3	集団	しゅうだん	group	grupa	grupė	rühm	группа	група	Gruppe	groupe	grupo	grupa	joukko	grupp	集团	그룹	ομάδα
+N3	収入	しゅうにゅう	income	ienākums	pajamos	tulu	доход	прибуток	Einkommen	revenu	ingreso	dochód	tulo	inkomst	收入	소득	εισόδημα
+N3	住民	じゅうみん	inhabitant	iedzīvotājs	gyventojas	asukas	житель	мешканець	Einwohner	habitant	habitante	mieszkaniec	asukas	invånare	居民	주민	κάτοικος
+N3	重要	じゅうよう	important	svarīgs	svarbus	tähtis	важный	важливий	wichtig	important	importante	ważny	tärkeä	viktig	重要	중요하다	σημαντικός
+N3	首相	しゅしょう	prime minister	premjerministrs	premjeras	peaminister	премьер-министр	прем'єр-міністр	Premierminister	premier ministre	primer ministro	premier	pääministeri	premiärminister	首相	총리	πρωθυπουργός
+N3	首都	しゅと	capital city	galvaspilsēta	sostinė	pealinn	столица	столиця	Hauptstadt	capitale	capital	stolica	pääkaupunki	huvudstad	首都	수도	πρωτεύουσα
+N3	主婦	しゅふ	housewife	mājsaimniece	šeimininkė	koduperenaine	домохозяйка	домогосподарка	Hausfrau	maîtresse de maison	ama de casa	gospodyni domowa	emäntä	husfru	主妇	주부	νοικοκυρά
+N3	需要	じゅよう	demand	pieprasījums	paklausa	nõudlus	спрос	потреба	Nachfrage	demande	demanda	popyt	kysyntä	efterfrågan	需求	수요	ζήτηση
+N3	種類	しゅるい	kind	suga	rūšis	liik	вид	вид	Art	genre	género	typ	laji	sort	类	종류	είδος
+N3	瞬間	しゅんかん	moment	moments	akimirka	hetk	момент	момент	Augenblick	instant	momento	chwila	hetki	momang	瞬间	순간	στιγμή
+N3	章	しょう	chapter	nodaļa	skyrius	peatükk	глава	глава	Kapitel	chapitre	capítulo	rozdział	luku	kapitel	章	장	κεφάλαιο
+N3	賞	しょう	prize	balva	prizas	auhind	премия	премія	Preis	prix	premio	nagroda	palkinto	pris	奖品	상	βραβείο
+N3	奨学金	しょうがくきん	scholarship	stipendija	stipendija	stipendium	стипендия	стипендія	Stipendium	bourse	beca	stypendium	apuraha	stipendium	奖学金	장학금	υποτροφία
+N3	乗客	じょうきゃく	passenger	pasažieris	keleivis	sõitja	пассажир	пасажир	Passagier	passager	pasajero	pasażer	matkustaja	passagerare	乘客	승객	επιβάτης
+N3	条件	じょうけん	condition	noteikums	sąlyga	tingimus	условие	умова	Bedingung	condition	condición	warunek	ehto	villkor	条件	조건	όρος
+N3	常識	じょうしき	common sense	veselais saprāts	sveikas protas	terve mõistus	здравый смысл	здоровий глузд	gesunder Menschenverstand	bon sens	sentido común	zdrowy rozsądek	terve järki	sunt förnuft	常识	상식	κοινή λογική
+N3	少女	しょうじょ	girl	meitene	mergina	tüdruk	девушка	дівчина	Mädchen	fille	niña	dziewczyna	tyttö	flicka	女孩儿	소녀	κορίτσι
+N3	冗談	じょうだん	joke	joks	juokas	nali	шутка	жарт	Scherz	plaisanterie	broma	dowcip	pila	skämt	玩笑	농담	αστείο
+N3	商人	しょうにん	trader	tirgotājs	pirklys	kaupmees	торговец	торговець	Händler	commerçant	comerciante	handlarz	kauppias	handlare	商人	상인	έμπορος
+N3	少年	しょうねん	boy	puika	berniukas	poiss	мальчик	хлопець	Bub	garçon	niño	chłopiec	poika	pojke	男孩	소년	αγόρι
+N3	商品	しょうひん	commodity	prece	prekė	kaup	товар	товар	Ware	produit	bien	towar	hyödyke	handelsvara	商品	상품	εμπόρευμα
+N3	職業	しょくぎょう	occupation	darbs	darbas	amet	занятие	заняття	Beschäftigung	occupation	ocupación	zajęcie	ammatti	sysselsättning	职业	직업	απασχόληση
+N3	植物	しょくぶつ	plant	augs	augalas	taim	растение	рослина	Pflanze	plante	planta	roślina	kasvi	planta	植物	식물	φυτό
+N3	食物	しょくもつ	food	pārtika	maistas	toit	еда	їжа	Nahrung	nourriture	alimento	jedzenie	ruoka	mat	食物	음식	τροφή
+N3	食欲	しょくよく	appetite	ēstgriba	apetitas	söögiisu	аппетит	апетит	Appetit	appétit	apetito	apetyt	ruokahalu	aptit	食欲	입맛	όρεξη
+N3	食料	しょくりょう	food	pārtika	maistas	toit	еда	їжа	Nahrung	nourriture	alimento	jedzenie	ruoka	mat	食物	음식	τροφή
+N3	女子	じょし	girl	meitene	mergina	tüdruk	девушка	дівчина	Mädchen	fille	niña	dziewczyna	tyttö	flicka	女孩儿	소녀	κορίτσι
+N3	助手	じょしゅ	helper	palīgs	padėjėjas	aitaja	помощник	помічник	Helfer	assistant	ayudante	pomocnik	auttaja	medhjälpare	帮手	조수	βοηθός
+N3	女優	じょゆう	actress	aktrise	aktorė	näitlejatar	актриса	акторка	Schauspielerin	actrice	actriz	aktorka	näyttelijätär	skådespelerska	女演员	여배우	ηθοποιός
+N3	書類	しょるい	document	dokuments	dokumentas	dokument	документ	документ	Unterlagen	document	documento	dokument	asiakirja	dokument	文件	서류	έγγραφο
+N3	城	しろ	castle	pils	pilis	kindlus	замок	замок	Burg	château	castillo	zamek	linna	slott	城堡	성	κάστρο
+N3	神経	しんけい	nerve	nervs	nervas	närv	нерв	нерв	Nerv	nerf	nervio	nerw	hermo	nerv	神经	신경	νεύρο
+N3	人工	じんこう	artificial	mākslīgais	dirbtinis	kunstlik	искусственный	штучний	künstlich	artificiel	artificial	sztuczny	keinotekoinen	konstgjord	人造	인공	τεχνητός
+N3	信じる	しんじる	to believe	ticēt	tikėti	uskuma	верить	вірити	glauben	croire	creer	wierzyć	uskoa	tro	相信	믿다	πιστεύω
+N3	親戚	しんせき	relative	radinieks	giminaitis	sugulane	родственник	родич	Verwandter	parent	familiar	krewny	sukulainen	släkting	亲戚	친척	συγγενής
+N3	心臓	しんぞう	heart	sirds	širdis	süda	сердце	серце	Herz	cœur	corazón	serce	sydän	hjärta	心脏	심장	καρδιά
+N3	人物	じんぶつ	person	persona	asmuo	isik	человек	особа	Person	personne	persona	osoba	henkilö	person	人	사람	άτομο
+N3	信頼	しんらい	to trust	uzticēties	tikėti	usaldama	доверять	довіряти	vertrauen	faire confiance	confiar	ufać	luottaa	lita på	相信	믿다	εμπιστεύομαι
+N3	人類	じんるい	mankind	cilvēce	žmonija	inimkond	человечество	людство	Menschheit	humanité	humanidad	ludzkość	ihmiskunta	människosläkt	人类	인류	ανθρωπότητα
+N3	巣	す	nest	lizda	lizdas	pesa	гнездо	гніздо	Nest	nid	nido	gniazdo	pesä	rede	鸟巢	둥지	φωλιά
+N3	酢	す	vinegar	etiķis	actas	äädikas	уксус	оцет	Essig	vinaigre	vinagre	ocet	etikka	vinäger	醋	식초	ξίδι
+N3	水準	すいじゅん	level	līmenis	lygis	tase	уровень	рівень	Grad	niveau	nivel	poziom	taso	nivå	水平	수평	επίπεδο
+N3	数字	すうじ	numeral	skaitļa vārds	skaitvardis	arvsõna	числительное	числівник	Numerale	chiffre	letra numeral	liczebnik	numero	siffra	数词	숫자	αριθμός
+N3	救う	すくう	to rescue	glābt	išgelbėti	päästma	спасать	рятувати	retten	délivrer	rescatar	ratować	pelastaa	rädda	拯救	구하다	σώζω
+N3	筋	すじ	muscle	muskulis	raumuo	lihas	мышца	м'яз	Muskel	muscle	músculo	mięsień	lihaskudos	muskel	肌肉	근육	μυς
+N3	勧める	すすめる	to recommend	ieteikt	patarti	soovitama	рекомендовать	рекомендувати	empfehlen	recommander	recomendar	polecać	suositella	rekommendera	推荐	추천하다	προτείνω
+N3	頭痛	ずつう	headache	galvassāpes	galvos skausmas	peavalu	головная боль	головний біль	Kopfschmerzen	mal de tête	dolor de cabeza	ból głowy	päänsärky	huvudvärk	头疼	두통	πονοκέφαλος
+N3	すっぱい	すっぱい	sour	skābs	rūgštus	hapu	кислый	кислий	sauer	aigre	agrio	kwaśny	hapan	sur	酸	시다	ξινός
+N3	既に	すでに	already	jau	jau	juba	уже	уже	bereits	déjà	ya	już	jo	redan	已经	벌써	ήδη
+N3	墨	すみ	ink	tinte	rašalas	tint	чернила	чорнило	Tinte	encre	tinta	atrament	muste	bläck	墨水	먹물	μελάνι
+N3	性	せい	gender	dzimte	lytis	sugu	пол	стать	Geschlecht	sexe	sexo	płeć	sukupuoli	kön	性别	성	φύλο
+N3	姓	せい	surname	uzvārds	pavardė	perekonnanimi	фамилия	прізвище	Nachname	nom	apellido	nazwisko	sukunimi	efternamn	姓	성	επώνυμο
+N3	正確	せいかく	accurate	precīzs	tikslus	täpne	точный	точний	genau	précis	acertado	dokładny	tarkka	som stämmer	准确	정확하다	ακριβής
+N3	世紀	せいき	century	gadsimts	šimtmetis	sajand	столетие	століття	Jahrhundert	siècle	centuria	stulecie	vuosisata	sekel	世纪	세기	αιώνας
+N3	税金	ぜいきん	tax	nodoklis	mokestis	maks	налог	податок	Steuer	impôt	impuesto	podatek	vero	skatt	税	세금	φόρος
+N3	清潔	せいけつ	clean	tīrs	švarus	puhas	чистый	чистий	sauber	propre	limpio	czysty	puhdas	ren	干净	깨끗하다	καθαρός
+N3	正式	せいしき	official	oficiāls	oficialus	ametlik	официальный	офіційний	offiziell	officiel	oficial	oficjalny	virallinen	officiell	官方	공식적	επίσημος
+N3	精神	せいしん	mind	prāts	protas	mõistus	ум	розум	Verstand	esprit	mente	rozum	mieli	förstånd	智力	마음	νους
+N3	成人	せいじん	adult	pieaugušais	suaugęs	täiskasvanu	взрослый	дорослий	Erwachsener	adulte	adulto	dorosły	aikuinen	vuxen	成人	성인	ενήλικας
+N3	制度	せいど	system	sistēma	sistema	menetlus	система	система	System	système	sistema	układ	järjestelmä	system	系统	체계	σύστημα
+N3	青年	せいねん	youth	jaunietis	jaunuolis	noormees	юноша	юнак	Heranwachsender	jeune	joven	młodzieniec	nuorukainen	yngling	青年	청년	νιος
+N3	生年月日	せいねんがっぴ	date of birth	dzimšanas datums	gimimo data	sünnikuupäev	дата рождения	дата народження	Geburtsdatum	date de naissance	fecha de nacimiento	data urodzenia	syntymäaika	födelsedatum	出生日期	생년월일	ημερομηνία γέννησης
+N3	製品	せいひん	product	produkts	produktas	toode	продукт	продукт	Produkt	produit	producto	produkt	tuote	produkt	产品	상품	προϊόν
+N3	政府	せいふ	government	valdība	vyriausybė	valitsus	правительство	уряд	Regierung	gouvernement	gobierno	rząd	hallitus	regering	政府	정부	κυβέρνηση
+N3	生物	せいぶつ	organism	organisms	organizmas	organism	организм	організм	Organismus	organisme	organismo	organizm	eliö	organism	生物	생물	οργανισμός
+N3	生命	せいめい	life	dzīve	gyvenimas	elu	жизнь	життя	Leben	vie	vida	życie	elämä	liv	生命	생명	ζωή
+N3	咳	せき	cough	klepus	kosulys	köha	кашель	кашель	Husten	toux	tos	kaszel	yskähdys	hostning	咳嗽	기침	βήχας
+N3	石炭	せきたん	coal	ogle	anglis	süsi	уголь	вугілля	Kohle	charbon	carbón	węgiel	kivihiili	kol	煤	석탄	γαιάνθρακας
+N3	責任	せきにん	responsibility	atbildība	atsakomybė	vastutus	ответственность	відповідальність	Verantwortung	responsabilité	responsabilidad	odpowiedzialność	vastuu	ansvar	责任	책임	ευθύνη
+N3	石油	せきゆ	oil	nafta	nafta	nafta	нефть	нафта	Erdöl	pétrole	petróleo	olej	öljy	olja	石油	기름	πετρέλαιο
+N3	愛する	あいする	to love	mīlēt	mylėti	armastama	любить	любити	lieben	aimer	amar	kochać	rakastaa	älska	爱	사랑하다	αγαπώ
+N3	遭う	あう	to meet	sagaidīt	sutikti	kohtama	встречать	зустрічати	treffen	rencontrer	encontrar	spotykać	tavata	träffa	遇见	만나다	συναντώ
+N3	明かり	あかり	light	gaisma	šviesa	valgus	свет	світло	Licht	lumière	luz	światło	valo	ljus	光	빛	φως
+N3	明らか	あきらか	obvious	redzams	akivaizdus	selge	очевидный	очевидний	offensichtlich	évident	obvio	oczywisty	ilmeinen	tydlig	明显	당연하다	προφανής
+N3	悪魔	あくま	devil	velns	velnias	kurat	чёрт	чорт	Teufel	diable	diablo	diabeł	paholainen	djävul	恶魔	악마	διάβολος
+N3	汗	あせ	sweat	sviedri	prakaitas	higi	пот	піт	Schweiß	sueur	sudor	pot	hiki	svett	汗	땀	ιδρώτας
+N3	与える	あたえる	to give	dot	duoti	andma	давать	давати	geben	donner	dar	dawać	antaa	ge	给	주다	δίνω
+N3	温かい	あたたかい	warm	silts	šiltas	soe	тёплый	теплий	warm	chaud	cálido	ciepły	lämmin	varm	暖和	따뜻하다	ζεστός
+N3	当たり前	あたりまえ	obvious	redzams	akivaizdus	selge	очевидный	очевидний	offensichtlich	évident	obvio	oczywisty	ilmeinen	tydlig	明显	당연하다	προφανής
+N3	穴	あな	hole	bedre	duobė	auk	впадина	дірка	Loch	creux	hoyo	dziura	kuoppa	hål	孔	구멍	τρύπα
+N3	油	あぶら	oil	eļļa	aliejus	õli	масло	олія	Öl	huile	aceite	olej	öljy	matolja	油	기름	λάδι
+N3	脂	あぶら	fat	tauki	riebalai	rasv	жир	жир	Fett	graisse	grasa	tłuszcz	rasva	fett	脂肪	지방	λίπος
+N3	誤り	あやまり	error	kļūda	klaida	viga	ошибка	помилка	Fehler	erreur	error	błąd	erehdys	fel	错误	실수	λάθος
+N3	嵐	あらし	storm	vētra	audra	torm	буря	буря	Sturm	orage	tormenta	burza	myrsky	storm	风暴	폭풍	καταιγίδα
+N3	泡	あわ	bubble	burbulis	burbulas	mull	пузырь	пузир	Blase	bulle	burbuja	bańka	kupla	bubbla	泡	거품	φυσαλίδα
+N3	胃	い	stomach	kuņģis	skrandis	kõht	желудок	шлунок	Magen	estomac	estómago	żołądek	mahalaukku	mage	胃	위	στομάχι
+N3	生き物	いきもの	creature	radījums	padaras	olend	существо	істота	Wesen	créature	criatura	istota	olio	varelse	生物	생물	πλάσμα
+N3	医師	いし	physician	ārsts	daktaras	arst	врач	лікар	Arzt	médecin	médico	lekarz	lääkäri	läkare	医生	의사	ιατρός
+N3	泉	いずみ	spring	avots	šaltinis	allikas	источник	джерело	Quelle	source	fuente	źródło	lähde	källa	泉	샘	βρύση
+N3	板	いた	board	dēlis	lenta	laud	доска	дошка	Brett	planche	tablero	deska	lauta	bräda	板	판자	σανίδα
+N3	偉大	いだい	great	liels	didelis	vägev	великий	великий	groß	grand	grande	wielki	jättimäinen	stor	大	크다	μεγάλος
+N3	抱く	いだく	to embrace	apskaut	apkabinti	embama	обнимать	обіймати	umarmen	étreindre	abrazar	obejmować	halata	krama	拥抱	끌어안다	αγκαλιάζω
+N3	痛み	いたみ	pain	sāpes	skausmas	valu	боль	біль	Schmerz	douleur	dolor	ból	kipu	smärta	疼痛	아픔	πόνος
+N3	市場	いちば	market	tirgus	turgus	turg	рынок	ринок	Markt	marché	mercado	rynek	tori	marknad	市场	시장	αγορά
+N3	従兄弟	いとこ	cousin	brālēns	pusbrolis	nõbu	двоюродный брат	двоюрідний брат	Cousin	cousin	primo	kuzyn	serkku	kusin	堂兄	사촌	ξάδερφος
+N3	命	いのち	life	dzīve	gyvenimas	elu	жизнь	життя	Leben	vie	vida	życie	elämä	liv	生命	생명	ζωή
+N3	衣服	いふく	clothes	drēbes	apranga	kehakate	одежда	одяг	Kleider	vêtements	ropa	ubrania	vaate	kläder	衣服	옷	ρούχο
+N3	祝う	いわう	to congratulate	apsveikt	sveikinti	õnnitlema	поздравлять	поздоровляти	gratulieren	féliciter	felicitar	gratulować	onnitella	gratulera	祝贺	축하하다	συγχαίρω
+N3	印象	いんしょう	impression	iespaids	įspūdis	mulje	впечатление	враження	Eindruck	impression	impresión	wrażenie	vaikutus	intryck	印象	인상	εντύπωση
+N3	受け取る	うけとる	to receive	saņemt	gauti	saama	получать	отримувати	bekommen	recevoir	recibir	dostać	saada	få	收到	받다	δέχομαι
+N3	兎	うさぎ	rabbit	trusis	triušis	küülik	кролик	кріль	Kaninchen	lapin	conejo	królik	kaniini	kanin	兔子	토끼	κουνέλι
+N3	牛	うし	cattle	liellopi	galvijai	veised	крупный рогатый скот	велика рогата худоба	Kühe	bétail	ganado	bydło	nautakarja	boskap	牛	소	βοοειδή
+N3	失う	うしなう	to lose	zaudēt	netekti	kaotama	терять	втрачати	verlieren	perdre	perder	gubić	menettää	förlora	丢	잃다	χάνω
+N3	疑う	うたがう	to doubt	šaubīties	abejoti	kõhklema	сомневаться	сумніватися	bezweifeln	douter	dudar	wątpić	epäillä	tvivla	怀疑	의심하다	αμφιβάλλω
+N3	宇宙	うちゅう	universe	visums	visata	universum	вселенная	всесвіт	Universum	univers	universo	wszechświat	kaikkeus	universum	宇宙	우주	σύμπαν
+N3	撃つ	うつ	to shoot	šaut	šaudyti	tulistama	стрелять	стріляти	schießen	tirer	disparar	strzelać	ampua	skjuta	射	쏘다	ρίχνω
+N3	裏切る	うらぎる	to betray	nodot	išduoti	reetma	предавать	зраджувати	verraten	trahir	traicionar	wydać	kavaltaa	förråda	背叛	배반하다	προδίδω
+N3	運	うん	luck	veiksme	sėkmė	õnn	удача	удача	Glück	chance	suerte	szczęście	onni	lycka	运气	운	τύχη
+N3	衛星	えいせい	satellite	pavadonis	palydovas	satelliit	спутник	супутник	Satellit	satellite	satélite	sztuczny satelita	satelliitti	satellit	卫星	인공위성	δορυφόρος
+N3	栄養	えいよう	nutrition	uzturs	mityba	toitumine	питание	харчування	Ernährung	nutrition	nutrición	żywienie	ravitsemus	näring	营养	영양	διατροφή
+N3	笑顔	えがお	smile	smaids	šypsena	naeratus	улыбка	усмішка	Lächeln	sourire	sonrisa	uśmiech	hymy	leende	微笑	미소	χαμόγελο
+N3	描く	えがく	to draw	zīmēt	piešti	joonistama	рисовать	рисувати	zeichnen	dessiner	dibujar	rysować	piirtää	rita	画	그리다	σχεδιάζω
+N3	円	えん	circle	riņķis	apskritimas	ring	окружность	круг	Kreis	cercle	círculo	okrąg	ympyrä	cirkel	圆形	원	κύκλος
+N3	王	おう	king	karalis	karalius	kuningas	король	король	König	roi	rey	król	kuningas	kung	国王	임금	βασιλιάς
+N3	追う	おう	to chase	dzīties pakaļ	vytis	taga ajama	гонять	ганяти	jagen	poursuivre	perseguir	gonić	ajaa takaa	jaga	追逐	쫓다	κυνηγώ
+N3	王様	おうさま	king	karalis	karalius	kuningas	король	король	König	roi	rey	król	kuningas	kung	国王	임금	βασιλιάς
+N3	王子	おうじ	prince	princis	princas	vürst	князь	князь	Fürst	prince	príncipe	książę	ruhtinas	furste	亲王	대공	πρίγκιπας
+N3	終える	おえる	to finish	beigt	baigti	lõpetama	заканчивать	закінчувати	beenden	finir	acabar	dokonywać	tehdä loppuun	slutföra	完成	끝내다	τελειώνω
+N3	大いに	おおいに	very	ļoti	labai	väga	очень	дуже	sehr	très	muy	bardzo	hyvin	mycket	很	아주	πολύ
+N3	丘	おか	hill	paugurs	kalva	mägi	холм	пагорб	Hügel	colline	cerro	wzgórze	mäki	kulle	小山	언덕	λόφος
+N3	恐れる	おそれる	to fear	baidīties	bijoti	kartma	бояться	боятися	fürchten	craindre	temer	bać	pelätä	frukta	害怕	두려워하다	φοβάμαι
+N3	男の人	おとこのひと	man	vīrs	vyras	mees	мужчина	чоловік	Mann	homme	hombre	mężczyzna	mies	man	男人	남자	άνδρας
+N3	温度	おんど	temperature	temperatūra	temperatūra	temperatuur	температура	температура	Temperatur	température	temperatura	temperatura	lämpötila	temperatur	温度	온도	θερμοκρασία
+N3	蚊	か	mosquito	ods	uodas	sääsk	комар	комар	Mücke	moustique	mosquito	komar	hyttynen	mygga	蚊子	모기	κουνούπι
+N3	課	か	lesson	mācība	pamoka	õppetund	урок	урок	Lehrstunde	leçon	lección	lekcja	oppitunti	lektion	课业	수업	μάθημα
+N3	会員	かいいん	member	biedrs	narys	liige	член	член	Mitglied	membre	miembro	członek	jäsen	medlem	会员	회원	μέλος
+N3	絵画	かいが	picture	attēls	vaizdas	pilt	картина	зображення	Bild	image	imagen	obraz	kuva	bild	图画	그림	εικόνα
+N3	外交	がいこう	diplomacy	diplomātija	diplomatija	diplomaatia	дипломатия	дипломатія	Diplomatie	diplomatie	diplomacia	dyplomacja	diplomatia	diplomati	外交	외교	διπλωματία
+N3	快適	かいてき	comfortable	ērts	patogus	mugav	удобный	комфортний	komfortabel	confortable	confortable	wygodny	mukava	bekväm	舒适	편하다	άνετος
+N3	画家	がか	painter	gleznotājs	dažytojas	kunstnik	художник	художник	Maler	artiste peintre	pintor	malarz	maalari	målare	画家	화가	ζωγράφος
+N3	価格	かかく	price	cena	kaina	hind	цена	ціна	Preis	prix	precio	cena	hinta	pris	价格	값	τιμή
+N3	化学	かがく	chemistry	ķīmija	chemija	keemia	химия	хімія	Chemie	chimie	química	chemia	kemia	kemi	化学	화학	χημεία
+N3	家具	かぐ	furniture	mēbeles	baldas	mööbel	мебель	меблі	Möbel	mobilier	muebles	mebel	huonekalut	möbel	家具	가구	έπιπλο
+N3	隠す	かくす	to hide	slēpt	slėpti	peitma	прятать	ховати	verbergen	cacher	esconder	chować	piilottaa	gömma	藏	숨기다	κρύβω
+N3	籠	かご	basket	grozs	krepšys	korv	корзина	кошик	Korb	panier	cesta	kosz	kori	korg	篮子	바구니	καλάθι
+N3	火災	かさい	conflagration	ugunsgrēks	gaisras	tulekahju	большой пожар	пожежа	Feuersbrunst	conflagration	conflagración	pożar	suurpalo	brand	大火	대화재	πυρκαγιά
+N3	家事	かじ	housework	mājasdarbs	buities darbai	kodutöö	работа по дому	робота по дому	Hausarbeit	ménage	tareas domésticas	prace domowe	kotityö	hushållsarbete	家务	가사	οικιακά
+N3	賢い	かしこい	clever	gudrs	protingas	nutikas	умный	розумний	patent	intelligent	listo	sprytny	nokkela	klok	聪明	똑똑하다	έξυπνος
+N3	歌手	かしゅ	singer	dziedātājs	dainininkas	laulja	певец	співак	Sänger	chanteur	cantante	piosenkarz	laulaja	sångare	歌手	가수	τραγουδιστής
+N3	数	かず	number	skaitlis	skaičius	arv	число	число	Zahl	nombre	número	liczba	luku	tal	数	숫자	αριθμός
+N3	数える	かぞえる	to count	skaitīt	skaičiuoti	loendama	считать	рахувати	zählen	compter	contar	liczyć	laskea	räkna	数	세다	μετράω
+N3	肩	かた	shoulder	plecs	petys	õlg	плечо	плече	Schulter	épaule	hombro	ramię	hartia	axel	肩	어깨	ώμος
+N3	刀	かたな	sword	zobens	kalavijas	mõõk	меч	меч	Schwert	épée	espada	miecz	miekka	svärd	剑	검	ξίφος
+N3	価値	かち	value	vērtība	vertė	väärtus	ценность	цінність	Wert	valeur	valor	wartość	arvo	värde	价值	가치	αξία
+N3	過程	かてい	process	process	procesas	protsess	процесс	процес	Prozess	procès	proceso	proces	prosessi	process	过程	프로세스	διαδικασία
+N3	金	かね	gold	zelts	auksas	kuld	золото	золото	Gold	or	oro	złoto	kulta	guld	金	금	χρυσός
+N3	鐘	かね	bell	zvans	varpas	kell	колокол	дзвін	Glocke	cloche	campana	dzwon	kello	klocka	钟	종	καμπάνα
+N3	被る	かぶる	to wear	valkāt	nešioti	kandma	носить	носити	tragen	porter	llevar	nosić	olla yllään	bära	穿	입다	φορώ
+N3	神	かみ	god	dievs	dievas	jumal	бог	бог	Gott	dieu	dios	bóg	jumala	gud	神	신	θεός
+N3	雷	かみなり	thunder	pērkons	griaustinis	kõu	гром	грім	Donner	tonnerre	trueno	grzmot	jyrinä	åska	雷	우레	βροντή
+N3	髪の毛	かみのけ	hair	mats	plaukai	juuksed	волосы	волосся	Haar	cheveu	cabello	włosy	hiukset	hår	头发	머리칼	μαλλί
+N3	歌謡	かよう	ballad	balāde	baladė	ballaad	баллада	балада	Ballade	ballade	balada	ballada	balladi	ballad	民谣	민요	μπαλάντα
+N3	殻	から	shell	čaula	kriauklė	koor	раковина	черепашка	Schale	coquille	concha	skorupa	kuori	skal	贝	조가비	όστρακο
+N3	革	かわ	leather	āda	oda	nahk	кожа	шкіра	Leder	cuir	cuero	skóra	nahka	läder	皮革	가죽	δέρμα
+N3	乾かす	かわかす	to dry	žāvēt	džiovinti	kuivatama	сушить	сушити	trocknen	sécher	secar	suszyć	kuivata	torka	干燥	말리다	στεγνώνω
+N3	缶	かん	can	skārdene	konservas	konserv	консервная банка	консервна банка	Blechdose	boîte de conserve	lata	puszka	säilyketölkki	konservburk	金属容器	깡통	κονσέρβα
+N3	考え	かんがえ	thought	doma	mintis	mõte	мысль	думка	Gedanke	idée	pensamiento	myśl	ajatus	tanke	思想	생각	σκέψη
+N3	環境	かんきょう	environment	vide	aplinka	keskkond	среда	середовище	Umgebung	environnement	ambiente	środowisko	ympäristö	miljö	环境	환경	περιβάλλον
+N3	患者	かんじゃ	patient	pacients	pacientas	patsient	пациент	пацієнт	Patient	patient	paciente	pacjent	potilas	patient	病人	환자	ασθενής
+N3	感じる	かんじる	to feel	just	jausti	tundma	чувствовать	відчувати	spüren	sentir	sentir	czuć	tuntea	känna	感到	느끼다	αισθάνομαι
+N3	関心	かんしん	interest	interese	interesas	huvi	интерес	цікавість	Interesse	intérêt	interés	zainteresowanie	kiinnostus	intresse	兴趣	흥미	ενδιαφέρον
+N3	機械	きかい	machine	mašīna	mašina	masin	машина	машина	Maschine	machine	máquina	maszyna	kone	maskin	机	기계	μηχανή
+N3	機関	きかん	engine	dzinējs	variklis	mootor	двигатель	двигун	Motor	moteur	motor	silnik	moottori	motor	引擎	기관	μηχανή
+N3	企業	きぎょう	business	uzņēmums	biznis	äri	предприятие	підприємство	Geschäft	entreprise	empresa	interes	liike	affärer	事业	사업	επιχείρηση
+N3	気候	きこう	climate	klimats	klimatas	kliima	климат	клімат	Klima	climat	clima	klimat	ilmasto	klimat	气候	기후	κλίμα
+N3	岸	きし	bank	krasts	krantas	pank	берег	беріг	Ufer	rive	ribera	brzeg	penkka	bank	岸	둑	όχθη
+N3	生地	きじ	dough	mīkla	tešla	taigen	тесто	тісто	Teig	pâte	masa	ciasto	taikina	deg	面团	떡	ζύμη
+N3	記事	きじ	article	raksts	straipsnis	artikkel	статья	стаття	Artikel	article	artículo	artykuł	artikkeli	artikel	文章	기사	άρθρο
+N3	技師	ぎし	engineer	inženieris	inžinierius	insener	инженер	інженер	Ingenieur	ingénieur	ingeniero	inżynier	insinööri	ingenjör	工程师	엔지니어	μηχανικός
+N3	記者	きしゃ	reporter	reportieris	reporteris	reporter	репортёр	репортер	Reporter	reporter	reportero	reporter	toimittaja	reporter	记者	기자	ρεπόρτερ
+N3	気体	きたい	vapor	tvaiks	garai	aur	пар	пара	Dampf	vapeur	vapor	para	höyry	ånga	蒸气	증기	ατμός
+N3	議長	ぎちょう	chairperson	priekšsēdētājs	pirmininkas	eesistuja	председатель	голова	Vorsitzender	secrétaire général	presidente	przewodniczący	puheenjohtaja	ordförande	主席	의장	πρόεδρος
+N3	希望	きぼう	to hope	cerēt	trokšti	lootma	надеяться	надіятися	hoffen	espérer	esperar	mieć nadzieję	toivoa	hoppas	希望	바라다	ελπίζω
+N3	奇妙	きみょう	strange	svešs	keistas	imelik	странный	дивний	seltsam	étrange	extraño	dziwny	outo	konstig	奇怪	이상하다	παράξενος
+N3	義務	ぎむ	duty	pienākums	pareiga	kohustus	долг	борг	Pflicht	devoir	deber	obowiązek	velvollisuus	plikt	责任	의무	καθήκον
+N3	球	きゅう	sphere	sfēra	sfera	kera	шар	сфера	Kugel	sphère	esfera	sfera	pallo	sfär	球面	구체	σφαίρα
+N3	休暇	きゅうか	vacation	brīvdiena	atostogos	puhkus	отпуск	відпустка	Ferien	vacances	vacaciones	urlop	loma	semester	假期	휴가	διακοπές
+N3	救助	きゅうじょ	to rescue	glābt	išgelbėti	päästma	спасать	рятувати	retten	délivrer	rescatar	ratować	pelastaa	rädda	拯救	구하다	σώζω
+N3	教科書	きょうかしょ	textbook	mācību grāmata	vadovėlis	õpik	учебник	підручник	Lehrbuch	manuel	manual	podręcznik	oppikirja	lärobok	课本	교과서	σύγγραμμα
+N3	行儀	ぎょうぎ	behavior	uzvedība	elgesys	käitumine	поведение	поведінка	Verhalten	comportement	proceder	zachowanie	käytös	beteende	行为	행위	συμπεριφορά
+N3	嫌う	きらう	to hate	ienīst	neapkęsti	vihkama	ненавидеть	ненавидіти	hassen	haïr	odiar	nienawidzić	vihata	hata	恨	싫어하다	μισώ
+N3	霧	きり	fog	migla	rūkas	udu	туман	туман	Nebel	brouillard	niebla	mgła	sumu	dimma	雾	안개	ομίχλη
+N3	銀	ぎん	silver	sudrabs	sidabras	hõbe	серебро	срібло	Silber	argent	plata	srebro	hopea	silver	银	은	άργυρος
+N3	金庫	きんこ	safe	seifs	seifas	seif	сейф	сейф	Tresor	coffre-fort	caja fuerte	sejf	kassakaappi	kassaskåp	保险柜	금고	χρηματοκιβώτιο
+N3	金属	きんぞく	metal	metāls	metalas	metall	металл	метал	Metall	métal	metal	metal	metalli	metall	金属	금속	μέταλλο
+N3	筋肉	きんにく	muscle	muskulis	raumuo	lihas	мышца	м'яз	Muskel	muscle	músculo	mięsień	lihaskudos	muskel	肌肉	근육	μυς
+N3	金融	きんゆう	finance	finanses	finansai	rahandus	финансы	фінанси	Finanz	finance	finanza	finanse	rahoitus	finans	财政	재정	χρηματοοικονομικά
+N3	句	く	phrase	frāze	žodžių junginys	fraas	фраза	фраза	Redewendung	expression	frase	zdanie	ilmaus	fras	短语	어구	φράση
+N3	食う	くう	to eat	ēst	valgyti	sööma	есть	їсти	essen	manger	comer	jeść	syödä	äta	吃	먹다	τρώω
+N3	鎖	くさり	chain	ķēde	grandinė	kett	цепь	ланцюг	Kette	chaîne	cadena	łańcuch	ketju	kedja	链	사슬	αλυσίδα
+N3	腐る	くさる	to rot	pūt	pūti	mädanema	гнить	гнити	verrotten	pourrir	pudrirse	gnić	mädäntyä	ruttna	腐化	썩다	σαπίζω
+N3	苦痛	くつう	pain	sāpes	skausmas	valu	боль	біль	Schmerz	douleur	dolor	ból	kipu	smärta	疼痛	아픔	πόνος
+N3	暮らす	くらす	to live	dzīvot	gyventi	elama	жить	жити	leben	vivre	vivir	żyć	elää	leva	生	살다	ζω
+N3	軍隊	ぐんたい	army	armija	armija	maavägi	армия	армія	Heer	armée	ejército	armia	maavoimat	armé	陆军	육군	στρατός
+N3	傾向	けいこう	tendency	tendence	tendencija	tendents	тенденция	тенденція	Tendenz	tendance	tendencia	tendencja	taipumus	tendens	趋势	경향	τάση
+N3	刑事	けいじ	detective	detektīvs	detektyvas	detektiiv	детектив	детектив	Ermittler	détective	detective	oficer śledczy	etsivä	kriminalpolis	侦探	탐정	αστυνομικός ερευνητής
+N3	芸術	げいじゅつ	art	māksla	menas	kunst	искусство	мистецтво	Kunst	art	arte	sztuka	taide	konst	艺术	예술	τέχνη
+N3	血液	けつえき	blood	asinis	kraujas	veri	кровь	кров	Blut	sang	sangre	krew	veri	blod	血	피	αίμα
+N3	券	けん	ticket	biļete	bilietas	pilet	билет	квиток	Ticket	billet	entrada	bilet	pääsylippu	biljett	票	표	εισιτήριο
+N3	見解	けんかい	opinion	doma	nuomonė	arvamus	мнение	думка	Meinung	avis	opinión	opinia	mielipide	mening	意见	의견	γνώμη
+N3	現金	げんきん	cash	skaidra nauda	grynieji pinigai	sularaha	наличные	готівка	Bargeld	espèces	efectivo	gotówka	käteinen	kontanter	现钱	현찰	μετρητά
+N3	言語	げんご	language	valoda	kalba	keel	язык	мова	Sprache	langue	lengua	język	kieli	språk	语言	언어	γλώσσα
+N3	健康	けんこう	health	veselība	sveikata	tervis	здоровье	здоров'я	Gesundheit	santé	salud	zdrowie	terveys	hälsa	健康	건강	υγεία
+N3	現実	げんじつ	reality	īstenība	tikrovė	tegelikkus	реальность	реальність	Wirklichkeit	réalité	realidad	rzeczywistość	olemassaolo	verklighet	现实	현실	πραγματικότητα
+N3	憲法	けんぽう	constitution	konstitūcija	konstitucija	põhiseadus	конституция	конституція	Verfassung	constitution	constitución	ustrój	valtiosääntö	konstitution	宪法	헌법	σύνταγμα
+N3	権利	けんり	right	tiesības	teisė	õigus	право	право	Recht	droit	derecho	prawo	oikeus	rätt	权利	권리	δικαίωμα
+N3	濃い	こい	dense	blīvs	tankus	tihe	густой	густий	dicht	dense	denso	gęsty	tiheä	tät	密	짙다	πυκνός
+N3	硬貨	こうか	coin	monēta	moneta	münt	монета	монета	Münze	pièce de monnaie	moneda	moneta	kolikko	mynt	硬币	동전	κέρμα
+N3	航空	こうくう	aviation	aviācija	aviacija	lennundus	авиация	авіація	Luftfahrt	aviation	aviación	lotnictwo	ilmailu	flyg	航空	항공	αεροπορία
+N3	攻撃	こうげき	to attack	uzbrukt	pulti	ründama	атаковать	нападати	angreifen	attaquer	atacar	atakować	hyökätä	attackera	攻击	공격하다	επιτίθεμαι
+N3	候補	こうほ	candidate	kandidāts	kandidatas	kandidaat	кандидат	кандидат	Kandidat	candidat	candidato	kandydat	ehdokas	kandidat	候选人	후보자	υποψήφιος
+N3	氷	こおり	ice	ledus	ledas	jää	лёд	лід	Eis	glace	hielo	lód	jää	is	冰	얼음	πάγος
+N3	国籍	こくせき	nationality	tautība	tautybė	rahvuslikkus	национальность	національність	Nationalität	nationalité	nacionalidad	narodowość	kansalaisuus	nationalitet	国籍	국적	εθνικότητα
+N3	黒板	こくばん	blackboard	tāfele	klasės lenta	tahvel	доска	дошка	Tafel	tableau noir	pizarra	tablica	liitutaulu	svart tavla	黑板	칠판	μαυροπίνακας
+N3	胡椒	こしょう	pepper	pipari	piparas	pipar	перец	перець	Pfeffer	poivre	pimienta	pieprz	pippuri	peppar	胡椒	고추	πιπέρι
+N3	個人	こじん	individual	indivīds	individas	indiviid	индивидуум	індивід	Individuum	individu	individuo	indywiduum	yksilö	individ	个体	개인	άτομο
+N3	国家	こっか	state	valsts	valstybė	riik	государство	держава	Staat	état	Estado	państwo	valtio	stat	国家	국가	κράτος
+N3	国会	こっかい	parliament	parlaments	parlamentas	parlament	парламент	парламент	Parlament	parlement	parlamento	parlament	eduskunta	riksdag	议会	의회	βουλή
+N3	諺	ことわざ	proverb	sakāmvārds	patarlė	vanasõna	пословица	прислів'я	Sprichwort	proverbe	proverbio	przysłowie	sananlasku	ordspråk	箴言	속담	παροιμία
+N3	粉	こな	powder	pulveris	milteliai	pulber	порошок	порошок	Puder	poudre	polvo	proszek	jauhe	pulver	粉	가루	σκόνη
+N3	好む	このむ	to like	patikt	patikti	meeldima	нравиться	подобатися	mögen	aimer	gustarle	lubić	pitää	tycka om	喜欢	좋아하다	αρέσει
+N3	小麦	こむぎ	wheat	kvieši	kviečiai	nisu	пшеница	пшениця	Weizen	blé	trigo	pszenica	vehnä	vete	麦	밀	σιτάρι
+N3	小屋	こや	hut	būda	lūšnelė	hütt	хижина	хатина	Hütte	hutte	cabaña	chata	vaja	hydda	棚屋	오두막	υπόστεγο
+N3	殺す	ころす	to kill	nāvēt	žudyti	tapma	убивать	вбивати	töten	tuer	matar	zabijać	tappaa	döda	杀	죽이다	σκοτώνω
+N3	才能	さいのう	talent	talants	talentas	talent	талант	талант	Talent	talent	talento	talent	kyky	talang	才能	재능	ταλέντο
+N3	酒	さけ	alcohol	alkohols	alkoholis	alkohol	алкоголь	алкоголь	Alkohol	alcool	alcohol	alkohol	alkoholi	alkohol	酒	술	οινόπνευμα
+N3	叫ぶ	さけぶ	to shout	kliegt	šaukti	hüüdma	кричать	кричати	rufen	crier	gritar	krzyczeć	huutaa	skrika	喊叫	소리치다	φωνάζω
+N3	誘う	さそう	to invite	aicināt	pakviesti	kutsuma	приглашать	запрошувати	einladen	inviter	invitar	zapraszać	kutsua	invitera	邀请	초대하다	προσκαλώ
+N3	札	さつ	banknote	banknote	banknotas	paberraha	банкнота	банкнота	Geldschein	billet de banque	billete	banknot	seteli	sedel	钞票	지폐	χαρτονόμισμα
+N3	作家	さっか	author	autors	autorius	autor	автор	автор	Autor	auteur	autor	autor	tekijä	författare	作家	저자	δημιουργός
+N3	砂漠	さばく	desert	tuksnesis	dykuma	kõrb	пустыня	пустеля	Wüste	désert	desierto	pustynia	aavikko	öken	沙漠	사막	έρημος
+N3	豆	まめ	bean	pupa	pupelė	uba	боб	біб	Bohne	haricot	haba	fasola	papu	böna	豆	콩	φασόλι
+N3	守る	まもる	to protect	saudzēt	saugoti	kaitsma	защищать	захищати	schützen	protéger	proteger	chronić	suojata	skydda	保护	보호하다	προστατεύω
+N3	丸	まる	circle	riņķis	apskritimas	ring	окружность	круг	Kreis	cercle	círculo	okrąg	ympyrä	cirkel	圆形	원	κύκλος
+N3	土産	みやげ	souvenir	suvenīrs	suvenyras	suveniir	сувенир	сувенір	Andenken	souvenir	recuerdo	pamiątka	matkamuisto	souvenir	纪念品	기념품	ενθύμιο
+N3	未来	みらい	future	nākotne	ateitis	tulevik	будущее	майбутнє	Zukunft	avenir	futuro	przyszłość	tulevaisuus	framtid	未来	미래	μέλλον
+N3	無視	むし	to ignore	ignorēt	ignoruoti	ignoreerida	игнорировать	ігнорувати	ignorieren	ignorer	ignorar	ignorować	sivuuttaa	ignorera	无视	무시하다	αγνοώ
+N3	蒸し暑い	むしあつい	humid	mitrs	drėgnas	niiske	влажный	вологий	feucht	mouillé	húmedo	wilgotny	kostea	fuktig	湿	습기가 많다	υγρός
+N3	胸	むね	breast	krūts	krūtis	rind	грудь	грудь	Brust	sein	pecho	pierś	rinta	bröst	乳房	유방	στήθος
+N3	名刺	めいし	business card	vizītkarte	vizitinė kortelė	visiitkaart	визитная карточка	візитівка	Visitenkarte	carte de visite	tarjeta de visita	wizytówka	käyntikortti	visitkort	名片	명함	επαγγελματική κάρτα
+N3	名詞	めいし	noun	lietvārds	daiktavardis	nimisõna	имя существительное	іменник	Dingwort	nom	nombre	rzeczownik	substantiivi	substantiv	名词	명사	ουσιαστικό
+N3	名人	めいじん	expert	eksperts	ekspertas	asjatundja	эксперт	експерт	Experte	expert	perito	ekspert	asiantuntija	expert	专家	숙련자	εμπειρογνώμων
+N3	飯	めし	food	pārtika	maistas	toit	еда	їжа	Nahrung	nourriture	alimento	jedzenie	ruoka	mat	食物	음식	τροφή
+N3	面	めん	face	seja	veidas	nägu	лицо	обличчя	Gesicht	visage	cara	twarz	kasvot	ansikte	脸	얼굴	πρόσωπο
+N3	申し訳	もうしわけ	apology	atvainošanās	atsiprašymas	vabandus	извинение	вибачення	Entschuldigung	excuse	disculpa	przeprosiny	anteeksipyyntö	ursäkt	道歉	사과	συγγνώμη
+N3	毛布	もうふ	blanket	sega	antklodė	tekk	одеяло	ковдра	Decke	couverture	manta	koc	peitto	täcke	毯子	이불	κουβέρτα
+N3	燃える	もえる	to burn	degt	deginti	põlema	гореть	горіти	brennen	brûler	arder	palić się	palaa	brinna	烧	불타다	καίγομαι
+N3	目的	もくてき	purpose	nolūks	tikslas	eesmärk	цель	ціль	Zweck	but	propósito	cel	tarkoitus	avsikt	目的	목적	σκοπός
+N3	目標	もくひょう	objective	mērķis	tikslas	eesmärk	цель	мета	Ziel	objectif	objetivo	cel	tavoite	mål	目标	목적	αντικείμενο
+N3	文字	もじ	letter	burts	raidė	täht	буква	буква	Buchstabe	lettre	letra	litera	kirjain	bokstav	字母	문자	γράμμα
+N3	用いる	もちいる	to use	lietot	vartoti	kasutama	использовать	уживати	benutzen	utiliser	usar	używać	käyttää	använda	用	쓰다	χρησιμοποιώ
+N3	求める	もとめる	to request	prasīt	prašyti	paluma	запрашивать	просити	anfordern	demander	pedir	prosić	pyytää	anhålla om	请求	부탁하다	ζητώ
+N3	者	もの	person	persona	asmuo	isik	человек	особа	Person	personne	persona	osoba	henkilö	person	人	사람	άτομο
+N3	文句	もんく	complaint	sūdzība	skundas	kaebus	жалоба	скарга	Klage	plainte	queja	skarga	valitus	klagomål	怨言	불평	παράπονο
+N3	役	やく	role	loma	rolė	roll	роль	роль	Rolle	rôle	papel	rola	rooli	roll	角色	역할	ρόλος
+N3	約	やく	approximately	apmēram	maždaug	umbkaudu	приблизительно	приблизно	ungefähr	plus ou moins	aproximadamente	około	arviolta	ungefär	大约	대략	περίπου
+N3	訳す	やくす	to translate	tulkot	išversti	tõlkima	переводить	перекладати	übersetzen	traduire	traducir	tłumaczyć	kääntää	översätta	翻译	번역하다	μεταφράζω
+N3	家賃	やちん	rent	noma	nuoma	rent	квартирная плата	оренда	Miete	loyer	renta	czynsz	vuokra	hyra	租金	임대	ενοίκιο
+N3	宿	やど	hotel	viesnīca	viešbutis	hotell	гостиница	готель	Hotel	hôtel	hotel	hotel	hotelli	hotell	宾馆	호텔	ξενοδοχείο
+N3	屋根	やね	roof	jumts	stogas	katus	крыша	дах	Dach	toit	tejado	dach	katto	tak	屋顶	지붕	στέγη
+N3	勇気	ゆうき	courage	drosme	drąsa	julgus	смелость	сміливість	Courage	bravoure	coraje	odwaga	rohkeus	mod	勇气	용기	κουράγιο
+N3	友人	ゆうじん	friend	draugs	draugas	sõber	друг	друг	Freund	ami	amigo	przyjaciel	ystävä	kamrat	朋友	친구	φίλος
+N3	郵便	ゆうびん	mail	pasts	paštas	post	почта	пошта	Post	poste	correo	poczta	posti	post	邮件	우편	ταχυδρομείο
+N3	床	ゆか	floor	grīda	grindys	põrand	пол	підлога	Boden	sol	piso	podłoga	lattia	golv	地板	바닥	δάπεδο
+N3	容易	ようい	easy	viegls	lengvas	kerge	лёгкий	легкий	leicht	facile	fácil	łatwy	helppo	lätt	容易	쉬운	εύκολος
+N3	要素	ようそ	element	elements	elementas	element	элемент	елемент	Element	élément	elemento	pierwiastek	perusosa	element	要素	요소	ουσία
+N3	予算	よさん	budget	budžets	biudžetas	eelarve	бюджет	бюджет	Budget	budget	presupuesto	budżet	määräraha	budget	预算	예산	προϋπολογισμός
+N3	嫁	よめ	bride	līgava	nuotaka	pruut	невеста	наречена	Braut	mariée	novia	panna młoda	morsian	brud	新娘	신부	νύφη
+N3	喜び	よろこび	joy	prieks	džiaugsmas	rõõm	радость	радість	Freude	joie	alegría	uciecha	ilo	glädje	欢喜	즐거움	χαρά
+N3	利益	りえき	profit	peļņa	pelnas	kasum	прибыль	прибуток	Gewinn	profit	provecho	zysk	tuotto	vinst	赢利	이익	κέρδος
+N3	利口	りこう	clever	gudrs	protingas	nutikas	умный	розумний	patent	intelligent	listo	sprytny	nokkela	klok	聪明	똑똑하다	έξυπνος
+N3	量	りょう	quantity	daudzums	kiekis	kogus	количество	кількість	Quantität	quantité	cantidad	ilość	määrä	kvantitet	数量	양	ποσότητα
+N3	寮	りょう	dormitory	internāts	bendrabutis	ühikas	общежитие	гуртожиток	Studentenwohnheim	résidence	residencia estudiantil	akademik	asuntola	studenthem	宿舍	기숙사	υπνωτήριο
+N3	例	れい	example	piemērs	pavyzdys	näide	пример	приклад	Beispiel	exemple	ejemplo	przykład	esimerkki	exempel	例子	보기	παράδειγμα
+N3	列車	れっしゃ	train	vilciens	traukinys	rong	поезд	потяг	Zug	train	tren	pociąg	juna	tåg	火车	기차	τρένο
+N3	話題	わだい	topic	temats	tema	teema	тема	тема	Thema	sujet	tema	temat	aihe	samtalsämne	主题	화제	θέμα
+N3	笑い	わらい	laugh	smiekli	juokas	naer	смех	сміх	Lachen	rire	risa	śmiech	nauru	skratt	笑声	웃음	γέλιο
+N3	湾	わん	bay	līcis	įlanka	laht	залив	затока	Bucht	baie	bahía	zatoka	lahti	bukt	海湾	만	κόλπος
+N3	悪	あく	evil	ļaunums	blogis	kurjus	зло	зло	Böse	mal	mal	zło	paha	ond	邪恶	악	κακό
+N3	医院	いいん	clinic	klīnika	klinika	kliinik	клиника	клініка	Klinik	clinique	clínica	przychodnia	klinikka	klinik	诊所	의원	κλινική
+N3	怒り	いかり	anger	piktums	pyktis	viha	гнев	гнів	Ärger	colère	enfado	złość	viha	ilska	发怒	성	οργή
+N3	産む	うむ	to give birth	dzemdēt	gimdyti	sünnitama	рожать	родити	gebären	mettre au monde	dar a luz	rodzić	synnyttää	föda	生	낳다	γεννώ
+N3	尾	お	tail	aste	uodega	saba	хвост	хвіст	Schwanz	queue	cola	ogon	häntä	svans	尾巴	꼬리	ουρά
+N3	驚き	おどろき	surprise	pārsteigums	staigmena	üllatus	сюрприз	сюрприз	Überraschung	surprise	sorpresa	niespodzianka	yllätys	överraskning	惊奇	놀라움	έκπληξη
+N3	織る	おる	to weave	aust	austi	kuduma	ткать	ткати	weben	tisser	tejer	tkać	kutoa	väva	编织	짜다	υφαίνω
+N3	課題	かだい	task	uzdevums	užduotis	ülesanne	задание	завдання	Aufgabe	tâche	tarea	zadanie	tehtävä	uppgift	课题	일	δουλειά
+N3	狩り	かり	hunt	medības	medžioklė	jaht	охота	полювання	Jagd	chasse	caza	polowanie	metsästys	jakt	狩猎	사냥	κυνήγι
+N3	癌	がん	cancer	vēzis	vėžys	vähk	рак	рак	Krebs	cancer	cáncer	nowotwór złośliwy	syöpä	cancer	癌症	암	καρκίνος
+N3	官僚	かんりょう	bureaucrat	birokrāts	biurokratas	bürokraat	бюрократ	бюрократ	Bürokrat	bureaucrate	burócrata	biurokrata	byrokraatti	byråkrat	官僚	관료	γραφειοκράτης
+N3	器官	きかん	organ	orgāns	organas	organ	орган	орган	Organ	organe	órgano	narząd	elin	organ	器官	기관	όργανο
+N3	機構	きこう	mechanism	mehānisms	mechanizmas	mehhanism	механизм	механізм	Mechanismus	mécanisme	mecanismo	mechanizm	koneisto	mekanism	机械	기구	μηχανισμός
+N3	群	ぐん	group	grupa	grupė	rühm	группа	група	Gruppe	groupe	grupo	grupa	joukko	grupp	集团	그룹	ομάδα
+N3	選手	せんしゅ	player	spēlētājs	žaidėjas	mängija	игрок	гравець	Spieler	joueur	jugador	gracz	pelaaja	spelare	运动员	선수	παίκτης
+N3	象	ぞう	elephant	zilonis	dramblys	elevant	слон	слон	Elefant	éléphant	elefante	słoń	norsu	elefant	象	코끼리	ελέφαντας
+N3	騒音	そうおん	noise	troksnis	triukšmas	kära	шум	шум	Lärm	bruit	ruido	hałas	melu	oljud	噪音	잡음	θόρυβος
+N3	速度	そくど	speed	ātrums	greitis	kiirus	скорость	швидкість	Schnelligkeit	vitesse	rapidez	szybkość	nopeus	fart	速度	속도	ταχύτητα
+N3	注ぐ	そそぐ	to pour	liet	pilti	valama	лить	лити	gießen	verser	escanciar	lać	kaataa	hälla	倒	붓다	χύνω
+N3	育つ	そだつ	to grow	augt	augti	kasvama	расти	рости	wachsen	grandir	crecer	rosnąć	kasvaa	växa	生长	자라다	μεγαλώνω
+N3	袖	そで	sleeve	piedurkne	rankovė	varrukas	рукав	рукав	Ärmel	manche	manga	rękaw	hiha	ärm	袖子	소매	μανίκι
+N3	対	たい	pair	pāris	pora	paar	пара	пара	Paar	paire	par	para	pari	par	双	한쌍	ζεύγος
+N3	体育	たいいく	physical education	fiziskā audzināšana	kūno kultūra	kehaline kasvatus	физвоспитание	фізичне виховання	Sportunterricht	éducation physique	educación física	wychowanie fizyczne	liikunta	idrott	体育	체육	φυσική αγωγή
+N3	大気	たいき	atmosphere	atmosfēra	atmosfera	atmosfäär	атмосфера	атмосфера	Atmosphäre	atmosphère	atmósfera	atmosfera	ilmakehä	atmosfär	大气	대기	ατμόσφαιρα
+N3	体重	たいじゅう	weight	svars	svoris	kaal	вес	вага	Gewicht	poids	peso	ciężar	paino	tyngd	重量	중량	βάρος
+N3	態度	たいど	attitude	nostāja	laikysena	suhtumine	отношение	ставлення	Einstellung	état d'esprit	actitud	nastawienie	asenne	attityd	态度	태도	στάση
+N3	逮捕	たいほ	to arrest	arestēt	suimti	vahistama	арестовывать	арештовувати	festnehmen	arrêter	arrestar	aresztować	vangita	gripa	逮捕	체포하다	συλλαμβάνω
+N3	平ら	たいら	flat	plakans	plokščias	lame	плоский	плоский	flach	plat	llano	płaski	litteä	flat	平	판판하다	επίπεδος
+N3	宝	たから	treasure	dārgums	lobis	aare	сокровище	скарб	Schatz	trésor	tesoro	skarb	aarre	skatt	珍宝	보물	θησαυρός
+N3	助ける	たすける	to help	līdzēt	padėti	aitama	помогать	допомагати	helfen	aider	ayudar	pomagać	auttaa	hjälpa	帮助	돕다	βοηθώ
+N3	ただ	ただ	free of charge	bezmaksas	nemokamas	tasuta	бесплатный	безкоштовний	umsonst	gratuit	sin cargo	darmowy	ilmainen	gratis	免费	무료	δωρεάν
+N3	戦い	たたかい	battle	kauja	kova	lahing	битва	битва	Schlacht	lutte	batalla	walka	taistelu	slag	战役	전쟁	μάχη
+N3	戦う	たたかう	to fight	cīnīties	kautis	kaklema	драться	битися	kämpfen	se battre	pelear	walczyć	tapella	strida	斗争	다투다	παλεύω
+N3	谷	たに	valley	ieleja	slėnis	org	долина	долина	Senke	vallée	valle	dolina	laakso	dal	山谷	골짜기	κοιλάδα
+N3	種	たね	seed	sēkla	sėkla	seeme	семя	сім'я	Samen	semence	grano	nasienie	siemen	frö	种子	씨	σπόρος
+N3	旅	たび	trip	brauciens	kelionė	retk	поездка	поїздка	Reise	voyage	viaje	podróż	retki	resa	旅行	여행	ταξίδι
+N3	玉	たま	ball	lode	kamuolys	pall	шар	куля	Kugel	balle	bola	kula	pallo	boll	球	공	σφαίρα
+N3	弾	たま	bullet	lode	kulka	kuul	пуля	куля	Kugel	balle	bala	pocisk	luoti	kula	子弹	탄환	σφαίρα
+N3	黙る	だまる	to be silent	klusēt	tylėti	vaikima	молчать	мовчати	schweigen	taire	callarse	milczeć	vaieta	tiga	缄默	조용히 하다	σωπαίνω
+N3	単語	たんご	word	vārds	žodis	sõna	слово	слово	Wort	mot	palabra	słowo	sana	ord	词	말	λέξη
+N3	単純	たんじゅん	simple	parasts	paprastas	lihtne	простой	простий	einfach	simple	simple	prosty	yksinkertainen	enkel	简单	간단하다	απλός
+N3	団体	だんたい	organization	organizācija	organizacija	ühing	организация	організація	Organisation	organisation	organización	organizacja	järjestö	organisation	组织	조직	οργάνωση
+N3	地	ち	earth	zeme	žemė	maa	земля	земля	Erde	terre	tierra	ziemia	maa	jord	地	흙	χώμα
+N3	知恵	ちえ	wisdom	gudrība	išmintis	tarkus	мудрость	мудрість	Weisheit	sagesse	sabiduría	mądrość	viisaus	visdom	智慧	지혜	σοφία
+N3	違い	ちがい	difference	atšķirība	skirtumas	erinevus	различие	різниця	Unterschied	différence	diferencia	różnica	erilaisuus	avvikelse	差别	차이	διαφορά
+N3	地区	ちく	district	novads	apylinkė	ringkond	район	округ	Bezirk	district	distrito	dzielnica	alue	distrikt	区域	지구	δήμος
+N3	知識	ちしき	knowledge	zināšana	žinojimas	teadmine	знание	знання	Wissen	connaissance	conocimiento	wiedza	tieto	kunskap	知识	지식	γνώση
+N3	父親	ちちおや	father	tēvs	tėvas	isa	отец	батько	Vater	père	padre	ojciec	isä	fader	父亲	아버지	πατέρας
+N3	知能	ちのう	intellect	intelekts	intelektas	intellekt	интеллект	інтелект	Intellekt	intellect	intelecto	intelekt	äly	intellekt	思力	지혜	νοημοσύνη
+N3	地平線	ちへいせん	horizon	horizonts	horizontas	silmapiir	горизонт	обрій	Horizont	horizon	horizonte	horyzont	horisontti	horisont	地平线	지평선	ορίζοντας
+N3	地方	ちほう	region	reģions	rajonas	piirkond	район	район	Gegend	région	región	okolica	alue	trakt	地区	지역	περιοχή
+N3	茶	ちゃ	tea	tēja	arbata	tee	чай	чай	Tee	thé	té	herbata	tee	te	茶	차	τσάι
+N3	中央	ちゅうおう	central	centrāls	centrinis	tsentraalne	центральный	центральний	zentral	central	central	centralny	keski-	central	中央	중앙	κεντρικός
+N3	昼食	ちゅうしょく	lunch	pusdienas	pietūs	lõuna	обед	обід	Mittagessen	déjeuner	almuerzo	obiad	lounas	lunch	午饭	점심	γεύμα
+N3	著者	ちょしゃ	author	autors	autorius	autor	автор	автор	Autor	auteur	autor	autor	tekijä	författare	作家	저자	δημιουργός
+N3	通貨	つうか	currency	valūta	valiuta	valuuta	валюта	валюта	Währung	monnaie	moneda	waluta	valuutta	valuta	货币	통화	νόμισμα
+N3	疲れ	つかれ	tiredness	nogurums	nuovargis	väsimus	усталость	утома	Müdigkeit	fatigue	fatiga	zmęczenie	väsymys	trötthet	疲劳	피로	κούραση
+N3	土	つち	earth	zeme	žemė	maa	земля	земля	Erde	terre	tierra	ziemia	maa	jord	地	흙	χώμα

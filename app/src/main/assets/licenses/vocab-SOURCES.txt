@@ -1,0 +1,32 @@
+Word of the day list (assets/vocab.tsv)
+
+The list is built by tools/make_vocab.py from these sources, selected, trimmed
+and rearranged (one meaning per word and language; stress marks removed from
+Russian, Ukrainian and Lithuanian; Mandarin converted to simplified characters).
+As a work derived from CC BY-SA material, vocab.tsv is shared under the
+Creative Commons Attribution-ShareAlike 4.0 licence:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+JLPT word lists (which words belong to N5, N4 and N3)
+  Jonathan Waller, JLPT Resources, https://www.tanos.co.uk/jlpt/
+  Creative Commons Attribution (CC BY)
+  via open-anki-jlpt-decks by Jamie Sinclair,
+  https://github.com/jamsinclair/open-anki-jlpt-decks, MIT licence
+
+Readings and parts of speech
+  JMdict, Electronic Dictionary Research and Development Group (EDRDG),
+  https://www.edrdg.org/jmdict/j_jmdict.html
+  Creative Commons Attribution-ShareAlike 4.0
+  via jmdict-simplified, https://github.com/scriptin/jmdict-simplified
+
+Translations
+  Wiktionary, the free dictionary, https://en.wiktionary.org/
+  (translation tables of the English entries), by Wiktionary contributors
+  Creative Commons Attribution-ShareAlike 4.0
+
+Simplified Chinese conversion
+  OpenCC (opencc-python-reimplemented), Apache License 2.0
+  (used when building the list; not part of the app)
+
+The first 60 words were translated by hand for earlier versions of Kamei and
+keep those translations.

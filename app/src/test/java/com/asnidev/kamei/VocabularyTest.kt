@@ -4,34 +4,58 @@ import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.dayFadeAt
 import com.asnidev.kamei.data.fade
 import com.asnidev.kamei.data.longFade
+import com.asnidev.kamei.lang.JlptLevel
 import com.asnidev.kamei.lang.Phrases
 import com.asnidev.kamei.lang.Vocabulary
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import java.io.File
 import java.time.LocalDate
 
 class VocabularyTest {
 
+    init {
+        // Unit tests run in the app module's folder.
+        Vocabulary.load(File("src/main/assets/vocab.tsv").readText())
+    }
+
     @Test
-    fun everyWordInEveryLanguage() {
-        assertTrue(Vocabulary.all.size >= 60)
+    fun everyLevelIsFull() {
+        for (l in JlptLevel.entries) assertEquals(l.name, 365, Vocabulary.from(setOf(l)).size)
+        // No word in two levels.
+        assertEquals(Vocabulary.all.size, Vocabulary.all.map { it.ja }.toSet().size)
+    }
+
+    @Test
+    fun everyWordHasAMeaning() {
         for (w in Vocabulary.all) {
-            for ((code, _) in Phrases.targets) assertFalse("${w.key} $code", w.word(code).isBlank())
-            for (l in listOf("ja", "zh", "ko", "el")) assertFalse("${w.key} $l reading", w.reading(l).isNullOrBlank())
+            assertFalse(w.ja, w.kana.isBlank())
+            assertTrue(w.ja, w.kana.all { it in '\u3040'..'\u30ff' || it == 'ー' })
+            // English always; any other language falls back to it.
+            for ((code, _) in Phrases.targets) assertFalse("${w.ja} $code", w.word(code).isBlank())
         }
-        assertEquals(Vocabulary.all.size, Vocabulary.all.map { it.key }.toSet().size)
     }
 
     @Test
     fun eachWordOnceBeforeAnyRepeats() {
-        val start = LocalDate.of(2026, 10, 14)
-        val n = Vocabulary.all.size
-        val seen = (0 until n).map { Vocabulary.of(start.plusDays(it.toLong()).toEpochDay()).key }.toSet()
-        assertEquals(n, seen.size)
-        assertEquals("雨", Vocabulary.all.first { it.key == "rain" }.word("ja"))
-        assertEquals("あめ", Vocabulary.all.first { it.key == "rain" }.reading("ja"))
+        val start = LocalDate.of(2026, 10, 14).toEpochDay()
+        for (levels in listOf(setOf(JlptLevel.N5), setOf(JlptLevel.N5, JlptLevel.N4), JlptLevel.entries.toSet())) {
+            val n = Vocabulary.from(levels).size
+            val seen = (0 until n).map { Vocabulary.of(start + it, levels)!!.ja }.toSet()
+            assertEquals(n, seen.size)
+            assertTrue(seen.all { ja -> Vocabulary.all.first { it.ja == ja }.level in levels })
+        }
+        // The hand-checked words keep their translations.
+        val rain = Vocabulary.all.first { it.ja == "雨" }
+        assertEquals("あめ", rain.kana)
+        assertEquals("lietus", rain.word("lv"))
+    }
+
+    @Test
+    fun bundledFontsCoverTheirLevels() {
+        for (w in Vocabulary.all.filter { it.level in Vocabulary.FONT_LEVELS }) assertTrue(w.ja, Vocabulary.inBundledFonts(w.ja))
     }
 
     @Test
