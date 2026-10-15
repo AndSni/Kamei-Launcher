@@ -161,7 +161,7 @@ fun Home(prefs: Prefs) {
             .windowInsetsPadding(screenInsets(prefs)),
     ) {
         // Tokyo: a band of the accent colour along the top, like the site's green bar.
-        if (look.tokyo) Box(Modifier.fillMaxWidth().height(5.dp).background(look.accent))
+        if (look.tokyo) Box(Modifier.fillMaxWidth().height(5.dp).background(look.band))
         Row(Modifier.fillMaxSize()) {
             // Material's cards reach nearer the edge; the others keep the sketch's margin.
             val start = if (look.cards) 14.dp else 28.dp
@@ -711,7 +711,7 @@ fun weatherLine(state: WeatherState, prefs: Prefs, now: LocalDateTime): WeatherL
     } else f.condition
     val reading = w.reading?.let { r -> degrees?.let { "${JaReading.temp(it)}  $r" } ?: r }
     return WeatherLine(
-        Words("$temp  ${w.display}", "$temp  ${w.translated}", reading),
+        Words("$temp ${w.display}", "$temp  ${w.translated}", reading),
         icon, f.night, Weather.blueness(outlook, prefs.rainWindow), false, w.translated, coming,
     )
 }

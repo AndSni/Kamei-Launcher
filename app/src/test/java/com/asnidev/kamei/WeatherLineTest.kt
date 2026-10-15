@@ -27,7 +27,7 @@ class WeatherLineTest {
     @Test
     fun rainComingGoesOnItsOwnLine() {
         val l = line(List(6) { 0.0 } + List(6) { 1.0 })
-        assertEquals("10°C  曇り", l.words.display)
+        assertEquals("10°C 曇り", l.words.display)
         assertEquals("あと30分で雨", l.coming!!.display)
         assertEquals("Rain in 30 min", l.coming!!.translated)
     }
@@ -35,14 +35,14 @@ class WeatherLineTest {
     @Test
     fun rainingNowSaysWhenItStops() {
         val l = line(List(4) { 1.0 } + List(8) { 0.0 })
-        assertEquals("10°C  雨", l.words.display)
+        assertEquals("10°C 雨", l.words.display)
         assertEquals("あと20分で雨がやみます", l.coming!!.display)
     }
 
     @Test
     fun dryIsOneLine() {
         val l = line(List(24) { 0.0 }, Condition.CLEAR)
-        assertEquals("10°C  晴れ", l.words.display)
+        assertEquals("10°C 晴れ", l.words.display)
         assertNull(l.coming)
     }
 }

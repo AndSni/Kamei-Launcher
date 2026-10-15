@@ -16,6 +16,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -54,6 +55,17 @@ data class Look(
 ) {
     fun rainTint(blueness: Float): Color = lerp(text, rain, blueness.coerceIn(0f, 1f))
     fun alertTint(heat: Float): Color = lerp(warn, alarm, heat.coerceIn(0f, 1f))
+
+    /**
+     * Tokyo's top band: the accent, unless the phone's scheme is greyscale (as on
+     * Xperias with a monochrome theme), where a white or grey bar reads as a glitch;
+     * then the green of the site it comes from.
+     */
+    val band: Color get() {
+        val hsv = FloatArray(3)
+        android.graphics.Color.colorToHSV(accent.toArgb(), hsv)
+        return if (hsv[1] >= 0.2f) accent else if (light) Color(0xFF00873C) else Color(0xFF3FA66B)
+    }
     val cards get() = theme == HomeTheme.MATERIAL
     val tokyo get() = theme == HomeTheme.TOKYO
     /** Whether headings start with the user's prefix (Original); the others mark them their own way. */
