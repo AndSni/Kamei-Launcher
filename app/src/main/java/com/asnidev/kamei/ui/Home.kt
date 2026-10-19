@@ -81,7 +81,6 @@ import com.asnidev.kamei.data.FontChoice
 import com.asnidev.kamei.data.HomeBlock
 import com.asnidev.kamei.data.InfoAlign
 import com.asnidev.kamei.data.LearnLines
-import com.asnidev.kamei.data.ReadingHint
 import com.asnidev.kamei.data.NotifStyle
 import com.asnidev.kamei.data.Prefs
 import com.asnidev.kamei.data.fade
@@ -334,13 +333,7 @@ private fun InfoColumn(prefs: Prefs, now: LocalDateTime, modifier: Modifier) {
                 val meaningFade = if (prefs.wordFade) 1f - prefs.wordEvery.elapsed(minute) else 1f
                 val word = v.ja
                 val rawReading = v.kana.takeIf { it != word }
-                val reading = rawReading?.let { r ->
-                    when (prefs.readingHint) {
-                        ReadingHint.KANA -> r
-                        ReadingHint.ROMAJI -> JaReading.romaji(r)
-                        ReadingHint.OFF -> null
-                    }
-                }
+                val reading = rawReading?.let { JaReading.hint(it, prefs.readingHint) }
                 val meaning = v.word(target)
                 HoldBlock(prefs.holdMillis, onTap = { extra++ }, onHold = {
                     val head = Phrases.words(target, Phrase.WORD_OF_DAY)
@@ -601,12 +594,7 @@ private fun Modifier.smoothHeight(align: InfoAlign): Modifier {
 @Composable
 private fun Learning(reading: String?, translated: String, prefs: Prefs, style: TextStyle, color: Color, fade: Float) {
     val r = reading?.takeIf { prefs.learnReading && it.isNotBlank() }?.let { text ->
-        val oneLine = text.lines().joinToString("  ")
-        when (prefs.readingHint) {
-            ReadingHint.KANA -> oneLine
-            ReadingHint.ROMAJI -> JaReading.romaji(oneLine)
-            ReadingHint.OFF -> null
-        }
+        JaReading.hint(text.lines().joinToString("  "), prefs.readingHint, sep = "  ·  ")
     }
     Spacer(Modifier.height(2.dp))
     if (r != null) BasicText(r, style = style.copy(color = color.copy(alpha = 0.75f * fade)))

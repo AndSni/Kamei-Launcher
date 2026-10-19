@@ -2,15 +2,29 @@ package com.asnidev.kamei.system
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.WallpaperManager
 import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Build
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
 
 object SystemActions {
+
+    /**
+     * Sets the phone's own wallpaper to plain black: the home screen's, and the lock
+     * screen's too if [lock]. Android shows it for a moment while locking, unlocking
+     * and switching apps, whatever the home app draws. Blocking: call it off the main
+     * thread. False if the phone refused.
+     */
+    fun blackWallpaper(context: Context, lock: Boolean): Boolean = runCatching {
+        val black = Bitmap.createBitmap(64, 64, Bitmap.Config.ARGB_8888).apply { eraseColor(android.graphics.Color.BLACK) }
+        val which = WallpaperManager.FLAG_SYSTEM or if (lock) WallpaperManager.FLAG_LOCK else 0
+        WallpaperManager.getInstance(context).setBitmap(black, null, true, which) != 0
+    }.onFailure { Log.w("Kamei", "black wallpaper", it) }.getOrDefault(false)
 
     /** No public API for this; every launcher uses the same StatusBarManager reflection. */
     @SuppressLint("WrongConstant")

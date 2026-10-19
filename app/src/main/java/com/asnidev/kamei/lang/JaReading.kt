@@ -1,5 +1,6 @@
 package com.asnidev.kamei.lang
 
+import com.asnidev.kamei.data.ReadingHint
 import java.time.DayOfWeek
 
 /**
@@ -191,6 +192,14 @@ object JaReading {
         }
         // Katakana loanword sounds.
         putAll(mapOf("てぃ" to "ti", "でぃ" to "di", "ふぁ" to "fa", "ふぃ" to "fi", "ふぇ" to "fe", "ふぉ" to "fo", "うぃ" to "wi", "うぇ" to "we", "しぇ" to "she", "じぇ" to "je", "ちぇ" to "che"))
+    }
+
+    /** A reading as [hint] asks: the kana, its rōmaji, both (kana [sep] rōmaji), or nothing. */
+    fun hint(kana: String, hint: ReadingHint, sep: String = " · "): String? = when (hint) {
+        ReadingHint.KANA -> kana
+        ReadingHint.ROMAJI -> romaji(kana)
+        ReadingHint.KANA_ROMAJI -> kana + sep + romaji(kana)
+        ReadingHint.OFF -> null
     }
 
     fun romaji(kana: String): String {

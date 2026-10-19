@@ -279,6 +279,7 @@ const val DEFAULT_PREFIX = "//"
 enum class ReadingHint(val label: String) {
     KANA("Kana"),
     ROMAJI("Rōmaji"),
+    KANA_ROMAJI("Kana + rōmaji"),
     OFF("Off"),
 }
 

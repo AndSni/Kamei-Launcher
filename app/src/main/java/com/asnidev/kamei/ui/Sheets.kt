@@ -120,17 +120,19 @@ fun TranslationPopup(words: Words, prefs: Prefs) {
                 words.display,
                 style = TextStyle(color = MaterialTheme.colorScheme.onSurface, fontFamily = font, fontSize = 22.sp, lineHeight = 30.sp),
             )
-            val reading = words.reading?.takeIf { it.isNotBlank() }?.let { r ->
-                when (prefs.readingHint) {
-                    ReadingHint.KANA -> r
-                    ReadingHint.ROMAJI -> r.lines().joinToString("\n") { JaReading.romaji(it) }
-                    ReadingHint.OFF -> null
-                }
-            }
-            if (reading != null) {
+            val kana = words.reading?.takeIf { it.isNotBlank() }
+            val romaji = kana?.lines()?.joinToString("\n") { JaReading.romaji(it) }
+            val hint = prefs.readingHint
+            if (kana != null && (hint == ReadingHint.KANA || hint == ReadingHint.KANA_ROMAJI)) {
                 Spacer(Modifier.height(6.dp))
                 // Large enough that ぱ (circle) and ば (two dashes) can't be mistaken for each other.
-                Text(reading, style = MaterialTheme.typography.titleMedium.copy(fontSize = 19.sp, lineHeight = 26.sp), color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(kana, style = MaterialTheme.typography.titleMedium.copy(fontSize = 19.sp, lineHeight = 26.sp), color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            if (romaji != null && (hint == ReadingHint.ROMAJI || hint == ReadingHint.KANA_ROMAJI)) {
+                Spacer(Modifier.height(if (hint == ReadingHint.KANA_ROMAJI) 2.dp else 6.dp))
+                // Under the kana, a little smaller: the kana stays the thing to read.
+                val size = if (hint == ReadingHint.KANA_ROMAJI) 16.sp else 19.sp
+                Text(romaji, style = MaterialTheme.typography.titleMedium.copy(fontSize = size, lineHeight = size * 1.35f), color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             HorizontalDivider(Modifier.padding(vertical = 18.dp), color = MaterialTheme.colorScheme.outlineVariant)
             // Short phrases big; a notification's own text at reading size.

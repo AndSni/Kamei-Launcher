@@ -89,6 +89,7 @@ import com.asnidev.kamei.data.WordEvery
 import com.asnidev.kamei.data.WorkMark
 import com.asnidev.kamei.data.dayFadeAt
 import com.asnidev.kamei.data.longFade
+import com.asnidev.kamei.lang.JaReading
 import com.asnidev.kamei.lang.JlptLevel
 import com.asnidev.kamei.lang.Phrase
 import com.asnidev.kamei.lang.Phrases
@@ -97,7 +98,9 @@ import com.asnidev.kamei.lang.Vocabulary
 import com.asnidev.kamei.system.CustomFonts
 import com.asnidev.kamei.system.SystemActions
 import com.asnidev.kamei.weather.WeatherStatus
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -489,7 +492,7 @@ private fun LanguagePage(prefs: Prefs) {
         }
         row {
             ChoiceItem("Reading hint", ReadingHint.entries, prefs.readingHint, { it.label }, "abc",
-                describe = { h -> when (h) { ReadingHint.KANA -> "すいようび"; ReadingHint.ROMAJI -> "suiyōbi"; ReadingHint.OFF -> "Translation only" } }) { h ->
+                describe = { h -> JaReading.hint("すいようび", h) ?: "Translation only" }) { h ->
                 vm.update { it.copy(readingHint = h) }
             }
         }
@@ -1102,8 +1105,47 @@ private fun WallpaperPage(prefs: Prefs) {
                 SystemActions.open(context, Intent.createChooser(Intent(Intent.ACTION_SET_WALLPAPER), "Wallpaper"))
             }
         }
+        if (!prefs.showWallpaper) row { BlackWallpaperItem() }
     }
     Note("Off, the home screen is pure black, which also saves power on OLED screens.")
+    if (!prefs.showWallpaper) Note("Android itself shows the phone's wallpaper for a split second while locking, unlocking and switching apps. A home app can't stop that, but a black wallpaper makes it invisible.")
+}
+
+/** Replaces the phone's own wallpaper with black, after asking: it can't be undone from here. */
+@Composable
+private fun BlackWallpaperItem() {
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var asking by remember { mutableStateOf(false) }
+    var result by remember { mutableStateOf<String?>(null) }
+    Item("Make the phone's wallpaper black", result ?: "So no picture flashes up while locking or switching apps", "photo-off") { asking = true }
+    if (asking) {
+        fun set(lock: Boolean) {
+            asking = false
+            scope.launch {
+                val ok = withContext(Dispatchers.IO) { SystemActions.blackWallpaper(context, lock) }
+                result = if (!ok) "The phone didn't allow it" else if (lock) "Done: home and lock screen are black" else "Done: the home screen wallpaper is black"
+            }
+        }
+        AlertDialog(
+            onDismissRequest = { asking = false },
+            title = { Text("Black wallpaper?") },
+            text = {
+                Text(
+                    "This replaces your phone's wallpaper with plain black. Kamei can't bring the old one back; " +
+                        "you'd pick it again in the phone's wallpaper settings. On Android 12 and later the phone's " +
+                        "colours come from the wallpaper, so they may turn grey unless you chose your own colours there.",
+                )
+            },
+            confirmButton = {
+                Column(horizontalAlignment = Alignment.End) {
+                    TextButton({ set(lock = false) }) { Text("Home screen only") }
+                    TextButton({ set(lock = true) }) { Text("Home and lock screen") }
+                    TextButton({ asking = false }) { Text("Cancel") }
+                }
+            },
+        )
+    }
 }
 
 @Composable

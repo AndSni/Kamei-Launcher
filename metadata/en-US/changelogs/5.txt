@@ -1,0 +1,1 @@
+Reading hint "Kana + rōmaji": the hold-to-translate popup shows the kana with its rōmaji underneath, and the learning lines and word of the day show both. Settings › Wallpaper can make the phone's own wallpaper black, so no picture flashes up while locking, unlocking or switching apps (Android shows it for a moment, whatever the home app draws).

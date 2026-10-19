@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <!-- "Uninstall" in an app's options. -->
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <!-- "Make the phone's wallpaper black", pressed by the user: no flash of it in system animations. -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <queries>
         <intent>

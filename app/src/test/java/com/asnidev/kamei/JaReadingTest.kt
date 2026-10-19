@@ -1,6 +1,7 @@
 package com.asnidev.kamei
 
 import com.asnidev.kamei.icons.AppType
+import com.asnidev.kamei.data.ReadingHint
 import com.asnidev.kamei.lang.JaReading
 import com.asnidev.kamei.lang.Phrase
 import org.junit.Assert.assertEquals
@@ -43,6 +44,14 @@ class JaReadingTest {
         assertEquals("でんぱが よわい", JaReading.say(Phrase.SIGNAL_WEAK))
         assertEquals("じゅうさんじ ごろに あめ", JaReading.say(Phrase.RAIN_AT, t = "13:00"))
         assertEquals("あと にじゅうごふんで あめ", JaReading.say(Phrase.RAIN_IN, 25))
+    }
+
+    @Test
+    fun readingHints() {
+        assertEquals("すいようび", JaReading.hint("すいようび", ReadingHint.KANA))
+        assertEquals("suiyōbi", JaReading.hint("すいようび", ReadingHint.ROMAJI))
+        assertEquals("すいようび · suiyōbi", JaReading.hint("すいようび", ReadingHint.KANA_ROMAJI))
+        assertEquals(null, JaReading.hint("すいようび", ReadingHint.OFF))
     }
 
     @Test
